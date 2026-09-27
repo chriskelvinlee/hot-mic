@@ -1,0 +1,28 @@
+# Generates HotMic.xcodeproj:  brew install xcodegen && cd ios && xcodegen
+name: HotMic
+options: { bundleIdPrefix: com.ckl, deploymentTarget: { iOS: "17.0" } }
+packages:
+  HotMicCore: { path: . }
+targets:
+  HotMic:
+    type: application
+    platform: iOS
+    sources: [App]
+    dependencies: [{ package: HotMicCore }]
+    settings:
+      base:
+        PRODUCT_BUNDLE_IDENTIFIER: com.ckl.hotmic
+        GENERATE_INFOPLIST_FILE: YES
+        MARKETING_VERSION: "0.1"
+        CURRENT_PROJECT_VERSION: "1"
+        TARGETED_DEVICE_FAMILY: "1"
+        INFOPLIST_KEY_UILaunchScreen_Generation: YES
+        INFOPLIST_KEY_UISupportedInterfaceOrientations: UIInterfaceOrientationPortrait
+        INFOPLIST_KEY_NSMicrophoneUsageDescription: "Hot Mic listens for voices and saves conversations on this phone, then sends them only to your own Mac."
+        INFOPLIST_KEY_NSLocalNetworkUsageDescription: "Hot Mic sends recordings to your Mac over your local network."
+    info:
+      path: App/Info.plist
+      properties:
+        UIBackgroundModes: [audio]              # keeps listening with the screen off
+        NSAppTransportSecurity: { NSAllowsLocalNetworking: true }   # plain http, local addresses only
+        UILaunchScreen: {}

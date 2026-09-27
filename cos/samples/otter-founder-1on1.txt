@@ -1,0 +1,44 @@
+Chris  0:00
+Hey, can you hear me okay? I'm sitting in the car, the wifi in the building is doing that thing again. How was the move?
+
+Leila Marsh  0:09
+Brutal. There are boxes literally everywhere behind me, just ignore the chaos. Um, okay, big one first. The extension is basically done, six million on the same terms, Oakhollow is leading, and we'd love Northwind to take its pro-rata. Marco worked it out at about four hundred and ten thousand. We need a yes or no by Wednesday because they want to close next Friday.
+
+Chris  0:48
+Okay. That's above what I can just wave through, so I need to sit with it. I'm not saying no, I just, I don't want to answer that from a parking lot.
+
+Leila Marsh  0:59
+Totally fair. Second thing, and you can say no. Oakhollow gets a board seat with this round, and I'd rather you move from observer to a full seat so it's not, you know, two new people and me.
+
+Chris  1:24
+Hm. That's a real time commitment. Let me think about that one too, separately from the money.
+
+Leila Marsh  1:31
+Of course. Okay, smaller stuff. Your cap table calculator, the side project? It breaks. If you add a SAFE and leave the valuation cap empty, the whole ownership column says NaN. Every row. I did it in Chrome yesterday, twice.
+
+Chris  1:58
+Oh no. Okay, that's mine. Empty cap should just mean uncapped, it shouldn't blow up the whole table. I'll get that fixed this week.
+
+Leila Marsh  2:09
+Also can someone send me that monthly update template you showed me? The one with burn and runway at the top. I keep reinventing it.
+
+Chris  2:17
+Yes, we'll send it today. And let's get forty-five minutes next week with you and whoever's running finance now. Is that still Jun?
+
+Leila Marsh  2:26
+Still Jun. Tuesday or Wednesday afternoon works for both of us. Oh, and we're about to pick a SOC 2 auditor, do you know who people actually use?
+
+Chris  2:38
+Not offhand. We'll put together a quick scan of companies at your stage that got SOC 2 done in under ninety days and which auditors they used. You'll have it before you pick one.
+
+Leila Marsh  2:55
+Amazing. And my friend Dana, she runs Corbel, she's only in town this Friday and would love a first coffee with you. Friday morning, anywhere near you. She's great, very early.
+
+Chris  3:07
+Friday, hm. Have her email me and we'll sort something out.
+
+Leila Marsh  3:12
+Cool. Ugh, and our cloud bill went up thirty percent and nobody can tell me why, it's like paying rent on a ghost. Anyway, I already sent the board deck on Monday so don't chase it, and Marco's redoing the pricing page himself this week.
+
+Chris  3:31
+Classic. We should really do a portfolio offsite someday where everyone just compares cloud bills. Somewhere sunny. Okay, I'll come back to you on the pro-rata and the seat. Good luck with the boxes.

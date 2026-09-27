@@ -1,0 +1,28 @@
+Nadia: Hey, you look like you slept about as much as I did.
+Chris: Three hours. The sync bug came back at midnight, don't ask.
+Nadia: Ha. Okay, walk with me, I've got like five minutes before my call.
+Chris: Go.
+Nadia: So the contractor got back. Forty-five hundred to do the iOS build properly, or we wait until I'm free in November.
+Chris: Forty-five hundred. Hm. That's real money for a side project. Let me think about it tonight.
+Nadia: Sure, he just wants an answer this week.
+Nadia: Also the share link is broken. Make a list called Mom's birthday, with the apostrophe, hit share, and the link 404s. Without the apostrophe it's fine.
+Chris: Oh, that's the slug thing. I'll get it fixed today, that's embarrassing.
+Nadia: Can we get a draft of the App Store description too? Mine reads like a tax form.
+Chris: Yeah, you'll have a draft by tomorrow.
+Nadia: And we need to book the Thursday playtest with the five beta families. Evening, after dinner, like seven.
+Chris: I'll get that scheduled. Can someone also check whether the grocery price API has a free tier? I don't want a surprise bill.
+Nadia: Please. Speaking of surprises, App Store review rejected us again. For a screenshot. A screenshot!
+Chris: Of course they did.
+Nadia: Oh, and Marcus from the Eastside builders meetup wants you to do a ten-minute lightning talk on side projects. It's like thirty people in a brewery.
+Chris: Thirty people, yeah, that's an easy one.
+Nadia: Figured. We should rewrite the whole backend in Rust someday, by the way.
+Chris: Someday. Did the domain renew?
+Nadia: I already renewed it last night. And Priyanka's doing the new logo, she said Sunday.
+Chris: Nice. Hang on, Alex just texted. Reading it out: "Can you grab Theo from swim at 5:30? And do we say yes to the Okafors' cabin weekend on the 18th? They need to know tonight."
+Nadia: Ooh, cabin.
+Chris: The cabin one I actually need to think about, that's the weekend before the fund close.
+Chris: Swim pickup at 5:30, put that on my calendar so I don't forget.
+Nadia: Did you see the bagel place downstairs closed?
+Chris: Tragic. Truly.
+Nadia: Okay, I'm late, go.
+Chris: Go, go.

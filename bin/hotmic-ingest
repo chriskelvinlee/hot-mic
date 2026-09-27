@@ -1,0 +1,6 @@
+#!/bin/bash
+# Receives recordings from the iPhone and transcribes them on this Mac.
+# Listens on your local network (token required). Ctrl-C stops it.
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.bun/bin:$PATH"
+cd "$(dirname "$0")/.." || exit 1
+exec bun src/ingest.ts

@@ -1,0 +1,443 @@
+{
+  "tool": "Generic meeting-notes AI (Otter / Fireflies / Granola style)",
+  "how": "Each recording is summarized on its own and action items are extracted per meeting, with no memory across meetings and no knowledge of your priorities or standing rules.",
+  "meetings": [
+    {
+      "context": "c1",
+      "summary": "Chris recorded a morning voice memo covering priorities for the day. Topics included preparing for Monday's Kestrel board meeting, a dentist appointment that now conflicts with IC on Tuesday, sending the Kestrel bridge wire today, and a few longer-term personal goals such as writing a book and learning to sail."
+    },
+    {
+      "context": "c2",
+      "summary": "Maya and Chris reviewed several open items for Northwind Seed. Maya relayed a Friday 2:00 PM meeting request from Arlo Vance at Quarry Labs, an intro request from Nina at Fernhill to Dev at Kestrel, and a fireside chat invitation to the Cascadia Seed Summit on October 15. Chris committed to sending comments on the Fernhill memo by 5:00 PM ahead of Tuesday's IC."
+    },
+    {
+      "context": "c3",
+      "summary": "The partners discussed the pipeline (Quarry, Fernhill, Halcyon) and frustrations with the current CRM, including a proposal from Jordan to build an in-house replacement, which Jordan will write up for a possible Q1 review. Priya will run the Halcyon CEO reference call, Fernhill goes to IC Tuesday once Chris's comments are in, and Maya noted that Tidewater received a term sheet that expires in 72 hours with a pro-rata of about $400K."
+    },
+    {
+      "context": "c4",
+      "summary": "Dev confirmed the Kestrel bridge documents are signed, and Chris said the wire would go out that afternoon. Dev is considering letting Greg, the sales lead, go before Monday's board meeting because pipeline has been flat for two quarters; Chris asked to review the sales comp plan first. Dev also asked for an intro to Renee Park, COO of Harborline Logistics."
+    },
+    {
+      "context": "c5",
+      "summary": "Sam and Chris reviewed a bug where reloading the page mid-session causes the same receipt to fire twice, likely because the fired list is held in client memory and the server replays the last event on socket reconnect. They also discussed switching to OpenAI embeddings for speed, renewing the Apple developer account, and a future Slack integration."
+    },
+    {
+      "context": "c6",
+      "summary": "Helen Marsh of Cedar Point Family Office asked for the Q3 LP letter by October 10, ahead of their October 12 committee, with marks and DPI up front. Helen also expressed interest in co-investing in Tidewater if Northwind is not taking its full allocation, and indicated Cedar Point is likely to commit to Fund III."
+    },
+    {
+      "context": "c7",
+      "summary": "Alex and Chris covered household logistics: an RSVP for dinner at the Nguyens' on the 3rd and Theo's aquarium permission slip due Friday. Chris decided to move a call Dev requested for tonight to the morning, and they discussed repainting the kitchen."
+    },
+    {
+      "context": "c8",
+      "summary": "In an end-of-day voice memo, Chris confirmed the Kestrel bridge wire went out at 3:00 PM. Chris noted that the Fernhill memo comments for Maya slipped to tomorrow morning, reflected on taking too many coffee meetings, and flagged a need to get up to speed on Tidewater after Helen's co-invest question."
+    }
+  ],
+  "action_items": [
+    {
+      "id": "b01",
+      "text": "Read the Kestrel board deck before the weekend (board meeting Monday)",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u002"
+      ]
+    },
+    {
+      "id": "b02",
+      "text": "Reschedule dentist appointment (moved to Tuesday 10:00 AM, conflicts with IC)",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u003"
+      ]
+    },
+    {
+      "id": "b03",
+      "text": "Write a book on decision fatigue for investors",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u004"
+      ]
+    },
+    {
+      "id": "b04",
+      "text": "Text Sam to confirm the 2:00 PM session",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u005"
+      ]
+    },
+    {
+      "id": "b05",
+      "text": "Send the Kestrel bridge wire today",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u007"
+      ]
+    },
+    {
+      "id": "b06",
+      "text": "Sign up for sailing lessons",
+      "owner": "Chris",
+      "context": "c1",
+      "utterances": [
+        "u008"
+      ]
+    },
+    {
+      "id": "b07",
+      "text": "Finish reading Maya's Fernhill memo",
+      "owner": "Chris",
+      "context": "c2",
+      "utterances": [
+        "u010"
+      ]
+    },
+    {
+      "id": "b08",
+      "text": "Shorten the market section of the Fernhill memo",
+      "owner": "Maya Chen",
+      "context": "c2",
+      "utterances": [
+        "u010"
+      ]
+    },
+    {
+      "id": "b09",
+      "text": "Confirm first meeting with Arlo Vance (Quarry Labs) for Friday 2:00 PM; he flies home Saturday",
+      "owner": "Chris",
+      "context": "c2",
+      "utterances": [
+        "u011",
+        "u012",
+        "u013"
+      ]
+    },
+    {
+      "id": "b10",
+      "text": "Intro Nina (Fernhill) to Dev (Kestrel) to compare notes on warehouse robot pilots",
+      "owner": "Chris",
+      "context": "c2",
+      "utterances": [
+        "u014",
+        "u015"
+      ]
+    },
+    {
+      "id": "b11",
+      "text": "Respond to Cascadia Seed Summit fireside chat invite (Boise, Oct 15, ~80 people); Maya offered to go",
+      "owner": "Chris",
+      "context": "c2",
+      "utterances": [
+        "u016",
+        "u017"
+      ]
+    },
+    {
+      "id": "b12",
+      "text": "Send Maya comments on the Fernhill memo by 5:00 PM today",
+      "owner": "Chris",
+      "context": "c2",
+      "utterances": [
+        "u018",
+        "u019"
+      ]
+    },
+    {
+      "id": "b13",
+      "text": "Evaluate replacing the CRM with an in-house build (spreadsheet plus agents)",
+      "owner": "unassigned",
+      "context": "c3",
+      "utterances": [
+        "u023",
+        "u025"
+      ]
+    },
+    {
+      "id": "b14",
+      "text": "Explore selling the in-house CRM to other funds",
+      "owner": "Jordan Blake",
+      "context": "c3",
+      "utterances": [
+        "u027"
+      ]
+    },
+    {
+      "id": "b15",
+      "text": "Run the Halcyon CEO reference call",
+      "owner": "Priya Raman",
+      "context": "c3",
+      "utterances": [
+        "u029"
+      ]
+    },
+    {
+      "id": "b16",
+      "text": "Send Fernhill memo comments so the deal can go to IC Tuesday",
+      "owner": "Chris",
+      "context": "c3",
+      "utterances": [
+        "u030"
+      ]
+    },
+    {
+      "id": "b17",
+      "text": "Re-engage the battery company whose follow-up was dropped",
+      "owner": "unassigned",
+      "context": "c3",
+      "utterances": [
+        "u031"
+      ]
+    },
+    {
+      "id": "b18",
+      "text": "Review Tidewater term sheet (expires in 72 hours; pro-rata ~$400K)",
+      "owner": "unassigned",
+      "context": "c3",
+      "utterances": [
+        "u032"
+      ]
+    },
+    {
+      "id": "b19",
+      "text": "Write up the in-house CRM proposal with a stale-pipeline view this weekend, for Q1 review",
+      "owner": "Jordan Blake",
+      "context": "c3",
+      "utterances": [
+        "u033",
+        "u035",
+        "u036"
+      ]
+    },
+    {
+      "id": "b20",
+      "text": "Set up first Quarry meeting with Chris",
+      "owner": "Maya Chen",
+      "context": "c3",
+      "utterances": [
+        "u037",
+        "u038"
+      ]
+    },
+    {
+      "id": "b21",
+      "text": "Avoid parking in the back lot on Fridays (towing)",
+      "owner": "unassigned",
+      "context": "c3",
+      "utterances": [
+        "u039"
+      ]
+    },
+    {
+      "id": "b22",
+      "text": "Send the Kestrel bridge wire this afternoon",
+      "owner": "Chris",
+      "context": "c4",
+      "utterances": [
+        "u043",
+        "u044"
+      ]
+    },
+    {
+      "id": "b23",
+      "text": "Decide on Greg's role before Monday's board meeting and share his numbers against an agreed plan",
+      "owner": "Dev Patel",
+      "context": "c4",
+      "utterances": [
+        "u045",
+        "u047",
+        "u048",
+        "u049"
+      ]
+    },
+    {
+      "id": "b24",
+      "text": "Send Chris the Kestrel sales comp plan",
+      "owner": "Dev Patel",
+      "context": "c4",
+      "utterances": [
+        "u050"
+      ]
+    },
+    {
+      "id": "b25",
+      "text": "Review the Kestrel sales comp plan",
+      "owner": "Chris",
+      "context": "c4",
+      "utterances": [
+        "u050"
+      ]
+    },
+    {
+      "id": "b26",
+      "text": "Intro Dev to Renee Park, COO of Harborline Logistics",
+      "owner": "Chris",
+      "context": "c4",
+      "utterances": [
+        "u051",
+        "u052"
+      ]
+    },
+    {
+      "id": "b27",
+      "text": "Fix duplicate receipt on page reload (persist the fired list; dedupe replayed event on socket reconnect)",
+      "owner": "Sam Okafor",
+      "context": "c5",
+      "utterances": [
+        "u056",
+        "u057",
+        "u058",
+        "u059"
+      ]
+    },
+    {
+      "id": "b28",
+      "text": "Decide whether to switch from bge-m3 to OpenAI embeddings",
+      "owner": "Chris",
+      "context": "c5",
+      "utterances": [
+        "u060",
+        "u061"
+      ]
+    },
+    {
+      "id": "b29",
+      "text": "Renew the Apple developer account ($99) on the card",
+      "owner": "Sam Okafor",
+      "context": "c5",
+      "utterances": [
+        "u062",
+        "u063"
+      ]
+    },
+    {
+      "id": "b30",
+      "text": "Add Slack integration so receipts post to a channel",
+      "owner": "unassigned",
+      "context": "c5",
+      "utterances": [
+        "u064",
+        "u065"
+      ]
+    },
+    {
+      "id": "b31",
+      "text": "Fix the iOS build / simulator issue",
+      "owner": "Sam Okafor",
+      "context": "c5",
+      "utterances": [
+        "u066"
+      ]
+    },
+    {
+      "id": "b32",
+      "text": "Send Q3 LP letter to Cedar Point by October 10",
+      "owner": "Chris",
+      "context": "c6",
+      "utterances": [
+        "u070",
+        "u072"
+      ]
+    },
+    {
+      "id": "b33",
+      "text": "Put marks and DPI up front in the Q3 letter",
+      "owner": "Chris",
+      "context": "c6",
+      "utterances": [
+        "u071"
+      ]
+    },
+    {
+      "id": "b34",
+      "text": "Check Tidewater allocation and get back to Helen on co-invest",
+      "owner": "Chris",
+      "context": "c6",
+      "utterances": [
+        "u073",
+        "u074"
+      ]
+    },
+    {
+      "id": "b35",
+      "text": "Follow up with Helen on a Fund III commitment",
+      "owner": "Chris",
+      "context": "c6",
+      "utterances": [
+        "u075"
+      ]
+    },
+    {
+      "id": "b36",
+      "text": "RSVP to Linh for dinner at the Nguyens' on the 3rd (by tomorrow)",
+      "owner": "Chris",
+      "context": "c7",
+      "utterances": [
+        "u076",
+        "u077"
+      ]
+    },
+    {
+      "id": "b37",
+      "text": "Sign Theo's aquarium permission slip in the school app by Friday",
+      "owner": "Chris",
+      "context": "c7",
+      "utterances": [
+        "u078"
+      ]
+    },
+    {
+      "id": "b38",
+      "text": "Move Dev's call to tomorrow morning",
+      "owner": "Chris",
+      "context": "c7",
+      "utterances": [
+        "u080",
+        "u082"
+      ]
+    },
+    {
+      "id": "b39",
+      "text": "Repaint the kitchen",
+      "owner": "unassigned",
+      "context": "c7",
+      "utterances": [
+        "u083",
+        "u084"
+      ]
+    },
+    {
+      "id": "b40",
+      "text": "Cut back on coffee meetings",
+      "owner": "Chris",
+      "context": "c8",
+      "utterances": [
+        "u086"
+      ]
+    },
+    {
+      "id": "b41",
+      "text": "Send Maya the Fernhill memo comments first thing tomorrow",
+      "owner": "Chris",
+      "context": "c8",
+      "utterances": [
+        "u087"
+      ]
+    },
+    {
+      "id": "b42",
+      "text": "Find out the current status of Tidewater",
+      "owner": "Chris",
+      "context": "c8",
+      "utterances": [
+        "u088"
+      ]
+    }
+  ]
+}

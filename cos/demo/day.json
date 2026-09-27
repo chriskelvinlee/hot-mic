@@ -1,0 +1,762 @@
+{
+  "date": "2026-09-24",
+  "weekday": "Thursday",
+  "owner": {
+    "name": "Chris",
+    "role": "Runs Northwind Seed, a small seed fund; sits on the Kestrel Robotics board; builds Hot Mic on GBrain on the side."
+  },
+  "capture": "Hot Mic iPhone recorder in a pocket, voice-gated, transcribed on the Mac with local Whisper; no audio kept, only text.",
+  "lanes": [
+    {
+      "id": "fund",
+      "label": "Northwind Seed",
+      "blurb": "The seed fund you run: pipeline, follow-ons, partners and LPs."
+    },
+    {
+      "id": "board",
+      "label": "Kestrel board",
+      "blurb": "Your board seat at Kestrel Robotics, a portfolio company."
+    },
+    {
+      "id": "build",
+      "label": "Hot Mic + GBrain",
+      "blurb": "Your side project: a local hot mic on your own brain."
+    },
+    {
+      "id": "personal",
+      "label": "Home",
+      "blurb": "Family, health and the house."
+    }
+  ],
+  "contexts": [
+    {
+      "id": "c1",
+      "start": "07:40",
+      "end": "07:52",
+      "kind": "voice memo",
+      "title": "Morning walk memo",
+      "people": [
+        "Chris (you)"
+      ],
+      "lane": "personal",
+      "consent": "Solo voice memo"
+    },
+    {
+      "id": "c2",
+      "start": "09:00",
+      "end": "09:20",
+      "kind": "1:1",
+      "title": "1:1 with Maya",
+      "people": [
+        "Chris (you)",
+        "Maya Chen (Associate, Northwind Seed)"
+      ],
+      "lane": "fund",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c3",
+      "start": "10:30",
+      "end": "11:00",
+      "kind": "group meeting",
+      "title": "Thursday partner meeting",
+      "people": [
+        "Chris (you)",
+        "Jordan Blake (Partner, Northwind Seed)",
+        "Priya Raman (Partner, Northwind Seed)",
+        "Maya Chen (Associate, Northwind Seed)"
+      ],
+      "lane": "fund",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c4",
+      "start": "12:30",
+      "end": "13:30",
+      "kind": "lunch",
+      "title": "Lunch with Dev",
+      "people": [
+        "Chris (you)",
+        "Dev Patel (Founder and CEO, Kestrel Robotics)"
+      ],
+      "lane": "board",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c5",
+      "start": "14:00",
+      "end": "14:40",
+      "kind": "call",
+      "title": "Hot Mic build session",
+      "people": [
+        "Chris (you)",
+        "Sam Okafor (Collaborator, Hot Mic)"
+      ],
+      "lane": "build",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c6",
+      "start": "16:00",
+      "end": "16:25",
+      "kind": "call",
+      "title": "LP check-in",
+      "people": [
+        "Chris (you)",
+        "Helen Marsh (LP, Cedar Point Family Office)"
+      ],
+      "lane": "fund",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c7",
+      "start": "18:30",
+      "end": "18:38",
+      "kind": "hallway",
+      "title": "Home, hallway with Alex",
+      "people": [
+        "Chris (you)",
+        "Alex (spouse)"
+      ],
+      "lane": "personal",
+      "consent": "All-party consent given at the start"
+    },
+    {
+      "id": "c8",
+      "start": "21:00",
+      "end": "21:15",
+      "kind": "voice memo",
+      "title": "Night wrap-up memo",
+      "people": [
+        "Chris (you)"
+      ],
+      "lane": "personal",
+      "consent": "Solo voice memo"
+    }
+  ],
+  "utterances": [
+    {
+      "id": "u001",
+      "t": "07:41",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Okay. Thursday. Walking. Uh, things for today."
+    },
+    {
+      "id": "u002",
+      "t": "07:41",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Kestrel board meeting is Monday and I haven't even opened the deck. I need to actually read it before the weekend, not Sunday night again."
+    },
+    {
+      "id": "u003",
+      "t": "07:43",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "The dentist moved me to Tuesday at ten, which is, that's right on top of IC. So that has to move."
+    },
+    {
+      "id": "u004",
+      "t": "07:44",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Someday I should write a book about this. Decision fatigue for investors. Like, a chief of staff for one person. Someday."
+    },
+    {
+      "id": "u005",
+      "t": "07:45",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Text Sam about the two o'clock, make sure we're still on."
+    },
+    {
+      "id": "u006",
+      "t": "07:46",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "This coffee is not good. Why do I keep coming here."
+    },
+    {
+      "id": "u007",
+      "t": "07:48",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Oh, and the Kestrel bridge. I still have to send our wire. Today."
+    },
+    {
+      "id": "u008",
+      "t": "07:49",
+      "context": "c1",
+      "speaker": "Chris",
+      "text": "Also I should learn to sail. Every September I say that."
+    },
+    {
+      "id": "u009",
+      "t": "09:01",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "Morning. Did you get my Fernhill memo?"
+    },
+    {
+      "id": "u010",
+      "t": "09:01",
+      "context": "c2",
+      "speaker": "Chris",
+      "text": "I did, I've read, like, half. It's good. The market section's a little long."
+    },
+    {
+      "id": "u011",
+      "t": "09:02",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "Okay, few quick things. Arlo Vance from Quarry Labs wants a first meeting, and he asked for Friday at two."
+    },
+    {
+      "id": "u012",
+      "t": "09:02",
+      "context": "c2",
+      "speaker": "Chris",
+      "text": "Friday. Hm."
+    },
+    {
+      "id": "u013",
+      "t": "09:03",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "I know. He flies home Saturday, that's why he asked."
+    },
+    {
+      "id": "u014",
+      "t": "09:04",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "Second, Nina at Fernhill asked if you'd intro her to Dev at Kestrel. They're both doing warehouse robots and she wants to compare notes on pilots."
+    },
+    {
+      "id": "u015",
+      "t": "09:04",
+      "context": "c2",
+      "speaker": "Chris",
+      "text": "Sure, Dev's great. He's, uh, he's got a lot going on this week though."
+    },
+    {
+      "id": "u016",
+      "t": "09:05",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "And the Cascadia Seed Summit in Boise asked if you'd do a fireside chat. October fifteenth. It's about eighty people."
+    },
+    {
+      "id": "u017",
+      "t": "09:06",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "I'd do it, honestly. If they want someone from Northwind."
+    },
+    {
+      "id": "u018",
+      "t": "09:07",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "Last thing. IC is Tuesday, so I really need your comments on the memo before I send the final."
+    },
+    {
+      "id": "u019",
+      "t": "09:07",
+      "context": "c2",
+      "speaker": "Chris",
+      "text": "Yeah. I'll get you comments on the memo by five today."
+    },
+    {
+      "id": "u020",
+      "t": "09:08",
+      "context": "c2",
+      "speaker": "Maya Chen",
+      "text": "Perfect. Oh, and did you see the thing about the, never mind, it's not important."
+    },
+    {
+      "id": "u021",
+      "t": "10:31",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "Can someone close the door? The espresso machine is screaming again."
+    },
+    {
+      "id": "u022",
+      "t": "10:31",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Okay, pipeline first. Quarry, Fernhill, Halcyon."
+    },
+    {
+      "id": "u023",
+      "t": "10:32",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "Before we start I have to say something about the CRM. I spent forty minutes yesterday trying to log one intro. Forty minutes."
+    },
+    {
+      "id": "u024",
+      "t": "10:32",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Here we go."
+    },
+    {
+      "id": "u025",
+      "t": "10:33",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "I'm serious. We should rip it out and build our own. It's a weekend project. A spreadsheet and a couple of agents."
+    },
+    {
+      "id": "u026",
+      "t": "10:33",
+      "context": "c3",
+      "speaker": "Chris",
+      "text": "It's never a weekend project."
+    },
+    {
+      "id": "u027",
+      "t": "10:34",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "It would be if we just did it! Every fund I know hates their CRM. We could sell it."
+    },
+    {
+      "id": "u028",
+      "t": "10:34",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "We are not selling a CRM, Jordan."
+    },
+    {
+      "id": "u029",
+      "t": "10:35",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Halcyon. I'll do the reference call on their CEO myself, I worked with her old CFO. Nobody else needs to be on it."
+    },
+    {
+      "id": "u030",
+      "t": "10:37",
+      "context": "c3",
+      "speaker": "Maya Chen",
+      "text": "Fernhill goes to IC Tuesday, once Chris's comments are in."
+    },
+    {
+      "id": "u031",
+      "t": "10:38",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "And honestly the pipeline view is why we dropped the follow-up with, who was it, the battery people."
+    },
+    {
+      "id": "u032",
+      "t": "10:39",
+      "context": "c3",
+      "speaker": "Maya Chen",
+      "text": "Oh, um, one more thing, sorry. Tidewater got a term sheet last night. It's exploding, seventy-two hours. Our pro-rata would be about four hundred."
+    },
+    {
+      "id": "u033",
+      "t": "10:39",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "Can I just finish? The pipeline view. If we built our own it would just show us what's gone stale."
+    },
+    {
+      "id": "u034",
+      "t": "10:40",
+      "context": "c3",
+      "speaker": "Chris",
+      "text": "Mm."
+    },
+    {
+      "id": "u035",
+      "t": "10:40",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Jordan, write it up and we'll look at it in Q1. Maybe."
+    },
+    {
+      "id": "u036",
+      "t": "10:41",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "I'm writing it up. I'm writing it up this weekend."
+    },
+    {
+      "id": "u037",
+      "t": "10:42",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Okay, Quarry. Maya, where are we?"
+    },
+    {
+      "id": "u038",
+      "t": "10:42",
+      "context": "c3",
+      "speaker": "Maya Chen",
+      "text": "First meeting's being set up with Chris."
+    },
+    {
+      "id": "u039",
+      "t": "10:44",
+      "context": "c3",
+      "speaker": "Jordan Blake",
+      "text": "Did anyone else get the building email? They're towing in the back lot on Fridays now."
+    },
+    {
+      "id": "u040",
+      "t": "10:45",
+      "context": "c3",
+      "speaker": "Priya Raman",
+      "text": "Okay, let's stop there, I have a hard stop."
+    },
+    {
+      "id": "u041",
+      "t": "12:32",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "This place still has the best ramen on the block. How's Theo? Still doing soccer?"
+    },
+    {
+      "id": "u042",
+      "t": "12:32",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Soccer, and now drums. Pray for us."
+    },
+    {
+      "id": "u043",
+      "t": "12:33",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "Ha. Okay. The bridge docs are signed on our side, by the way."
+    },
+    {
+      "id": "u044",
+      "t": "12:33",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Great. Our wire goes out this afternoon."
+    },
+    {
+      "id": "u045",
+      "t": "12:35",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "So, the real thing. I'm thinking about letting Greg go. Before the board meeting. I don't want to walk in Monday with this hanging over the room."
+    },
+    {
+      "id": "u046",
+      "t": "12:35",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Okay. That's, uh, that's fast."
+    },
+    {
+      "id": "u047",
+      "t": "12:36",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "Pipeline's been flat two quarters. He's great with the big logos but nothing closes. And half his team is paid on bookings, not collections, so it's a mess."
+    },
+    {
+      "id": "u048",
+      "t": "12:37",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Has he seen his numbers against a plan he actually agreed to?"
+    },
+    {
+      "id": "u049",
+      "t": "12:37",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "Sort of. Not formally."
+    },
+    {
+      "id": "u050",
+      "t": "12:38",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Send me the comp plan. I'll look at the comp plan."
+    },
+    {
+      "id": "u051",
+      "t": "12:39",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "Thank you. Also, could you intro me to someone at Harborline Logistics? I heard they're piloting robots in two warehouses."
+    },
+    {
+      "id": "u052",
+      "t": "12:39",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "I know Renee Park, their COO. Yeah, she'd take the call."
+    },
+    {
+      "id": "u053",
+      "t": "12:41",
+      "context": "c4",
+      "speaker": "Dev Patel",
+      "text": "Amazing. Okay, tell me about the fund. Is Jordan still trying to build his own CRM?"
+    },
+    {
+      "id": "u054",
+      "t": "12:41",
+      "context": "c4",
+      "speaker": "Chris",
+      "text": "Every single week."
+    },
+    {
+      "id": "u055",
+      "t": "14:01",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Hey. Can you hear me? My mic's doing the thing."
+    },
+    {
+      "id": "u056",
+      "t": "14:02",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Okay, the receipt bug. If you reload the page in the middle of a session, the same receipt fires twice."
+    },
+    {
+      "id": "u057",
+      "t": "14:03",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Repro: say the Friday line, get the red receipt, reload the page, say it again. You get a second red receipt for the same claim, and it acts like it's new."
+    },
+    {
+      "id": "u058",
+      "t": "14:03",
+      "context": "c5",
+      "speaker": "Chris",
+      "text": "So the once-per-session rule doesn't survive a reload."
+    },
+    {
+      "id": "u059",
+      "t": "14:04",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Yeah. I think the client keeps the fired list in memory, and the server replays the last event when the socket reconnects."
+    },
+    {
+      "id": "u060",
+      "t": "14:06",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Other question. Should we just use OpenAI embeddings to go faster? bge-m3 on the laptop is slow on the big pack."
+    },
+    {
+      "id": "u061",
+      "t": "14:06",
+      "context": "c5",
+      "speaker": "Chris",
+      "text": "Hmm. Let's, uh, let me think about that."
+    },
+    {
+      "id": "u062",
+      "t": "14:08",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Also the Apple developer account renews next week. Ninety-nine dollars. Can I just put it on the card?"
+    },
+    {
+      "id": "u063",
+      "t": "14:08",
+      "context": "c5",
+      "speaker": "Chris",
+      "text": "Probably. Yeah, probably."
+    },
+    {
+      "id": "u064",
+      "t": "14:10",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "And we should add Slack someday. Like, the receipts could post to a channel."
+    },
+    {
+      "id": "u065",
+      "t": "14:10",
+      "context": "c5",
+      "speaker": "Chris",
+      "text": "Someday."
+    },
+    {
+      "id": "u066",
+      "t": "14:12",
+      "context": "c5",
+      "speaker": "Sam Okafor",
+      "text": "Okay, I'm going to go fight the iOS build. It's decided the simulator doesn't exist."
+    },
+    {
+      "id": "u067",
+      "t": "16:01",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "Chris, hi. Sorry, I'm in the car, it might cut out."
+    },
+    {
+      "id": "u068",
+      "t": "16:01",
+      "context": "c6",
+      "speaker": "Chris",
+      "text": "No problem. How was the college tour?"
+    },
+    {
+      "id": "u069",
+      "t": "16:02",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "Exhausting. Six campuses, one kid who hated all of them."
+    },
+    {
+      "id": "u070",
+      "t": "16:04",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "Two things. Our committee meets October twelfth, so we need the Q3 letter by October tenth. Last quarter's came late and I got asked about it."
+    },
+    {
+      "id": "u071",
+      "t": "16:04",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "And please put the marks and the DPI up front. They skip straight to that."
+    },
+    {
+      "id": "u072",
+      "t": "16:05",
+      "context": "c6",
+      "speaker": "Chris",
+      "text": "Understood. The tenth."
+    },
+    {
+      "id": "u073",
+      "t": "16:07",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "Second. I heard Tidewater's raising. If you're not taking your full allocation, we'd love to co-invest."
+    },
+    {
+      "id": "u074",
+      "t": "16:07",
+      "context": "c6",
+      "speaker": "Chris",
+      "text": "Oh. Let me, I'll check where that is and get back to you."
+    },
+    {
+      "id": "u075",
+      "t": "16:09",
+      "context": "c6",
+      "speaker": "Helen Marsh",
+      "text": "Of course. And we're likely in for Fund Three, just so you know. Nothing formal."
+    },
+    {
+      "id": "u076",
+      "t": "18:31",
+      "context": "c7",
+      "speaker": "Alex",
+      "text": "Linh asked if we're coming to dinner at the Nguyens' on the third. I said probably. Can you RSVP? She wants to know by tomorrow."
+    },
+    {
+      "id": "u077",
+      "t": "18:31",
+      "context": "c7",
+      "speaker": "Chris",
+      "text": "Yes. Yes, we're going."
+    },
+    {
+      "id": "u078",
+      "t": "18:32",
+      "context": "c7",
+      "speaker": "Alex",
+      "text": "And Theo's permission slip for the aquarium trip is due Friday. It's in the school app. You have to sign it, I did the last one."
+    },
+    {
+      "id": "u079",
+      "t": "18:33",
+      "context": "c7",
+      "speaker": "Alex",
+      "text": "Your phone's buzzing again."
+    },
+    {
+      "id": "u080",
+      "t": "18:33",
+      "context": "c7",
+      "speaker": "Chris",
+      "text": "It's Dev. He wants to talk tonight."
+    },
+    {
+      "id": "u081",
+      "t": "18:34",
+      "context": "c7",
+      "speaker": "Alex",
+      "text": "Tonight tonight?"
+    },
+    {
+      "id": "u082",
+      "t": "18:34",
+      "context": "c7",
+      "speaker": "Chris",
+      "text": "No. I'll move him to the morning."
+    },
+    {
+      "id": "u083",
+      "t": "18:35",
+      "context": "c7",
+      "speaker": "Alex",
+      "text": "We should repaint the kitchen. I'm serious this time. That green."
+    },
+    {
+      "id": "u084",
+      "t": "18:35",
+      "context": "c7",
+      "speaker": "Chris",
+      "text": "We should. At some point."
+    },
+    {
+      "id": "u085",
+      "t": "21:01",
+      "context": "c8",
+      "speaker": "Chris",
+      "text": "Okay. End of day. The Kestrel bridge wire went out at three, I got the confirmation. So that's done."
+    },
+    {
+      "id": "u086",
+      "t": "21:02",
+      "context": "c8",
+      "speaker": "Chris",
+      "text": "I keep saying yes to too many coffees. Four this week. Four. I don't know."
+    },
+    {
+      "id": "u087",
+      "t": "21:03",
+      "context": "c8",
+      "speaker": "Chris",
+      "text": "Maya's memo comments. I said five. Didn't happen. First thing tomorrow."
+    },
+    {
+      "id": "u088",
+      "t": "21:05",
+      "context": "c8",
+      "speaker": "Chris",
+      "text": "Helen asked about a Tidewater co-invest and honestly I don't know what's going on with Tidewater right now. I should find out."
+    },
+    {
+      "id": "u089",
+      "t": "21:06",
+      "context": "c8",
+      "speaker": "Chris",
+      "text": "Okay. Bed."
+    }
+  ]
+}

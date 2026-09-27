@@ -1,0 +1,257 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Hot Mic</title>
+<style>
+  :root {
+    --bg: #0b0d10; --panel: #14181d; --line: #252b33; --text: #eef1f4; --dim: #8a94a1;
+    --green: #35d07f; --red: #ff4d5e; --amber: #ffb02e; --blue: #6cb4ff;
+  }
+  * { box-sizing: border-box; }
+  html, body { height: 100%; margin: 0; }
+  body {
+    background: var(--bg); color: var(--text);
+    font: 16px/1.45 -apple-system, BlinkMacSystemFont, "SF Pro Text", "Helvetica Neue", sans-serif;
+    display: flex; flex-direction: column; overflow: hidden; user-select: none;
+  }
+  header { display: flex; align-items: center; gap: 12px; padding: 14px 20px; border-bottom: 1px solid var(--line); }
+  .dot { width: 12px; height: 12px; border-radius: 50%; background: #3a424d; transition: background .15s, box-shadow .15s; flex: none; }
+  .dot.ready { background: var(--green); }
+  .dot.live { background: var(--red); box-shadow: 0 0 0 6px rgba(255,77,94,.18); }
+  .dot.think { background: var(--amber); }
+  #state { font-weight: 600; letter-spacing: .01em; }
+  #promise { color: var(--dim); font-size: 13px; }
+  #counts { margin-left: auto; color: var(--dim); font-size: 13px; text-align: right; }
+
+  main { flex: 1; display: flex; align-items: safe center; justify-content: center; padding: 24px; min-height: 0; overflow-y: auto; }
+  #stage { width: min(880px, 100%); display: flex; flex-direction: column; gap: 16px; margin: auto 0; }
+  @media (max-height: 720px) { .card { padding: 16px 20px; } h1 { font-size: 28px; margin: 4px 0 6px; } .lede { font-size: 15px; } .claims { margin-top: 8px; } .stored { font-size: 22px; } }
+
+  .card {
+    background: var(--panel); border: 1px solid var(--line); border-left: 6px solid var(--blue);
+    border-radius: 14px; padding: 22px 26px; animation: rise .28s ease-out;
+  }
+  .card.receipt { border-left-color: var(--red); background: #1d1216; border-color: #4a2229; }
+  .card.correction { border-left-color: var(--amber); background: #1d1810; border-color: #4a3a1c; }
+  @keyframes rise { from { opacity: 0; transform: translateY(14px); } to { opacity: 1; transform: none; } }
+  .kicker { font-size: 12px; font-weight: 700; letter-spacing: .12em; text-transform: uppercase; color: var(--blue); display: flex; gap: 10px; align-items: center; }
+  .receipt .kicker { color: var(--red); } .correction .kicker { color: var(--amber); }
+  .badge { margin-left: auto; font-weight: 600; letter-spacing: 0; text-transform: none; color: var(--dim); font-size: 12px; border: 1px solid var(--line); border-radius: 999px; padding: 2px 9px; }
+  h1 { font-size: clamp(28px, 4.2vw, 44px); line-height: 1.12; margin: 8px 0 8px; font-weight: 700; }
+  .lede { font-size: clamp(16px, 1.9vw, 20px); color: #cfd6de; margin: 0; }
+  .claims { margin: 14px 0 0; padding: 0; list-style: none; display: grid; gap: 6px; }
+  .claims li { color: #b9c2cc; font-size: 15px; padding-left: 14px; border-left: 2px solid var(--line); }
+  .claims .when { color: var(--dim); font-variant-numeric: tabular-nums; margin-right: 6px; }
+  .meta { margin-top: 14px; color: var(--dim); font-size: 13px; display: flex; flex-wrap: wrap; gap: 6px 16px; }
+  .seen { margin-top: 12px; font-size: 14px; color: var(--green); }
+  .said { font-size: clamp(17px, 2vw, 21px); color: #f3c9ce; margin: 10px 0 4px; }
+  .correction .said { color: #f1dcb4; }
+  .stored { font-size: clamp(22px, 3vw, 32px); font-weight: 700; line-height: 1.2; margin: 6px 0 0; }
+  .label { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--dim); margin-top: 12px; }
+
+  #idle { text-align: center; color: var(--dim); }
+  #idle .big { font-size: clamp(22px, 3vw, 30px); color: #aab3be; font-weight: 600; }
+  kbd { background: #1c2128; border: 1px solid var(--line); border-bottom-width: 2px; border-radius: 6px; padding: 1px 8px; font: inherit; color: var(--text); }
+
+  footer { border-top: 1px solid var(--line); padding: 10px 20px 14px; display: grid; gap: 8px; }
+  #heard { color: var(--dim); font-size: 14px; min-height: 20px; white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+  #heard b { color: #c4ccd5; font-weight: 500; }
+  #row { display: flex; gap: 10px; align-items: center; }
+  #talk {
+    flex: none; border: 1px solid var(--line); background: #1a1f26; color: var(--text); border-radius: 10px;
+    padding: 9px 16px; font: inherit; font-weight: 600; cursor: pointer; touch-action: none;
+  }
+  #talk.live { background: var(--red); border-color: var(--red); }
+  #typed { flex: 1; background: #10141a; border: 1px solid var(--line); border-radius: 10px; color: var(--text); padding: 9px 12px; font: inherit; user-select: text; }
+  #typed:focus { outline: none; border-color: var(--blue); }
+  #history { display: flex; gap: 8px; flex-wrap: wrap; min-height: 26px; }
+  .chip { font-size: 12px; color: #aeb7c2; border: 1px solid var(--line); border-radius: 999px; padding: 2px 10px; }
+  .chip.r { color: var(--red); border-color: #4a2229; } .chip.c { color: var(--amber); border-color: #4a3a1c; }
+  #err { color: var(--amber); font-size: 13px; }
+</style>
+</head>
+<body>
+<header>
+  <span id="dot" class="dot"></span>
+  <span id="state">Starting</span>
+  <span id="promise">records only while you hold the key &middot; audio is never stored &middot; everything runs on this Mac</span>
+  <span id="counts"></span>
+</header>
+
+<main><div id="stage">
+  <div id="idle">
+    <div class="big">Hold <kbd>Space</kbd> and speak.</div>
+    <p>Name a person, company or idea and its page appears. Contradict a dated claim and you get a receipt.</p>
+  </div>
+</div></main>
+
+<footer>
+  <div id="heard"></div>
+  <div id="row">
+    <button id="talk" type="button">Hold to talk</button>
+    <input id="typed" placeholder="or type what was said and press Return   ( / to focus, Esc to clear the card, Shift+R to reset the session )" autocomplete="off">
+  </div>
+  <div id="history"></div>
+  <div id="err"></div>
+</footer>
+
+<script>
+const TOKEN = "__HOTMIC_TOKEN__";
+const $ = (id) => document.getElementById(id);
+const stage = $("stage"), dot = $("dot"), stateEl = $("state"), heardEl = $("heard"), errEl = $("err");
+let status = { stt: "starting" }, recording = false, pending = 0;
+
+const esc = (s) => String(s ?? "").replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+const secs = (ms) => (ms / 1000).toFixed(1) + " s";
+function ago(sec) { return sec < 90 ? sec + " seconds ago" : sec < 5400 ? Math.round(sec / 60) + " minutes ago" : Math.round(sec / 3600) + " hours ago"; }
+
+function paintState() {
+  dot.className = "dot" + (recording ? " live" : pending ? " think" : status.stt === "ready" ? " ready" : "");
+  stateEl.textContent = recording ? "Listening" : pending ? "Thinking" :
+    status.stt === "ready" ? "Ready" : status.stt === "error" ? "Typed input only" : "Starting";
+  $("talk").classList.toggle("live", recording);
+  $("talk").textContent = recording ? "Release to send" : "Hold to talk";
+  if (status.pages !== undefined) {
+    const r = status.receipts === "off" ? "receipts off" : "receipts on (" + status.receipts + ")";
+    $("counts").textContent = status.pages + " pages · " + status.claims + " dated claims · " + r;
+  }
+  errEl.textContent = status.stt === "error" ? "Speech-to-text is unavailable: " + status.sttError : "";
+}
+
+function show(html, cls) {
+  const el = document.createElement("div");
+  el.className = "card " + (cls || "");
+  el.innerHTML = html;
+  // one card of each kind at a time: a receipt may sit under the page it is about
+  if (!cls) stage.innerHTML = ""; else { $("idle")?.remove(); stage.querySelectorAll(".receipt,.correction").forEach((n) => n.remove()); }
+  stage.appendChild(el);
+}
+
+function chip(text, cls) {
+  const c = document.createElement("span");
+  c.className = "chip " + (cls || ""); c.textContent = text;
+  const h = $("history"); h.prepend(c);
+  while (h.children.length > 8) h.lastChild.remove();
+}
+
+function onEvent(e) {
+  if (e.type === "status") { status = e; return paintState(); }
+  if (e.type === "reset") { stage.innerHTML = '<div id="idle"><div class="big">Session reset.</div><p>Hold <kbd>Space</kbd> and speak.</p></div>'; $("history").innerHTML = ""; heardEl.textContent = ""; return; }
+  if (e.type === "heard") {
+    heardEl.innerHTML = "heard: <b>" + esc(e.text) + "</b>" + (e.sttMs ? " &nbsp;·&nbsp; transcribed in " + secs(e.sttMs) : "");
+    return;
+  }
+  if (e.type === "quiet") {
+    if (e.alreadyShown) heardEl.innerHTML += " &nbsp;·&nbsp; already shown: " + esc(e.alreadyShown.join(", ")) + " (Shift+R starts a fresh session)";
+    return;
+  }
+  if (e.type === "card") {
+    const claims = (e.takes || []).map((t) => "<li>" + (t.since ? '<span class="when">' + esc(t.since) + "</span>" : "") + esc(t.claim) + "</li>").join("");
+    show(
+      '<div class="kicker">' + esc(e.pageType) + '<span class="badge">' + secs(e.ms) + " · no model call</span></div>" +
+      "<h1>" + esc(e.title) + "</h1>" +
+      (e.lede ? '<p class="lede">' + esc(e.lede) + "</p>" : "") +
+      (claims ? '<ul class="claims">' + claims + "</ul>" : "") +
+      (e.lastSeen ? '<div class="seen">Last came up ' + ago(e.lastSeen.agoSec) + ": “" + esc(e.lastSeen.text) + "”</div>" : "") +
+      '<div class="meta"><span>' + esc(e.slug) + ".md</span><span>heard “" + esc(e.heard) + "”" +
+      (e.exact ? "" : " → matched “" + esc(e.matched) + "”") + "</span><span>from your " + (e.origin === "brain" ? "brain" : "pack") + "</span></div>");
+    return chip(e.title);
+  }
+  if (e.type === "receipt") {
+    const mine = e.holder === "you", world = e.kind === "correction";
+    const head = world ? "Correction · your brain says otherwise" : mine ? "Receipt · you said the opposite" : "Receipt · " + e.holder + " said the opposite";
+    show(
+      '<div class="kicker">' + esc(head) + '<span class="badge">' + secs(e.ms) + " · judged on this Mac</span></div>" +
+      '<div class="label">Just now</div><p class="said">“' + esc(e.spoken) + "”</p>" +
+      '<div class="label">' + (world ? "On file" : mine ? "You, on file" : esc(e.holder) + ", on file") + (e.since ? " · " + esc(e.since) : "") + "</div>" +
+      '<p class="stored">' + esc(e.claim) + "</p>" +
+      '<div class="meta"><span>' + esc(e.slug) + "#" + e.row + "</span>" + (e.source ? "<span>source: " + esc(e.source) + "</span>" : "") +
+      "<span>" + esc(e.reason) + "</span><span>confidence " + Math.round(e.confidence * 100) + "%</span></div>",
+      e.kind);
+    return chip((world ? "correction: " : "receipt: ") + e.claim.slice(0, 40), world ? "c" : "r");
+  }
+}
+
+// ---- server link -------------------------------------------------------------
+function connect() {
+  const es = new EventSource("/api/events?token=" + TOKEN);
+  es.onmessage = (m) => { try { onEvent(JSON.parse(m.data)); } catch {} };
+  es.onerror = () => { es.close(); status = { ...status, stt: "starting" }; paintState(); setTimeout(connect, 1500); };
+}
+async function post(path, body, type) {
+  pending++; paintState();
+  try {
+    const r = await fetch(path, { method: "POST", headers: { "x-hotmic-token": TOKEN, ...(type ? { "content-type": type } : {}) }, body });
+    const j = await r.json().catch(() => ({}));
+    if (!r.ok) errEl.textContent = j.error || ("request failed: " + r.status); else if (status.stt !== "error") errEl.textContent = "";
+    return j;
+  } catch (e) { errEl.textContent = "Hot Mic server is not reachable."; }
+  finally { pending--; paintState(); }
+}
+
+// ---- microphone: buffer samples only while the key is held --------------------
+let ctx, stream, node, chunks = [], micReady = false;
+async function ensureMic() {
+  if (micReady) return true;
+  try {
+    stream = await navigator.mediaDevices.getUserMedia({ audio: { channelCount: 1, echoCancellation: true, noiseSuppression: true, autoGainControl: true } });
+    ctx = new (window.AudioContext || window.webkitAudioContext)();
+    const src = ctx.createMediaStreamSource(stream);
+    node = ctx.createScriptProcessor(4096, 1, 1);
+    node.onaudioprocess = (ev) => { if (recording) chunks.push(new Float32Array(ev.inputBuffer.getChannelData(0))); };
+    const mute = ctx.createGain(); mute.gain.value = 0;
+    src.connect(node); node.connect(mute); mute.connect(ctx.destination);
+    micReady = true; return true;
+  } catch (e) { errEl.textContent = "Microphone permission is needed (or use the text box)."; return false; }
+}
+function toWav16k(buffers, inRate) {
+  const len = buffers.reduce((n, b) => n + b.length, 0);
+  const all = new Float32Array(len); let o = 0; for (const b of buffers) { all.set(b, o); o += b.length; }
+  const ratio = inRate / 16000, outLen = Math.floor(len / ratio), pcm = new Int16Array(outLen);
+  for (let i = 0; i < outLen; i++) {       // average each input span: a cheap low-pass before decimating
+    const a = Math.floor(i * ratio), b = Math.min(len, Math.floor((i + 1) * ratio)); let s = 0;
+    for (let k = a; k < b; k++) s += all[k];
+    const v = Math.max(-1, Math.min(1, s / Math.max(1, b - a))); pcm[i] = v < 0 ? v * 0x8000 : v * 0x7fff;
+  }
+  const buf = new ArrayBuffer(44 + pcm.length * 2), v = new DataView(buf);
+  const w = (p, s) => { for (let i = 0; i < s.length; i++) v.setUint8(p + i, s.charCodeAt(i)); };
+  w(0, "RIFF"); v.setUint32(4, 36 + pcm.length * 2, true); w(8, "WAVE"); w(12, "fmt "); v.setUint32(16, 16, true);
+  v.setUint16(20, 1, true); v.setUint16(22, 1, true); v.setUint32(24, 16000, true); v.setUint32(28, 32000, true);
+  v.setUint16(32, 2, true); v.setUint16(34, 16, true); w(36, "data"); v.setUint32(40, pcm.length * 2, true);
+  new Int16Array(buf, 44).set(pcm); return buf;
+}
+async function startTalk() {
+  if (recording || status.stt !== "ready") return;
+  if (!(await ensureMic())) return;
+  if (ctx.state === "suspended") await ctx.resume();
+  chunks = []; recording = true; paintState();
+}
+function stopTalk() {
+  if (!recording) return;
+  recording = false; paintState();
+  const got = chunks; chunks = [];
+  const samples = got.reduce((n, b) => n + b.length, 0);
+  if (samples < ctx.sampleRate * 0.4) return;          // a tap, not speech
+  post("/api/utterance", toWav16k(got, ctx.sampleRate), "audio/wav");
+}
+
+const typed = $("typed");
+addEventListener("keydown", (e) => {
+  if (e.target === typed) { if (e.key === "Enter" && typed.value.trim()) { post("/api/say", JSON.stringify({ text: typed.value }), "application/json"); typed.value = ""; } if (e.key === "Escape") typed.blur(); return; }
+  if (e.code === "Space" && !e.repeat) { e.preventDefault(); startTalk(); }
+  else if (e.key === "/") { e.preventDefault(); typed.focus(); }
+  else if (e.key === "Escape") { stage.innerHTML = '<div id="idle"><div class="big">Hold <kbd>Space</kbd> and speak.</div></div>'; }
+  else if (e.key.toLowerCase() === "r" && e.shiftKey && !e.metaKey && !e.ctrlKey) post("/api/reset");
+});
+addEventListener("keyup", (e) => { if (e.code === "Space" && e.target !== typed) { e.preventDefault(); stopTalk(); } });
+addEventListener("blur", stopTalk);
+const talk = $("talk");
+talk.addEventListener("pointerdown", (e) => { e.preventDefault(); talk.setPointerCapture(e.pointerId); startTalk(); });
+talk.addEventListener("pointerup", stopTalk); talk.addEventListener("pointercancel", stopTalk);
+
+connect(); paintState();
+</script>
+</body>
+</html>

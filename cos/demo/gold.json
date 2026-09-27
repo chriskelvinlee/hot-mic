@@ -1,0 +1,380 @@
+{
+  "labeler": "Independent grader acting as a veteran chief of staff to Chris; labels formed only from day.json and the cos-demo pack pages (synthetic demo day, 2026-09-24).",
+  "items": [
+    {
+      "id": "g01",
+      "utterances": [
+        "u002"
+      ],
+      "route": "you",
+      "summary": "Kestrel board meeting is Monday 9/28 and you have not opened the deck yet. You want it read before the weekend, not Sunday night.",
+      "would_do": "Pull the deck tonight and block 90 minutes Friday afternoon for you to read it. Have an agent write a one-page pre-read (key numbers, open questions, and a note that Dev may raise a sales leadership change). The reading and the judgment are yours; nobody can do them for you.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g02",
+      "utterances": [
+        "u003"
+      ],
+      "route": "precedent",
+      "summary": "The dentist moved your appointment to Tuesday at 10:00, inside the Tuesday 9:30 to 11:30 investment committee block, the same IC where Fernhill is up.",
+      "would_do": "Standing rule: nothing goes in the IC block, personal appointments included. Call the dentist and rebook outside Tuesday 9:30 to 11:30, put the new time on your calendar and tell you after. No question needed.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g03",
+      "utterances": [
+        "u004"
+      ],
+      "route": "drop",
+      "summary": "Someday idea: write a book about decision fatigue for investors.",
+      "would_do": "No task. At most a line in an ideas note; keep it off every list.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g04",
+      "utterances": [
+        "u005"
+      ],
+      "route": "drop",
+      "summary": "Morning reminder to text Sam to confirm the 2pm.",
+      "would_do": "Already moot: Sam joined the 14:00 build session on time. Do not create a task after the fact.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g05",
+      "utterances": [
+        "u006"
+      ],
+      "route": "drop",
+      "summary": "Complaint about the coffee at the usual cafe.",
+      "would_do": "No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g06",
+      "utterances": [
+        "u007",
+        "u043",
+        "u044",
+        "u085"
+      ],
+      "route": "drop",
+      "summary": "Send Northwind's Kestrel bridge wire today ($150k committed). You told Dev it goes out this afternoon, and at 21:01 you confirmed it went out at 3pm with a confirmation.",
+      "would_do": "Already handled. Do not raise it as a to-do; just file the wire confirmation with the Kestrel bridge records. A naive note-taker would flag this as an urgent money item.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g07",
+      "utterances": [
+        "u008"
+      ],
+      "route": "drop",
+      "summary": "Annual wish to learn to sail.",
+      "would_do": "No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g08",
+      "utterances": [
+        "u009",
+        "u010",
+        "u018",
+        "u019",
+        "u030",
+        "u087"
+      ],
+      "route": "you",
+      "summary": "Fernhill memo comments: you promised Maya comments by 5pm today and missed it. IC is Tuesday, and Maya's memos go to IC only after your comments are in.",
+      "would_do": "Put the memo first on your Friday morning with a 45-minute block. Send Maya a short note at 7:30 resetting the time (for example, comments by 10am Friday) so Maya is not left waiting. Remind you of the one note you already gave (market section too long). Also flag that Fernhill builds warehouse robots like Kestrel, where you hold the board seat, so any overlap should be addressed before IC. The comments themselves are yours.",
+      "severity_if_missed": "high"
+    },
+    {
+      "id": "g09",
+      "utterances": [
+        "u011",
+        "u012",
+        "u013",
+        "u037",
+        "u038"
+      ],
+      "route": "precedent",
+      "summary": "Arlo Vance of Quarry Labs asked for a first meeting Friday at 2pm because he flies home Saturday.",
+      "would_do": "Standing rules: no first meetings on Fridays, offer Tuesday or Thursday, first meetings are 30 minutes by video. Tell Maya to decline Friday and offer 30-minute video slots Tuesday (outside 9:30 to 11:30 IC) or Thursday; video removes the travel problem. Your 'Friday. Hm.' was not an override, so do not ask.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g10",
+      "utterances": [
+        "u014",
+        "u015"
+      ],
+      "route": "precedent",
+      "summary": "Nina at Fernhill wants an intro to Dev at Kestrel to compare notes on warehouse robot pilots. You said yes, and that Dev has a lot going on this week.",
+      "would_do": "Standing rules: every intro is double opt-in, and non-urgent intro asks to a portfolio founder are held during their board week. Hold until after Monday's Kestrel board meeting, then send Dev a short forwardable blurb and connect only if Dev says yes. The blurb should say plainly that Fernhill also builds warehouse robots and is in Northwind's pipeline, so Dev can judge the overlap. Tell Maya the timing so Nina hears back.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g11",
+      "utterances": [
+        "u016",
+        "u017"
+      ],
+      "route": "precedent",
+      "summary": "Cascadia Seed Summit in Boise invited you to a fireside chat on October 15, audience about 80. Maya said she would do it.",
+      "would_do": "Standing rules: decline audiences under 200 unless a portfolio founder shares the stage, and suggest Maya only if Maya has said she wants it, which she just did. Decline for you with thanks and offer Maya as Northwind's speaker; loop Maya in.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g12",
+      "utterances": [
+        "u020"
+      ],
+      "route": "drop",
+      "summary": "Maya started to mention something, then said never mind, not important.",
+      "would_do": "No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g13",
+      "utterances": [
+        "u021"
+      ],
+      "route": "drop",
+      "summary": "Jordan: close the door, the espresso machine is screaming again.",
+      "would_do": "No task; the office handles the machine.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g14",
+      "utterances": [
+        "u023",
+        "u024",
+        "u025",
+        "u026",
+        "u027",
+        "u028",
+        "u033",
+        "u035",
+        "u036",
+        "u053",
+        "u054"
+      ],
+      "route": "drop",
+      "summary": "Jordan's recurring CRM rant: rip it out, build our own over a weekend, maybe sell it. Priya deferred it: Jordan writes it up and the partners maybe look in Q1. Dev teased you about it at lunch.",
+      "would_do": "Jordan owns the write-up. No task for you; if the write-up arrives, it goes on a Q1 partner agenda, not this week.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g15",
+      "utterances": [
+        "u029"
+      ],
+      "route": "drop",
+      "summary": "Halcyon CEO reference call.",
+      "would_do": "Priya owns it and said nobody else needs to be on it. No task for you.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g16",
+      "utterances": [
+        "u031"
+      ],
+      "route": "drop",
+      "summary": "Jordan's aside that the fund dropped a follow-up with 'the battery people'.",
+      "would_do": "Unnamed company, in the past, used as an argument about the CRM. The pipeline is Maya's. No task for you; at most Maya can check it at the next pipeline review.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g17",
+      "utterances": [
+        "u032",
+        "u088"
+      ],
+      "route": "you",
+      "summary": "Tidewater got a priced-round term sheet Wednesday night, exploding in 72 hours (about Saturday night). Northwind's pro-rata would be about $400k. Maya raised it in the middle of Jordan's CRM rant and it got talked over; at 21:05 you said you do not know what is going on with Tidewater.",
+      "would_do": "Standing rules: pro-rata above $250k needs your call and a partner vote, and above the cap you read the full term sheet, not a summary. Put this first for Friday: get the full term sheet to you by 7:30, confirm the exact deadline and lead investor, book a partner call with Jordan and Priya on Friday to vote, and have an agent prepare the facts (about 6% ownership, pro-rata right from the seed side letter, amount, key terms) without a recommendation. You decide.",
+      "severity_if_missed": "high"
+    },
+    {
+      "id": "g18",
+      "utterances": [
+        "u039"
+      ],
+      "route": "drop",
+      "summary": "Building email: towing in the back lot on Fridays now.",
+      "would_do": "No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g19",
+      "utterances": [
+        "u045",
+        "u046",
+        "u047",
+        "u048",
+        "u049",
+        "u050"
+      ],
+      "route": "you",
+      "summary": "Dev is thinking about letting Greg, the sales leader, go before Monday's board meeting: pipeline flat two quarters, half the team paid on bookings rather than collections, and no formally agreed plan. You asked Dev to send the comp plan and said you would look at it.",
+      "would_do": "Keep it confidential and out of shared notes. Make sure the comp plan is in hand before your Friday morning call with Dev, and prepare one page of questions (was there an agreed plan, is the comp design part of the problem, timing and process before the board). This is the one-on-one-before-the-board conversation you want founders to have with you; your view to Dev is yours to give.",
+      "severity_if_missed": "high"
+    },
+    {
+      "id": "g20",
+      "utterances": [
+        "u051",
+        "u052"
+      ],
+      "route": "precedent",
+      "summary": "Dev asked for an intro to Harborline Logistics, which is piloting robots in two warehouses. You know Renee Park, their COO, and said yes.",
+      "would_do": "Standing rule: double opt-in. Draft and send Renee a short ask with a forwardable blurb on Kestrel and the pilot interest, connect Dev only after Renee says yes, and tell Dev it is in motion. The board-week hold does not apply: this is Dev's own ask, not an ask to Dev.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g21",
+      "utterances": [
+        "u056",
+        "u057",
+        "u058",
+        "u059"
+      ],
+      "route": "agent",
+      "summary": "Hot Mic receipt bug: reloading the page mid-session fires the same red receipt again as if new. Likely cause: the client keeps the fired list in memory and the server replays the last event on socket reconnect.",
+      "would_do": "Hand it to a coding agent with Sam's repro: persist the fired-claim list per session across reloads, and dedupe or stop the replayed event on reconnect; add a reload regression test. Open a change for Sam and you to review; nothing merged without review.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g22",
+      "utterances": [
+        "u060",
+        "u061"
+      ],
+      "route": "precedent",
+      "summary": "Sam asked whether to switch to OpenAI embeddings because bge-m3 on the laptop is slow on the big pack. You said you would think about it.",
+      "would_do": "Your recorded decision is to run GBrain embeddings locally on your Mac with Ollama bge-m3, and a new vendor would come to you anyway. Tell Sam the standing decision holds and embeddings stay local; offer an agent to speed up the big pack locally (embed once and cache, re-embed only changed pages). Give you a one-line FYI in case you want to reopen it; do not put it on the decision list.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g23",
+      "utterances": [
+        "u062",
+        "u063"
+      ],
+      "route": "precedent",
+      "summary": "Apple developer account renews next week for $99; Sam asked to put it on the card.",
+      "would_do": "Standing rule: renewals under $200 for tools already in use are pre-approved. Tell Sam yes and log it in the build notes.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g24",
+      "utterances": [
+        "u064",
+        "u065"
+      ],
+      "route": "drop",
+      "summary": "Sam: add Slack someday so receipts post to a channel.",
+      "would_do": "Someday idea, and you answered 'someday'. No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g25",
+      "utterances": [
+        "u066"
+      ],
+      "route": "drop",
+      "summary": "Sam is going to fight the iOS build, which cannot find the simulator.",
+      "would_do": "Sam owns it. No task for you.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g26",
+      "utterances": [
+        "u070",
+        "u071",
+        "u072"
+      ],
+      "route": "agent",
+      "summary": "Helen Marsh (Cedar Point) needs the Q3 LP letter by October 10 for a committee meeting on October 12, with marks and DPI up front. Last quarter's letter was late and Helen was asked about it. You said 'the tenth'.",
+      "would_do": "The standing format already leads with marks and DPI, so nothing new to decide. Set an internal ship date of October 8: Maya pulls the numbers by October 1, an agent drafts in the standing format (marks and DPI first, one short paragraph per company that moved), you write the opening and approve the whole letter, and it goes to all LPs no later than October 9. Put the checkpoints on your calendar.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g27",
+      "utterances": [
+        "u073",
+        "u074"
+      ],
+      "route": "precedent",
+      "summary": "Helen heard Tidewater is raising and would like to co-invest if Northwind is not taking its full allocation. You said you would check and get back to Helen.",
+      "would_do": "Standing rule: no LP gets a co-invest offer until the partnership has decided its own allocation. Make no offer and give no hint yet. Tie it to the Tidewater decision; once the partners vote, draft a reply to Helen for you to approve, since you owe Helen an answer.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g28",
+      "utterances": [
+        "u075"
+      ],
+      "route": "drop",
+      "summary": "Helen: Cedar Point is likely in for Fund Three, nothing formal.",
+      "would_do": "Log it as a soft signal in the Fund III notes. No task and no follow-up now.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g29",
+      "utterances": [
+        "u076",
+        "u077"
+      ],
+      "route": "precedent",
+      "summary": "Linh asked whether you and Alex are coming to dinner at the Nguyens' on October 3 and wants to know by tomorrow. You said yes, you are going.",
+      "would_do": "Decision already made and consistent with your rule of confirming social plans Alex has agreed to. RSVP yes to Linh by Friday and put it on the family calendar.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g30",
+      "utterances": [
+        "u078"
+      ],
+      "route": "precedent",
+      "summary": "Theo's permission slip for the aquarium trip is due Friday in the school app, and you need to sign it.",
+      "would_do": "Standing rule: school paperwork gets prepared for you and you sign it yourself. Open the school app, fill everything in, and put it in front of you Friday morning to sign before the deadline.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g31",
+      "utterances": [
+        "u079",
+        "u080",
+        "u081",
+        "u082"
+      ],
+      "route": "precedent",
+      "summary": "Dev called at 6:33pm wanting to talk tonight, almost certainly about Greg. You said you would move Dev to the morning.",
+      "would_do": "Standing rule: weeknights after 6:30pm are family time and non-emergency calls move to the next morning, 7:30 at the earliest. Reply to Dev tonight offering 7:30 Friday, book it, and have the comp plan and Greg notes ready. If Dev says it truly cannot wait, treat it as an emergency and bring it to you.",
+      "severity_if_missed": "medium"
+    },
+    {
+      "id": "g32",
+      "utterances": [
+        "u083",
+        "u084"
+      ],
+      "route": "drop",
+      "summary": "Alex: we should repaint the kitchen, that green.",
+      "would_do": "Someday house idea you both agreed to 'at some point'. No task.",
+      "severity_if_missed": "low"
+    },
+    {
+      "id": "g33",
+      "utterances": [
+        "u086"
+      ],
+      "route": "drop",
+      "summary": "Late-night venting about saying yes to too many coffees, four this week.",
+      "would_do": "No task tonight. If it keeps coming up, offer a weekly coffee cap as a possible new rule at the weekly review; that would be your call.",
+      "severity_if_missed": "low"
+    }
+  ]
+}

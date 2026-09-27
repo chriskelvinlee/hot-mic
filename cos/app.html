@@ -1,0 +1,2421 @@
+<title>Hot Mic Chief of Staff</title>
+<style>
+@import url("https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=IBM+Plex+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Source+Serif+4:ital,opsz,wght@0,8..60,400;0,8..60,600;1,8..60,400&display=swap");
+
+:root {
+  color-scheme: dark;
+  --bg: #0b0d10;
+  --panel: #14181d;
+  --inset: #0f1216;
+  --line: #252b33;
+  --line-2: #343c47;
+  --text: #eef1f4;
+  --text-2: #c3cbd4;
+  --dim: #8a94a1;
+  --faint: #5f6975;
+  --live: #35d07f;
+  --live-bg: rgba(53, 208, 127, 0.12);
+  --live-line: rgba(53, 208, 127, 0.45);
+  --you: #ff4d5e;
+  --you-bg: rgba(255, 77, 94, 0.13);
+  --you-line: rgba(255, 77, 94, 0.45);
+  --on-you: #17070a;
+  --prec: #ffb02e;
+  --prec-bg: rgba(255, 176, 46, 0.12);
+  --prec-line: rgba(255, 176, 46, 0.42);
+  --agent: #6cb4ff;
+  --agent-bg: rgba(108, 180, 255, 0.12);
+  --agent-line: rgba(108, 180, 255, 0.42);
+  --on-agent: #07121f;
+  --drop: #8a94a1;
+  --drop-bg: rgba(138, 148, 161, 0.10);
+  --drop-line: rgba(138, 148, 161, 0.42);
+  --focus: #6cb4ff;
+  --btn-bg: #1a1f26;
+  --btn-strong-bg: #eef1f4;
+  --btn-strong-text: #0b0d10;
+  --sans: "IBM Plex Sans", -apple-system, BlinkMacSystemFont, "Segoe UI", "Helvetica Neue", Arial, sans-serif;
+  --mono: "IBM Plex Mono", ui-monospace, "SF Mono", Menlo, Consolas, "Liberation Mono", monospace;
+  --serif: "Source Serif 4", "Source Serif Pro", Georgia, "Times New Roman", serif;
+}
+@media (prefers-color-scheme: light) {
+  :root:not([data-theme="dark"]) {
+    color-scheme: light;
+    --bg: #f3f4f6;
+    --panel: #ffffff;
+    --inset: #f8f9fa;
+    --line: #dde1e6;
+    --line-2: #c5ccd4;
+    --text: #0f1318;
+    --text-2: #2c343d;
+    --dim: #5a6470;
+    --faint: #8a939e;
+    --live: #12844a;
+    --live-bg: rgba(18, 132, 74, 0.10);
+    --live-line: rgba(18, 132, 74, 0.40);
+    --you: #cc1f36;
+    --you-bg: rgba(204, 31, 54, 0.08);
+    --you-line: rgba(204, 31, 54, 0.38);
+    --on-you: #ffffff;
+    --prec: #8f5600;
+    --prec-bg: rgba(214, 140, 0, 0.12);
+    --prec-line: rgba(143, 86, 0, 0.38);
+    --agent: #1a62b3;
+    --agent-bg: rgba(26, 98, 179, 0.08);
+    --agent-line: rgba(26, 98, 179, 0.38);
+    --on-agent: #ffffff;
+    --drop: #66707c;
+    --drop-bg: rgba(102, 112, 124, 0.08);
+    --drop-line: rgba(102, 112, 124, 0.40);
+    --focus: #1a62b3;
+    --btn-bg: #ffffff;
+    --btn-strong-bg: #0f1318;
+    --btn-strong-text: #ffffff;
+  }
+}
+:root[data-theme="light"] {
+  color-scheme: light;
+  --bg: #f3f4f6;
+  --panel: #ffffff;
+  --inset: #f8f9fa;
+  --line: #dde1e6;
+  --line-2: #c5ccd4;
+  --text: #0f1318;
+  --text-2: #2c343d;
+  --dim: #5a6470;
+  --faint: #8a939e;
+  --live: #12844a;
+  --live-bg: rgba(18, 132, 74, 0.10);
+  --live-line: rgba(18, 132, 74, 0.40);
+  --you: #cc1f36;
+  --you-bg: rgba(204, 31, 54, 0.08);
+  --you-line: rgba(204, 31, 54, 0.38);
+  --on-you: #ffffff;
+  --prec: #8f5600;
+  --prec-bg: rgba(214, 140, 0, 0.12);
+  --prec-line: rgba(143, 86, 0, 0.38);
+  --agent: #1a62b3;
+  --agent-bg: rgba(26, 98, 179, 0.08);
+  --agent-line: rgba(26, 98, 179, 0.38);
+  --on-agent: #ffffff;
+  --drop: #66707c;
+  --drop-bg: rgba(102, 112, 124, 0.08);
+  --drop-line: rgba(102, 112, 124, 0.40);
+  --focus: #1a62b3;
+  --btn-bg: #ffffff;
+  --btn-strong-bg: #0f1318;
+  --btn-strong-text: #ffffff;
+}
+
+*, *::before, *::after { box-sizing: border-box; }
+[hidden] { display: none !important; }
+html { -webkit-text-size-adjust: 100%; }
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font: 400 15px/1.55 var(--sans);
+  -webkit-font-smoothing: antialiased;
+}
+img { max-width: 100%; }
+a { color: inherit; text-decoration-color: var(--line-2); text-underline-offset: 3px; }
+a:hover { text-decoration-color: currentColor; }
+:focus-visible { outline: 2px solid var(--focus); outline-offset: 2px; }
+.u-btn:focus-visible, .ri:focus-visible, .opt:focus-visible, .ex:focus-visible { outline-offset: -2px; }
+button { font: inherit; color: inherit; }
+code, pre, .mono { font-family: var(--mono); }
+.mono, .num, time, table, .big, .lg-n, .tile-v, .clock { font-variant-numeric: tabular-nums; }
+.sr-only { position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; border: 0; }
+.dim { color: var(--dim); }
+
+.wrap { max-width: 1280px; margin: 0 auto; padding-inline: clamp(16px, 3.5vw, 40px); padding-block: 28px 56px; }
+
+/* Labels */
+.kicker, .side-k, .tile-k, .xsec h4, .dfacts dt, .ap-k, .old-k {
+  font: 600 11px/1.3 var(--sans);
+  letter-spacing: 0.11em;
+  text-transform: uppercase;
+  color: var(--dim);
+}
+
+/* Buttons */
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 9px 14px;
+  border: 1px solid var(--line-2); border-radius: 6px;
+  background: var(--btn-bg); color: var(--text);
+  font: 600 14px/1 var(--sans);
+  cursor: pointer;
+}
+.btn:hover { border-color: var(--dim); }
+.btn:disabled { opacity: 0.55; cursor: default; }
+.btn-strong { background: var(--btn-strong-bg); color: var(--btn-strong-text); border-color: var(--btn-strong-bg); }
+.btn-strong:hover { border-color: var(--btn-strong-bg); opacity: 0.9; }
+.btn-quiet { background: transparent; }
+
+/* Route chips: color plus shape plus label */
+.rc {
+  display: inline-flex; align-items: center; gap: 5px;
+  padding: 3px 6px 3px 5px;
+  border: 1px solid; border-radius: 2px;
+  font: 600 10.5px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase;
+  white-space: nowrap; vertical-align: middle;
+}
+.rc::before { content: ""; width: 7px; height: 7px; flex: none; }
+.rc-you { background: var(--you); border-color: var(--you); color: var(--on-you); }
+.rc-you::before { border-radius: 50%; background: currentColor; }
+.rc-precedent { color: var(--prec); border-color: var(--prec-line); background: var(--prec-bg); }
+.rc-precedent::before { background: currentColor; }
+.rc-agent { color: var(--agent); border-color: var(--agent-line); background: var(--agent-bg); }
+.rc-agent::before { background: currentColor; clip-path: polygon(0 0, 100% 50%, 0 100%); }
+.rc-drop { color: var(--drop); border-color: var(--drop-line); border-style: dashed; background: transparent; }
+.rc-drop::before { border: 1.5px solid currentColor; border-radius: 50%; }
+.rc-missing { color: var(--you); border-color: var(--you-line); border-style: dashed; background: transparent; }
+.rc-missing::before { border: 1.5px solid currentColor; }
+
+.lane, .tag {
+  display: inline-flex; align-items: center;
+  padding: 3px 7px;
+  border: 1px solid var(--line-2); border-radius: 2px;
+  font: 500 12px/1.1 var(--sans); color: var(--text-2);
+  white-space: nowrap; vertical-align: middle;
+}
+.tag-high { color: var(--you); border-color: var(--you-line); }
+.tag-gate { color: var(--text); border-color: var(--text-2); font-weight: 600; }
+.real { color: var(--text); border-color: var(--text-2); font-weight: 600; }
+.mark-new { color: var(--prec); border-color: var(--prec-line); }
+.mark-applied { color: var(--text-2); border-style: dashed; }
+
+/* Header */
+.top { display: grid; gap: 10px; padding-block: 4px 26px; }
+.top-row { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; }
+.brand { margin: 0; font: 600 20px/1.2 var(--sans); letter-spacing: -0.005em; }
+.brand .slash { color: var(--faint); font-weight: 400; margin-inline: 3px; }
+.onair {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 6px 10px 6px 8px;
+  border: 1px solid var(--live-line); border-radius: 2px; background: var(--live-bg);
+  font: 600 11px/1 var(--sans); letter-spacing: 0.12em; text-transform: uppercase; color: var(--live);
+}
+.onair .dot { width: 8px; height: 8px; border-radius: 50%; background: var(--live); animation: pulse 2.4s ease-out infinite; }
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 var(--live-line); }
+  70% { box-shadow: 0 0 0 7px transparent; }
+  100% { box-shadow: 0 0 0 0 transparent; }
+}
+.dateline { margin-left: auto; font: 500 13px/1.3 var(--mono); color: var(--dim); }
+.thesis {
+  margin: 8px 0 0; max-width: 36em;
+  font: 400 clamp(20px, 2.3vw, 27px)/1.32 var(--sans); letter-spacing: -0.01em;
+  color: var(--text); text-wrap: balance;
+}
+.capture { margin: 0; max-width: 90ch; font-size: 13px; color: var(--dim); }
+.capture b { color: var(--text-2); font-weight: 500; }
+
+/* Funnel */
+.funnel {
+  display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr);
+  gap: 28px 56px;
+  padding-block: 28px 30px;
+  border-top: 1px solid var(--line);
+}
+.contrast { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: stretch; }
+.side { display: grid; gap: 8px; align-content: start; padding-right: 24px; min-width: 0; }
+.side + .side { border-left: 1px solid var(--line); padding: 0 0 0 24px; }
+.big { font: 600 clamp(64px, 8.5vw, 108px)/0.9 var(--sans); letter-spacing: -0.035em; }
+.old .big { color: var(--dim); }
+.new .big { color: var(--you); }
+.side-cap { font: 500 17px/1.3 var(--sans); color: var(--text); }
+.side-sub { font-size: 13px; line-height: 1.45; color: var(--dim); }
+.flow { display: grid; gap: 14px; align-content: start; min-width: 0; }
+.steps { margin: 0; display: flex; flex-wrap: wrap; align-items: baseline; gap: 4px 12px; font-size: 14px; color: var(--dim); }
+.steps b { font: 600 24px/1 var(--sans); color: var(--text); margin-right: 5px; font-variant-numeric: tabular-nums; }
+.steps .arrow { color: var(--faint); }
+.bar { display: flex; gap: 2px; height: 18px; }
+.bar.is-empty { background: var(--drop-bg); }
+.seg { flex: 0 1 0; min-width: 6px; transition: flex-grow 0.3s ease; }
+.seg-you { background: var(--you); }
+.seg-precedent { background: var(--prec); }
+.seg-agent { background: var(--agent); }
+.seg-drop { background: repeating-linear-gradient(135deg, var(--drop) 0 2px, transparent 2px 6px); box-shadow: inset 0 0 0 1px var(--drop-line); }
+.legend { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px; }
+.lg a { display: grid; gap: 7px; justify-items: start; text-decoration: none; padding-block: 4px; }
+.lg-n { font: 600 30px/1 var(--sans); }
+.lg-you .lg-n { color: var(--you); }
+.lg-l { font-size: 13px; line-height: 1.3; color: var(--text-2); }
+.lg a:hover .lg-l { text-decoration: underline; text-underline-offset: 3px; }
+.precept { margin: 2px 0 0; font-size: 14px; color: var(--text-2); }
+.eod {
+  grid-column: 1 / -1;
+  display: grid; grid-template-columns: 200px minmax(0, 1fr); gap: 8px 40px;
+  padding-top: 22px; border-top: 1px dashed var(--line);
+}
+.eod p { margin: 0; max-width: 70ch; font: 400 18px/1.55 var(--serif); color: var(--text-2); }
+
+/* Sections */
+.sec { margin-top: 44px; padding-top: 28px; border-top: 1px solid var(--line); }
+.sec-h { display: flex; flex-wrap: wrap; align-items: flex-end; justify-content: space-between; gap: 14px 28px; margin-bottom: 22px; }
+.sec-h > div:first-child { min-width: 0; max-width: 72ch; }
+.sec h2 { margin: 0; font: 600 25px/1.2 var(--sans); letter-spacing: -0.01em; text-wrap: balance; display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.sec h2 .rc { font-size: 11px; }
+.sec-sub { margin: 7px 0 0; font-size: 14px; color: var(--dim); }
+h3.sub-h { margin: 30px 0 12px; font: 600 17px/1.3 var(--sans); }
+.empty-lg { margin: 0; padding: 18px 0; font-size: 15px; color: var(--dim); border-top: 1px dashed var(--line); border-bottom: 1px dashed var(--line); }
+
+/* Desk */
+.replay { display: flex; flex-wrap: wrap; align-items: center; gap: 8px; }
+.segctl { display: inline-flex; border: 1px solid var(--line-2); border-radius: 6px; overflow: hidden; }
+.segctl button { border: 0; background: var(--btn-bg); padding: 9px 11px; font: 600 13px/1 var(--mono); color: var(--dim); cursor: pointer; }
+.segctl button + button { border-left: 1px solid var(--line-2); }
+.segctl button[aria-pressed="true"] { background: var(--btn-strong-bg); color: var(--btn-strong-text); }
+.clock { font: 500 13px/1 var(--mono); color: var(--dim); padding-left: 4px; }
+.clock.on { color: var(--live); }
+.desk { display: grid; grid-template-columns: minmax(0, 5fr) minmax(0, 6fr); gap: 24px; align-items: start; }
+.transcript {
+  position: relative;
+  max-height: min(76vh, 800px); overflow-y: auto; overscroll-behavior: contain;
+  border: 1px solid var(--line); background: var(--inset);
+}
+.ctx + .ctx { border-top: 1px solid var(--line); }
+.ctx-h {
+  position: sticky; top: 0; z-index: 1;
+  display: grid; gap: 3px;
+  padding: 11px 14px 10px;
+  background: var(--inset); border-bottom: 1px solid var(--line);
+}
+.ctx-line { display: flex; flex-wrap: wrap; align-items: center; gap: 5px 10px; font-size: 12px; color: var(--dim); }
+.ctx-time { color: var(--text-2); }
+.ctx-kind { font-weight: 600; font-size: 11px; letter-spacing: 0.1em; text-transform: uppercase; }
+.ctx-title { margin: 0; font: 600 15px/1.3 var(--sans); }
+.ctx-people, .ctx-consent { margin: 0; font-size: 12px; line-height: 1.45; color: var(--dim); }
+.ctx-consent::before { content: ""; display: inline-block; width: 6px; height: 6px; margin-right: 6px; border-radius: 50%; background: var(--live); vertical-align: 1px; }
+.ulist { list-style: none; margin: 0; padding: 6px 0; }
+.u-btn {
+  display: grid; grid-template-columns: 44px minmax(0, 1fr); gap: 10px;
+  width: 100%; padding: 6px 14px;
+  border: 0; background: none; text-align: left;
+  font: 400 13px/1.55 var(--mono); color: var(--text-2);
+}
+button.u-btn { cursor: pointer; }
+button.u-btn:hover { background: var(--drop-bg); }
+.u-t { color: var(--faint); }
+.u-who { color: var(--text); font-weight: 600; }
+.u-text { overflow-wrap: anywhere; }
+.u-ref .u-text { color: var(--text); }
+.u-chips { display: inline-flex; flex-wrap: wrap; gap: 4px; margin-left: 8px; vertical-align: 1px; }
+.u.hl .u-btn { background: var(--agent-bg); }
+.u.hl[data-hl="you"] .u-btn { background: var(--you-bg); }
+.u.hl[data-hl="precedent"] .u-btn { background: var(--prec-bg); }
+.u.hl[data-hl="drop"] .u-btn { background: var(--drop-bg); }
+.u.hl .u-t { color: var(--text); font-weight: 600; }
+.routes-col { display: grid; gap: 16px; min-width: 0; }
+.routes { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 22px 22px; }
+.rbox { min-width: 0; }
+.rbox-h { display: flex; align-items: center; gap: 8px; padding-bottom: 8px; border-bottom: 1px solid var(--line-2); }
+.rbox-name { font: 600 14px/1.25 var(--sans); }
+.rbox-n { margin-left: auto; font: 600 20px/1 var(--sans); font-variant-numeric: tabular-nums; }
+.rbox-you .rbox-n { color: var(--you); }
+.rbox-budget { font-size: 12px; color: var(--dim); padding-top: 6px; }
+.rlist { list-style: none; margin: 0; padding: 0; max-height: 300px; overflow-y: auto; }
+.ri {
+  display: grid; grid-template-columns: 42px minmax(0, 1fr); gap: 8px;
+  width: 100%; padding: 8px 6px;
+  border: 0; border-bottom: 1px solid var(--line); background: none;
+  text-align: left; cursor: pointer;
+}
+.ri:hover { background: var(--drop-bg); }
+.ri[aria-pressed="true"] { background: var(--agent-bg); box-shadow: inset 0 0 0 1px var(--agent-line); }
+.ri[data-route="you"][aria-pressed="true"] { background: var(--you-bg); box-shadow: inset 0 0 0 1px var(--you-line); }
+.ri[data-route="precedent"][aria-pressed="true"] { background: var(--prec-bg); box-shadow: inset 0 0 0 1px var(--prec-line); }
+.ri[data-route="drop"][aria-pressed="true"] { background: var(--drop-bg); box-shadow: inset 0 0 0 1px var(--drop-line); }
+.ri-t { padding-top: 2px; font: 400 12px/1.35 var(--mono); color: var(--dim); }
+.ri-title { display: block; font: 500 14px/1.35 var(--sans); color: var(--text); overflow-wrap: anywhere; }
+.rbox-drop .ri-title { color: var(--text-2); }
+.ri-meta { display: block; margin-top: 2px; font-size: 12px; color: var(--dim); overflow-wrap: anywhere; }
+.rempty { margin: 10px 0 0; font-size: 13px; color: var(--dim); }
+.inspector { display: grid; gap: 8px; align-content: start; min-height: 110px; padding: 14px 16px; border: 1px solid var(--line); }
+.insp-h { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 8px; }
+.insp-id { font: 500 12px/1 var(--mono); color: var(--faint); }
+.insp-t { margin: 0; font: 600 16px/1.35 var(--sans); overflow-wrap: anywhere; }
+.insp-why { margin: 0; font-size: 14px; color: var(--text-2); }
+.insp-x { margin: 0; font-size: 13px; color: var(--dim); overflow-wrap: anywhere; }
+.insp-link { font-size: 13px; font-weight: 600; justify-self: start; }
+.insp-empty { margin: 0; font-size: 14px; color: var(--dim); }
+
+/* Quote */
+.quote { margin: 0; padding: 10px 12px; background: var(--inset); border: 1px solid var(--line); font: 400 13px/1.55 var(--mono); color: var(--text-2); overflow-wrap: anywhere; }
+.q-t { color: var(--faint); margin-right: 8px; }
+.q-who { color: var(--text); font-weight: 600; margin-right: 8px; }
+.q-s { color: var(--text); }
+
+/* Cards: only decision, dispatch and live result */
+.card { display: grid; gap: 14px; align-content: start; min-width: 0; padding: 20px; background: var(--panel); border: 1px solid var(--line); border-radius: 8px; }
+.dgrid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 360px), 1fr)); gap: 18px; align-items: start; }
+.dcard { border-color: var(--you-line); }
+.dmeta { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.q { margin: 0; font: 600 22px/1.3 var(--serif); letter-spacing: -0.005em; text-wrap: balance; overflow-wrap: anywhere; }
+.opts-hint { margin: 0; font-size: 13px; color: var(--dim); }
+.opts { display: grid; gap: 8px; }
+.opt {
+  display: grid; gap: 4px;
+  padding: 10px 12px;
+  border: 1px solid var(--line-2); border-radius: 6px; background: var(--btn-bg);
+  text-align: left; cursor: pointer;
+}
+.opt:hover { border-color: var(--text-2); }
+.opt.is-rec { border-color: var(--you-line); box-shadow: inset 0 0 0 1px var(--you-line); }
+.opt-top { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 10px; }
+.opt-l { font: 600 15px/1.35 var(--sans); color: var(--text); overflow-wrap: anywhere; }
+.rec { padding: 3px 5px; border: 1px solid var(--you-line); border-radius: 2px; font: 600 10.5px/1 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--you); }
+.opt-tr { font-size: 13px; line-height: 1.45; color: var(--dim); overflow-wrap: anywhere; }
+.dfacts { margin: 0; display: grid; gap: 2px; }
+.dfacts dt { margin-top: 8px; }
+.dfacts dt:first-child { margin-top: 0; }
+.dfacts dd { margin: 0; font-size: 14px; color: var(--text-2); overflow-wrap: anywhere; }
+.decided { display: grid; gap: 10px; }
+.dec-l { margin: 0; display: flex; flex-wrap: wrap; align-items: center; gap: 8px; font: 600 17px/1.35 var(--sans); }
+.dec-note { margin: 0; font-size: 13px; color: var(--dim); overflow-wrap: anywhere; }
+.dec-note code { color: var(--text-2); font-size: 12px; }
+.code-scroll { overflow-x: auto; max-width: 100%; }
+.take-row { margin: 0; padding: 10px 12px; background: var(--inset); border: 1px solid var(--prec-line); font: 400 12.5px/1.5 var(--mono); color: var(--text); white-space: pre; }
+
+/* Precedents */
+.applied { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.ap { display: grid; gap: 9px; padding: 14px 0; border-bottom: 1px solid var(--line); }
+.ap-h { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.ap-t { font: 400 13px/1 var(--mono); color: var(--dim); }
+.ap-title { font: 600 15px/1.35 var(--sans); overflow-wrap: anywhere; }
+.ap-rule, .ap-act { display: grid; grid-template-columns: 190px minmax(0, 1fr); gap: 3px 16px; font-size: 14px; color: var(--text-2); }
+.ap-k { padding-top: 3px; }
+.ap-claim { font: 400 13.5px/1.5 var(--mono); color: var(--prec); overflow-wrap: anywhere; }
+.ap-src { display: block; margin-top: 2px; font: 400 12px/1.4 var(--mono); color: var(--dim); overflow-wrap: anywhere; }
+.ap-link { font-size: 13px; font-weight: 600; justify-self: start; }
+.ledger { display: grid; gap: 22px; }
+.ledger-sum { margin: -4px 0 14px; font-size: 14px; color: var(--dim); }
+.pg { display: grid; gap: 8px; min-width: 0; }
+.pg-h { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; }
+.pg-title { margin: 0; font: 600 15px/1.3 var(--sans); }
+.pg-path { font-size: 12px; color: var(--dim); overflow-wrap: anywhere; }
+.table-scroll { overflow-x: auto; max-width: 100%; border: 1px solid var(--line); }
+table { border-collapse: collapse; width: 100%; }
+.takes { font: 400 12.5px/1.5 var(--mono); }
+.takes th, .grid-t th {
+  padding: 8px 10px; text-align: left; white-space: nowrap;
+  font: 600 11px/1.2 var(--sans); letter-spacing: 0.08em; text-transform: uppercase; color: var(--dim);
+  background: var(--inset); border-bottom: 1px solid var(--line);
+}
+.takes td { padding: 8px 10px; vertical-align: top; color: var(--text-2); border-bottom: 1px solid var(--line); }
+.takes tr:last-child td { border-bottom: 0; }
+.takes td.claim { min-width: 280px; color: var(--text); }
+.takes td.n { text-align: right; }
+.takes td.nowrap { white-space: nowrap; }
+.takes tr.is-new td { background: var(--prec-bg); }
+.marks { display: flex; flex-wrap: wrap; gap: 4px; margin-top: 5px; }
+.marks .tag { font-size: 11px; }
+
+/* Dispatch */
+.xgrid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 380px), 1fr)); gap: 18px; align-items: start; }
+.xcard { border-color: var(--agent-line); }
+.xh { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; }
+.agent-badge { display: inline-flex; align-items: center; padding: 5px 8px; border-radius: 2px; background: var(--agent); color: var(--on-agent); font: 600 12px/1 var(--mono); white-space: nowrap; }
+.x-title { margin: 0; font: 600 18px/1.3 var(--sans); overflow-wrap: anywhere; }
+.x-under { margin: 0; font-size: 13px; color: var(--dim); overflow-wrap: anywhere; }
+.x-under span { color: var(--prec); font-family: var(--mono); }
+.x-brief { margin: 0; font-size: 15px; color: var(--text-2); overflow-wrap: anywhere; }
+.xsec { display: grid; gap: 5px; }
+.xsec h4 { margin: 0; }
+.xsec ul { margin: 0; padding-left: 18px; display: grid; gap: 3px; font-size: 14px; color: var(--text-2); overflow-wrap: anywhere; }
+.xsec ul.sig { list-style: none; padding: 0; font: 400 13px/1.5 var(--mono); color: var(--text); }
+.xsec ul.noise li { color: var(--dim); text-decoration: line-through; text-decoration-color: var(--faint); }
+.xsec ul.done { list-style: none; padding: 0; }
+.xsec ul.done li { display: grid; grid-template-columns: 14px minmax(0, 1fr); gap: 8px; }
+.xsec ul.done li::before { content: ""; width: 11px; height: 11px; margin-top: 5px; border: 1.5px solid var(--dim); border-radius: 2px; }
+.xsec ul.pages { list-style: none; padding: 0; font: 400 12px/1.5 var(--mono); color: var(--dim); }
+.xfoot { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; padding-top: 12px; border-top: 1px solid var(--line); }
+.copy-status { font-size: 13px; color: var(--dim); }
+.copy-fallback { width: 100%; min-height: 180px; padding: 8px; background: var(--inset); color: var(--text); border: 1px solid var(--line-2); font: 400 12px/1.5 var(--mono); resize: vertical; }
+
+/* Filtered */
+.fl-top { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 10px 20px; margin-bottom: 8px; }
+.fl-sum { margin: 0; font-size: 14px; color: var(--text-2); }
+.flist { list-style: none; margin: 0; padding: 0; display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 480px), 1fr)); column-gap: 36px; border-top: 1px solid var(--line); }
+.fl { display: grid; gap: 6px; align-content: start; padding: 12px 0; border-bottom: 1px solid var(--line); min-width: 0; }
+.fl-h { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; font-size: 13px; }
+.reason { display: inline-flex; padding: 3px 7px; border: 1px dashed var(--drop-line); border-radius: 2px; font: 600 11px/1.1 var(--sans); letter-spacing: 0.06em; text-transform: uppercase; color: var(--drop); white-space: nowrap; }
+.fl-t { font: 400 12px/1 var(--mono); color: var(--faint); }
+.fl-title { color: var(--text-2); font-weight: 500; overflow-wrap: anywhere; }
+.fl-q { margin: 0; font: 400 13px/1.5 var(--mono); color: var(--dim); overflow-wrap: anywhere; }
+.fl-q b { color: var(--text-2); font-weight: 500; }
+.fl-old { display: grid; gap: 4px; padding: 8px 10px; background: var(--inset); border: 1px dashed var(--you-line); font-size: 13px; color: var(--text-2); }
+.fl-old p { margin: 0; overflow-wrap: anywhere; }
+.old-k { color: var(--you); margin-right: 6px; }
+.fl-old .none { color: var(--dim); }
+
+/* Scorecard */
+.tiles { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 230px), 1fr)); gap: 1px; background: var(--line); border: 1px solid var(--line); }
+.tile { display: grid; gap: 8px; align-content: start; padding: 18px; background: var(--bg); }
+.tile-v { font: 600 42px/1 var(--sans); letter-spacing: -0.02em; }
+.tile-v small { font-size: 16px; font-weight: 500; color: var(--dim); letter-spacing: 0; margin-left: 6px; }
+.tile-s { font-size: 13px; line-height: 1.45; color: var(--dim); }
+.score-cols { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 340px), 1fr)); gap: 26px 44px; margin-top: 28px; align-items: start; }
+.score-cols h3 { margin: 0 0 10px; font: 600 16px/1.3 var(--sans); }
+.slist { list-style: none; margin: 0; padding: 0; border-top: 1px solid var(--line); }
+.slist li { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; padding: 10px 0; border-bottom: 1px solid var(--line); font-size: 14px; }
+.slist .sid { font: 400 12px/1 var(--mono); color: var(--faint); }
+.slist .stext { flex: 1 1 calc(100% - 110px); min-width: 0; overflow-wrap: anywhere; }
+.slist .none { color: var(--dim); }
+.grid-t td, .grid-t th { padding: 9px 10px; border: 1px solid var(--line); }
+.grid-t td { text-align: center; font: 500 15px/1 var(--mono); color: var(--text-2); }
+.grid-t td.zero { color: var(--faint); font-weight: 400; }
+.grid-t td.diag { background: var(--panel); color: var(--text); font-weight: 600; box-shadow: inset 0 0 0 1px var(--line-2); }
+.grid-t td.off { color: var(--text); font-weight: 600; }
+.grid-t thead th { text-align: center; }
+.grid-t thead th:first-child, .grid-t tbody th { text-align: left; }
+.grid-t tbody th { background: var(--inset); }
+.grid-note { margin: 8px 0 0; font-size: 13px; color: var(--dim); }
+.conf-block { grid-column: 1 / -1; max-width: 760px; }
+.grid-t th.corner { font-size: 10.5px; line-height: 1.35; background: transparent; }
+.grid-t th.corner span { display: block; }
+.per { margin-top: 26px; }
+.per summary { cursor: pointer; font-weight: 600; font-size: 14px; padding-block: 6px; }
+.per .grid-t td { text-align: left; font: 400 13px/1.45 var(--sans); }
+.per .grid-t td.mono { font-family: var(--mono); font-size: 12px; }
+.method { margin: 28px 0 0; padding-top: 14px; max-width: 86ch; border-top: 1px dashed var(--line); font-size: 13px; color: var(--dim); }
+.method b { color: var(--text-2); font-weight: 600; }
+
+/* Live triage */
+.live { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 24px 40px; align-items: start; }
+.live-form { display: grid; gap: 12px; min-width: 0; }
+.live-row { display: flex; flex-wrap: wrap; gap: 8px; }
+#live-line {
+  flex: 1 1 260px; min-width: 0;
+  padding: 11px 12px;
+  background: var(--inset); color: var(--text);
+  border: 1px solid var(--line-2); border-radius: 6px;
+  font: 400 14px/1.4 var(--mono);
+}
+#live-line::placeholder { color: var(--faint); }
+.examples { display: flex; flex-wrap: wrap; gap: 8px; }
+.ex { display: grid; gap: 3px; max-width: 100%; padding: 8px 10px; border: 1px dashed var(--line-2); border-radius: 4px; background: transparent; text-align: left; cursor: pointer; }
+.ex:hover { border-color: var(--dim); }
+.ex-k { font: 600 10.5px/1.2 var(--sans); letter-spacing: 0.1em; text-transform: uppercase; color: var(--dim); }
+.ex-t { font: 400 13px/1.4 var(--mono); color: var(--text-2); overflow-wrap: anywhere; }
+.live-mode { margin: 0; font-size: 13px; color: var(--dim); }
+.live-out { min-width: 0; }
+.thinking { margin: 0; padding: 16px; border: 1px dashed var(--line-2); font: 400 14px/1.4 var(--mono); color: var(--dim); }
+.live-card { gap: 9px; padding: 16px 18px; }
+.lc-you { border-color: var(--you-line); }
+.lc-precedent { border-color: var(--prec-line); }
+.lc-agent { border-color: var(--agent-line); }
+.lc-drop { border-color: var(--drop-line); border-style: dashed; }
+.lc-h { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 10px; }
+.lc-route { font: 600 14px/1.2 var(--sans); }
+.lc-mode { margin-left: auto; font: 500 11px/1.2 var(--mono); color: var(--dim); }
+.lc-heard { margin: 0; font: 400 13px/1.5 var(--mono); color: var(--dim); overflow-wrap: anywhere; }
+.lc-title { margin: 0; font: 600 17px/1.35 var(--sans); overflow-wrap: anywhere; }
+.lc-q { margin: 0; font: 600 19px/1.35 var(--serif); overflow-wrap: anywhere; }
+.lc-why { margin: 0; font-size: 14px; color: var(--text-2); overflow-wrap: anywhere; }
+.lc-claim { margin: 0; font: 400 13px/1.5 var(--mono); color: var(--prec); overflow-wrap: anywhere; }
+.lc-claim span { display: block; color: var(--dim); font-size: 12px; margin-top: 2px; }
+.lc-agent { margin: 0; display: grid; gap: 6px; justify-items: start; font-size: 14px; color: var(--text-2); overflow-wrap: anywhere; }
+.lc-opts { margin: 0; padding-left: 18px; font-size: 14px; color: var(--text-2); }
+.lc-note { margin: 0; padding-top: 8px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); }
+
+/* Skill */
+.skill-meta { display: flex; flex-wrap: wrap; align-items: baseline; gap: 6px 12px; margin-bottom: 12px; }
+.sk-name { font: 600 15px/1.2 var(--mono); }
+.sk-ver { font: 500 12px/1 var(--mono); color: var(--dim); padding: 3px 6px; border: 1px solid var(--line-2); border-radius: 2px; }
+.skill-d summary { cursor: pointer; font-weight: 600; font-size: 14px; padding-block: 6px; }
+.skill-body { display: grid; gap: 10px; margin-top: 10px; }
+.skill-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px; }
+.sk-md { margin: 0; max-height: 520px; overflow: auto; padding: 14px 16px; background: var(--inset); border: 1px solid var(--line); font: 400 12.5px/1.6 var(--mono); color: var(--text-2); white-space: pre; tab-size: 2; }
+
+/* Footer */
+.foot { display: grid; gap: 10px; margin-top: 56px; padding-top: 26px; border-top: 1px solid var(--line); }
+.foot blockquote { margin: 0; }
+.foot blockquote p { margin: 0; max-width: 34ch; font: 400 italic clamp(20px, 2.4vw, 26px)/1.35 var(--serif); color: var(--text); text-wrap: balance; }
+.foot cite { display: block; margin-top: 6px; font: 500 13px/1.3 var(--sans); font-style: normal; color: var(--dim); }
+.foot-small { margin: 0; font-size: 13px; color: var(--dim); }
+
+/* No data */
+.nodata { display: grid; gap: 10px; padding-block: 12vh; max-width: 60ch; }
+.nodata h1 { margin: 0; font: 600 30px/1.2 var(--sans); }
+.nodata p { margin: 0; color: var(--text-2); }
+.nodata code { padding: 2px 6px; background: var(--panel); border: 1px solid var(--line); border-radius: 3px; font-size: 14px; }
+
+/* Motion */
+@keyframes enter { from { opacity: 0; transform: translateY(-6px); } to { opacity: 1; transform: none; } }
+.fresh { animation: enter 0.35s ease-out; }
+@keyframes flash { 0% { box-shadow: 0 0 0 3px var(--focus); } 100% { box-shadow: 0 0 0 3px transparent; } }
+.flash { animation: flash 1.4s ease-out; }
+
+@media (max-width: 1000px) {
+  .funnel { grid-template-columns: minmax(0, 1fr); }
+  .desk { grid-template-columns: minmax(0, 1fr); }
+  .routes-col { order: -1; }
+  .live { grid-template-columns: minmax(0, 1fr); }
+  .eod { grid-template-columns: minmax(0, 1fr); }
+}
+@media (max-width: 600px) {
+  .routes { grid-template-columns: minmax(0, 1fr); }
+  .legend { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .side { padding-right: 14px; }
+  .side + .side { padding-left: 14px; }
+  .ap-rule, .ap-act { grid-template-columns: minmax(0, 1fr); }
+  .dateline { margin-left: 0; width: 100%; }
+  .transcript { max-height: 66vh; }
+  .u-btn { grid-template-columns: 40px minmax(0, 1fr); gap: 8px; padding-inline: 10px; }
+  .card { padding: 16px; }
+  .q { font-size: 20px; }
+  .sec h2 { font-size: 22px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+}
+
+/* upload your own conversation */
+.up-jump { margin: 10px 0 0; font-size: 14px; }
+.up-jump a { color: var(--text); text-underline-offset: 3px; }
+.up-banner { margin: 14px 0 0; padding: 10px 14px; display: flex; flex-wrap: wrap; align-items: center; gap: 8px 14px; background: var(--live-bg); border: 1px solid var(--live-line); border-radius: 6px; font-size: 14px; color: var(--text); }
+.up { display: grid; grid-template-columns: minmax(0, 1.3fr) minmax(0, 1fr); gap: 20px 28px; align-items: start; }
+@media (max-width: 760px) { .up { grid-template-columns: minmax(0, 1fr); } }
+.up-col { display: grid; gap: 8px; min-width: 0; }
+.up-col .kicker { margin-top: 6px; }
+.up textarea, .up select, .up input[type="text"] {
+  width: 100%; min-width: 0; padding: 9px 11px;
+  background: var(--inset); color: var(--text);
+  border: 1px solid var(--line-2); border-radius: 6px;
+  font: 400 13px/1.45 var(--mono);
+}
+.up textarea { resize: vertical; min-height: 150px; }
+.up input[type="file"] { max-width: 100%; font: 400 13px/1.4 var(--sans); color: var(--text-2); }
+.up textarea:focus-visible, .up select:focus-visible, .up input:focus-visible { outline: 2px solid var(--focus); outline-offset: 1px; }
+.up-parsed { margin: 0; font-size: 14px; color: var(--text-2); }
+.up-check { display: flex; gap: 8px; align-items: flex-start; font-size: 14px; color: var(--text-2); }
+.up-check input { margin-top: 3px; flex: none; }
+.up-actions { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 6px; }
+.up-status { margin: 0; min-height: 1.4em; font-size: 14px; color: var(--text); }
+.up-status.err { color: var(--you); }
+.up-note { margin: 0; font-size: 12.5px; color: var(--dim); }
+</style>
+
+<div class="wrap">
+  <div id="nodata" class="nodata" hidden>
+    <p class="brand">Hot Mic <span class="slash">/</span> Chief of Staff</p>
+    <h1>No data built yet</h1>
+    <p>Run <code>bun cos/build.ts</code> to build the demo day into this page, then open the built file.</p>
+  </div>
+
+  <div id="app">
+    <header class="top">
+      <div class="top-row">
+        <h1 class="brand">Hot Mic <span class="slash">/</span> Chief of Staff</h1>
+        <span class="onair"><span class="dot" aria-hidden="true"></span>Heard all day</span>
+        <span class="dateline" id="dateline"></span>
+      </div>
+      <p class="thesis">Your scarcest resource is decisions, so your chief of staff shows you only what only you can decide, settles the rest from your own precedents, and hands the work to agents.</p>
+      <p class="capture" id="capture"></p>
+      <p class="up-banner" id="up-banner" hidden></p>
+      <p class="up-jump"><a href="#sec-upload">Run it on your own conversation</a></p>
+    </header>
+
+    <section class="funnel" aria-label="Your day in numbers">
+      <div class="contrast">
+        <div class="side old">
+          <span class="side-k">Old way: meeting-notes AI</span>
+          <span class="big" id="n-old">0</span>
+          <span class="side-cap">action items for you</span>
+          <span class="side-sub" id="old-sub"></span>
+        </div>
+        <div class="side new">
+          <span class="side-k">New way: your chief of staff</span>
+          <span class="big" id="n-you">0</span>
+          <span class="side-cap" id="you-cap">decisions for you</span>
+          <span class="side-sub" id="new-sub"></span>
+        </div>
+      </div>
+      <div class="flow">
+        <p class="steps">
+          <span><b id="n-heard">0</b>utterances heard</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+          <span><b id="n-signals">0</b>moments flagged</span>
+          <span class="arrow" aria-hidden="true">&rarr;</span>
+          <span>routed</span>
+        </p>
+        <div class="bar" id="bar" role="img" aria-label="Signals by route"></div>
+        <ul class="legend" id="legend"></ul>
+        <p class="precept">Every decision you make becomes a precedent, so you never make it twice.</p>
+      </div>
+      <div class="eod" id="eod">
+        <span class="kicker">End-of-day brief</span>
+        <p id="eod-text"></p>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-desk" aria-labelledby="h-desk">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-desk">Your day, as heard</h2>
+          <p class="sec-sub">Every line Hot Mic heard, grouped by conversation. Marked lines became items. Click a line or an item to trace one to the other.</p>
+        </div>
+        <div class="replay" role="group" aria-label="Replay the day">
+          <button type="button" class="btn btn-strong" id="replay-btn">Replay the day</button>
+          <span class="segctl" role="group" aria-label="Replay speed">
+            <button type="button" id="speed-1" aria-pressed="true">1x</button>
+            <button type="button" id="speed-3" aria-pressed="false">3x</button>
+          </span>
+          <button type="button" class="btn" id="skip-btn" hidden>Skip to end</button>
+          <span class="clock" id="clock"></span>
+        </div>
+      </div>
+      <div class="desk">
+        <div class="transcript" id="transcript" tabindex="0" role="region" aria-label="Transcript of the day"></div>
+        <div class="routes-col">
+          <div class="routes" id="routes"></div>
+          <div class="inspector" id="inspector" aria-live="polite"></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-you" aria-labelledby="h-you">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-you"><span class="rc rc-you">You</span>Needs you</h2>
+          <p class="sec-sub" id="you-sub"></p>
+        </div>
+      </div>
+      <div class="dgrid" id="decisions"></div>
+    </section>
+
+    <section class="sec" id="sec-precedent" aria-labelledby="h-precedent">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-precedent"><span class="rc rc-precedent">Precedent</span>Decided by your precedent</h2>
+          <p class="sec-sub" id="prec-sub"></p>
+        </div>
+      </div>
+      <ul class="applied" id="applied"></ul>
+      <h3 class="sub-h">Your precedent ledger</h3>
+      <p class="ledger-sum" id="ledger-sum"></p>
+      <div class="ledger" id="ledger"></div>
+    </section>
+
+    <section class="sec" id="sec-agent" aria-labelledby="h-agent">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-agent"><span class="rc rc-agent">Agent</span>Dispatched to agents</h2>
+          <p class="sec-sub" id="agent-sub"></p>
+        </div>
+      </div>
+      <div class="xgrid" id="dispatch"></div>
+    </section>
+
+    <section class="sec" id="sec-drop" aria-labelledby="h-drop">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-drop"><span class="rc rc-drop">Filtered</span>Filtered noise</h2>
+          <p class="sec-sub">Heard, weighed, and kept out of your day. Each line shows why.</p>
+        </div>
+      </div>
+      <div class="fl-top">
+        <p class="fl-sum" id="fl-sum"></p>
+        <button type="button" class="btn" id="toggle-old" aria-pressed="false">What the old way did with this</button>
+      </div>
+      <ul class="flist" id="filtered"></ul>
+    </section>
+
+    <section class="sec" id="sec-score" aria-labelledby="h-score">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-score">Is it a real chief of staff?</h2>
+          <p class="sec-sub">An independent grader labeled the same day by hand. This is how your chief of staff compares, and how the old way compares.</p>
+        </div>
+      </div>
+      <div id="score"></div>
+    </section>
+
+    <section class="sec" id="sec-upload" aria-labelledby="h-upload">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-upload">Run it on your own conversation</h2>
+          <p class="sec-sub">Upload or paste a transcript from Otter, Fireflies, Granola, Zoom (.vtt or .srt) or plain &ldquo;Name: text&rdquo; lines. Claude runs the chief-of-staff skill on it and this page redraws for your conversation.</p>
+        </div>
+      </div>
+      <form class="up" id="up-form" autocomplete="off">
+        <div class="up-col">
+          <label class="kicker" for="up-file">Transcript file</label>
+          <input type="file" id="up-file" name="up-file" accept=".txt,.md,.vtt,.srt,.json,.csv,text/plain,text/markdown,text/vtt,application/json">
+          <label class="kicker" for="up-text">Or paste it</label>
+          <textarea id="up-text" name="up-text" rows="9" spellcheck="false" placeholder="Maya: Did you get my memo?&#10;Chris: I did. I'll send comments by five."></textarea>
+        </div>
+        <div class="up-col">
+          <p class="up-parsed" id="up-parsed">No transcript yet.</p>
+          <label class="kicker" for="up-owner">Which speaker is you?</label>
+          <select id="up-owner" name="up-owner"><option value="">Load a transcript first</option></select>
+          <label class="kicker" for="up-title">Title (optional)</label>
+          <input type="text" id="up-title" name="up-title" maxlength="80" placeholder="1:1 with Maya">
+          <label class="up-check" for="up-demo-rules"><input type="checkbox" id="up-demo-rules" name="up-demo-rules"> Also use the demo day&rsquo;s example rules (otherwise only your real rules and any you decided above)</label>
+          <label class="up-check" for="up-consent"><input type="checkbox" id="up-consent" name="up-consent"> Everyone in this conversation agreed to be recorded</label>
+          <div class="up-actions">
+            <button type="submit" class="btn btn-strong" id="up-go">Triage this conversation</button>
+            <button type="button" class="btn btn-quiet" id="up-stop" hidden>Stop</button>
+          </div>
+          <p class="up-status" id="up-status" role="status" aria-live="polite"></p>
+          <p class="up-note">The transcript stays in this tab. It goes to Claude once, on your own account, for this triage, and the page does not save it. Leave out anything that should not leave your machine.</p>
+        </div>
+      </form>
+    </section>
+
+    <section class="sec" id="sec-live" aria-labelledby="h-live">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-live">Try it: say something</h2>
+          <p class="sec-sub">Type a line you might say. Your chief of staff routes it against your precedents, including any you decided above.</p>
+        </div>
+      </div>
+      <div class="live">
+        <form class="live-form" id="live-form" autocomplete="off">
+          <label class="kicker" for="live-line">What you said</label>
+          <div class="live-row">
+            <input type="text" id="live-line" name="live-line" maxlength="500" placeholder="Say something you might say in a meeting">
+            <button type="submit" class="btn btn-strong" id="live-btn">Triage it</button>
+          </div>
+          <div class="examples" id="examples"></div>
+          <p class="live-mode" id="live-mode">Checking whether Claude is available here.</p>
+        </form>
+        <div class="live-out" id="live-out" aria-live="polite"></div>
+      </div>
+    </section>
+
+    <section class="sec" id="sec-skill" aria-labelledby="h-skill">
+      <div class="sec-h">
+        <div>
+          <h2 id="h-skill">The skill behind it</h2>
+          <p class="sec-sub" id="skill-sub">One markdown file you own. The harness stays thin.</p>
+        </div>
+      </div>
+      <div id="skill"></div>
+    </section>
+
+    <footer class="foot">
+      <blockquote>
+        <p>&ldquo;GBrain is a pre-harness for any brain-computer interface.&rdquo;</p>
+        <cite id="quote-cite">Chris, the owner of this brain</cite>
+      </blockquote>
+      <p class="foot-small">Synthetic demo day. Nothing was sent, written or spent.</p>
+      <p class="foot-small mono" id="built"></p>
+    </footer>
+  </div>
+</div>
+
+<script id="cos-data">window.COS_DATA = null;</script>
+<script>
+(function () {
+  "use strict";
+
+  // keep a clean copy of the page so an uploaded conversation can be drawn from scratch
+  var PRISTINE = document.getElementById("app").cloneNode(true);
+  window.COS_REBOOT = function (data) {
+    var fresh = PRISTINE.cloneNode(true);
+    document.getElementById("app").replaceWith(fresh);
+    run(data);
+  };
+  run(window.COS_DATA);
+
+  function run(D) {
+  var appEl = document.getElementById("app");
+  var noDataEl = document.getElementById("nodata");
+  if (!D || typeof D !== "object") {
+    appEl.hidden = true;
+    noDataEl.hidden = false;
+    return;
+  }
+
+  /* ---------- helpers ---------- */
+  const ROUTES = ["you", "precedent", "agent", "drop"];
+  const RNAME = { you: "Needs you", precedent: "Decided by your precedent", agent: "Dispatched to agents", drop: "Filtered" };
+  const RCHIP = { you: "You", precedent: "Precedent", agent: "Agent", drop: "Filtered", missing: "Not caught" };
+  const MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+  const WEEKDAYS = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+  const reduceMotion = !!(window.matchMedia && window.matchMedia("(prefers-reduced-motion: reduce)").matches);
+
+  const arr = (x) => (Array.isArray(x) ? x : []);
+  const str = (x) => (x == null ? "" : String(x));
+  const isNum = (x) => typeof x === "number" && isFinite(x);
+  const cap = (t) => { t = str(t); return t ? t.charAt(0).toUpperCase() + t.slice(1) : ""; };
+  const $ = (id) => document.getElementById(id);
+  const norm = (t) => str(t).toLowerCase().replace(/[‘’]/g, "'").replace(/[^a-z0-9$%' ]+/g, " ").replace(/\s+/g, " ").trim();
+  const plural = (n, one, many) => n + " " + (n === 1 ? one : (many || one + "s"));
+  const pct = (x) => (isNum(x) ? Math.round(x) + "%" : "n/a");
+  const q = (t) => "“" + str(t) + "”";
+
+  function h(tag, attrs) {
+    const el = document.createElement(tag);
+    if (attrs) {
+      Object.keys(attrs).forEach((k) => {
+        const v = attrs[k];
+        if (v == null || v === false) return;
+        if (k === "class") el.className = v;
+        else if (k.slice(0, 2) === "on" && typeof v === "function") el.addEventListener(k.slice(2), v);
+        else el.setAttribute(k, v === true ? "" : String(v));
+      });
+    }
+    const kids = Array.prototype.slice.call(arguments, 2).flat(Infinity);
+    kids.forEach((kid) => {
+      if (kid == null || kid === false || kid === "") return;
+      el.append(kid instanceof Node ? kid : String(kid));
+    });
+    return el;
+  }
+  function chip(route, text) {
+    const r = RCHIP[route] ? route : "drop";
+    return h("span", { class: "rc rc-" + r }, text || RCHIP[r]);
+  }
+  function parseDate(d) {
+    const m = /^(\d{4})-(\d{2})-(\d{2})/.exec(str(d));
+    return m ? new Date(Date.UTC(+m[1], +m[2] - 1, +m[3])) : null;
+  }
+  function longDate(d, wd) {
+    const dt = parseDate(d);
+    if (!dt) return str(d);
+    return (str(wd) || WEEKDAYS[dt.getUTCDay()]) + ", " + dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()] + " " + dt.getUTCFullYear();
+  }
+  function shortDate(d) {
+    const dt = parseDate(d);
+    if (!dt) return str(d);
+    return WEEKDAYS[dt.getUTCDay()].slice(0, 3) + " " + dt.getUTCDate() + " " + MONTHS[dt.getUTCMonth()].slice(0, 3);
+  }
+  function flash(el) {
+    if (!el) return;
+    el.classList.remove("flash");
+    void el.offsetWidth;
+    el.classList.add("flash");
+    setTimeout(() => el.classList.remove("flash"), 1500);
+  }
+
+  /* ---------- data ---------- */
+  const day = D.day && typeof D.day === "object" ? D.day : {};
+  const T = D.triage && typeof D.triage === "object" ? D.triage : {};
+  const B = D.baseline && typeof D.baseline === "object" ? D.baseline : {};
+  const G = D.gold && typeof D.gold === "object" ? D.gold : {};
+  const E = D.eval && typeof D.eval === "object" ? D.eval : null;
+  const SK = D.skill && typeof D.skill === "object" ? D.skill : null;
+  const ownerName = str(day.owner && day.owner.name) || "Chris";
+  const dayDate = str(day.date);
+  const spk = (name) => { const n = str(name).trim(); return n && n === ownerName ? "You" : (n || "Unknown speaker"); };
+
+  const lanes = arr(day.lanes).filter(Boolean);
+  const laneMap = new Map(lanes.map((l) => [str(l.id), l]));
+  const laneLabel = (id) => { const l = laneMap.get(str(id)); return (l && str(l.label)) || cap(id) || "No lane"; };
+  const laneChip = (id) => (str(id) ? h("span", { class: "lane", title: "Lane" }, laneLabel(id)) : null);
+
+  const ctxs = arr(day.contexts).filter(Boolean).slice().sort((a, b) => str(a.start).localeCompare(str(b.start)));
+  const ctxMap = new Map(ctxs.map((c) => [str(c.id), c]));
+
+  const U = arr(day.utterances).filter(Boolean).map((u, i) => Object.assign({}, u, { _i: i }));
+  U.sort((a, b) => str(a.t).localeCompare(str(b.t)) || a._i - b._i);
+  U.forEach((u, k) => { u._k = k; });
+  const UM = new Map(U.map((u) => [str(u.id), u]));
+
+  const items = arr(T.items).filter(Boolean).map((raw, i) => {
+    const it = Object.assign({}, raw);
+    it.id = str(it.id) || "t" + String(i + 1).padStart(2, "0");
+    it.route = ROUTES.indexOf(it.route) >= 0 ? it.route : "drop";
+    it._us = arr(it.utterances).map((id) => UM.get(str(id))).filter(Boolean).sort((a, b) => a._k - b._k);
+    it._first = it._us.length ? it._us[0]._k : Infinity;
+    it._last = it._us.length ? it._us[it._us.length - 1]._k : Infinity;
+    const c = ctxMap.get(str(it.context));
+    it._t = it._us.length ? str(it._us[0].t) : (c ? str(c.start) : "");
+    it._who = spk(it.speaker || (it._us[0] && it._us[0].speaker));
+    it._ord = i;
+    return it;
+  });
+  items.sort((a, b) => (a._first - b._first) || (a._ord - b._ord));
+  const itemMap = new Map(items.map((it) => [it.id, it]));
+  const byRoute = { you: [], precedent: [], agent: [], drop: [] };
+  items.forEach((it) => byRoute[it.route].push(it));
+  const byU = new Map();
+  items.forEach((it) => it._us.forEach((u) => {
+    const k = str(u.id);
+    if (!byU.has(k)) byU.set(k, []);
+    byU.get(k).push(it);
+  }));
+  const budget = isNum(T.attention_budget) ? T.attention_budget : 3;
+
+  const BA = arr(B.action_items).filter(Boolean).map((b) => {
+    const ids = arr(b.utterances).map(str);
+    const us = ids.map((id) => UM.get(id)).filter(Boolean);
+    return Object.assign({}, b, { _ids: new Set(ids), _last: us.length ? Math.max.apply(null, us.map((u) => u._k)) : Infinity });
+  });
+  const comp = (E && E.compression) || {};
+  const oldTotal = BA.length || (isNum(comp.baseline_action_items) ? comp.baseline_action_items : 0);
+  const oldFor = (it) => {
+    const ids = new Set(arr(it.utterances).map(str));
+    return BA.filter((b) => Array.from(b._ids).some((id) => ids.has(id)));
+  };
+  const oldFromDrops = (() => {
+    const seen = new Set();
+    byRoute.drop.forEach((it) => oldFor(it).forEach((b) => seen.add(b)));
+    return seen.size;
+  })();
+
+  const pageName = (p) => cap(str(p).split("/").pop().replace(/\.md$/i, "").replace(/[-_]+/g, " ")) || "Untitled page";
+  const P = arr(D.precedents).filter(Boolean).map((p) => ({
+    page: str(p.page),
+    title: str(p.title) || pageName(p.page),
+    lane: str(p.lane),
+    rows: arr(p.rows).filter(Boolean).map((r) => Object.assign({}, r))
+  }));
+  const allRows = () => {
+    const out = [];
+    P.forEach((pg) => pg.rows.forEach((r) => out.push({ pg: pg, r: r })));
+    return out;
+  };
+
+  const state = { sel: null, decided: {}, showOld: false };
+
+  /* ---------- header ---------- */
+  $("dateline").textContent = longDate(dayDate, day.weekday);
+  (function () {
+    const cap1 = $("capture");
+    const role = str(day.owner && day.owner.role);
+    if (role) cap1.append(h("b", null, ownerName + ". "), role + " ");
+    if (day.capture) cap1.append(str(day.capture));
+    $("quote-cite").textContent = ownerName + ", the owner of this brain";
+    if (D.built_at) $("built").textContent = "Built " + str(D.built_at).replace("T", " ").replace(/(\d{2}:\d{2}):\d{2}(\.\d+)?/, "$1");
+  })();
+
+  /* ---------- funnel ---------- */
+  (function () {
+    const bar = $("bar");
+    const legend = $("legend");
+    ROUTES.forEach((r) => {
+      bar.append(h("span", { class: "seg seg-" + r, id: "seg-" + r }));
+      legend.append(h("li", { class: "lg lg-" + r },
+        h("a", { href: "#sec-" + r }, chip(r), h("span", { class: "lg-n", id: "lg-n-" + r }, "0"), h("span", { class: "lg-l" }, RNAME[r]))));
+    });
+    const meetings = arr(B.meetings).length || ctxs.length;
+    $("old-sub").textContent = "Every action item from " + plural(meetings, "recording") + " lands on you" +
+      (oldFromDrops ? ", including " + oldFromDrops + " from lines your chief of staff filtered as noise." : ".");
+    const nYou = byRoute.you.length;
+    const over = nYou - budget;
+    $("you-cap").textContent = nYou === 1 ? "decision for you" : "decisions for you";
+    $("new-sub").textContent = (over > 0 ? "Over your budget of " + budget + " a day by " + over + ". " : "Within your budget of " + budget + " a day. ") +
+      byRoute.precedent.length + " settled by your precedents, " + byRoute.agent.length + " handed to agents.";
+    const eod = str(T.end_of_day_brief);
+    if (eod) $("eod-text").textContent = eod; else $("eod").hidden = true;
+  })();
+
+  function updateCounts(k) {
+    const all = k >= U.length;
+    const seen = (last) => all || last < k;
+    const c = { you: 0, precedent: 0, agent: 0, drop: 0 };
+    items.forEach((it) => { if (seen(it._last)) c[it.route]++; });
+    const sig = c.you + c.precedent + c.agent + c.drop;
+    const heard = all ? (U.length || (isNum(comp.utterances) ? comp.utterances : 0)) : k;
+    const old = all ? oldTotal : BA.filter((b) => seen(b._last)).length;
+    $("n-heard").textContent = String(heard);
+    $("n-signals").textContent = String(sig);
+    $("n-old").textContent = String(old);
+    $("n-you").textContent = String(c.you);
+    ROUTES.forEach((r) => {
+      $("lg-n-" + r).textContent = String(c[r]);
+      const seg = $("seg-" + r);
+      seg.style.flexGrow = String(c[r]);
+      seg.hidden = c[r] === 0;
+      const rc = $("cnt-" + r);
+      if (rc) rc.textContent = String(c[r]);
+    });
+    const bar = $("bar");
+    bar.classList.toggle("is-empty", sig === 0);
+    bar.setAttribute("aria-label", ROUTES.map((r) => c[r] + " " + RNAME[r].toLowerCase()).join(", "));
+  }
+
+  /* ---------- desk: transcript ---------- */
+  const uEls = new Map();
+  const ctxEls = new Map();
+  const riEls = new Map();
+  const riLis = new Map();
+  let hlEls = [];
+
+  function timeRange(c) {
+    const a = str(c.start), b = str(c.end);
+    return a && b ? a + "–" + b : a || b;
+  }
+  function peopleOf(c) {
+    return arr(c.people).map(str).filter((p) => p && p !== ownerName && p.indexOf(ownerName + " (") !== 0);
+  }
+
+  function buildTranscript() {
+    const box = $("transcript");
+    box.replaceChildren();
+    const groups = [];
+    const gm = new Map();
+    U.forEach((u) => {
+      const cid = str(u.context);
+      if (!gm.has(cid)) {
+        const g = { cid: cid, ctx: ctxMap.get(cid) || { id: cid, title: cid ? "Conversation " + cid : "Other lines" }, us: [] };
+        gm.set(cid, g);
+        groups.push(g);
+      }
+      gm.get(cid).us.push(u);
+    });
+    if (!groups.length) {
+      box.append(h("p", { class: "insp-empty", style: "padding:16px" }, "No utterances in this build."));
+      return;
+    }
+    groups.forEach((g) => {
+      const c = g.ctx;
+      const people = peopleOf(c);
+      const head = h("div", { class: "ctx-h" },
+        h("div", { class: "ctx-line" },
+          h("span", { class: "mono ctx-time" }, timeRange(c)),
+          c.kind ? h("span", { class: "ctx-kind" }, str(c.kind)) : null,
+          laneChip(c.lane)),
+        h("h3", { class: "ctx-title" }, str(c.title) || "Untitled conversation"),
+        h("p", { class: "ctx-people" }, people.length ? "With " + people.join(", ") : "Just you"),
+        c.consent ? h("p", { class: "ctx-consent" }, str(c.consent)) : null);
+      const list = h("ol", { class: "ulist" });
+      g.us.forEach((u) => list.append(uRow(u)));
+      const el = h("div", { class: "ctx", "data-ctx": g.cid }, head, list);
+      ctxEls.set(g.cid, el);
+      box.append(el);
+    });
+  }
+
+  function uRow(u) {
+    const its = byU.get(str(u.id)) || [];
+    const inner = [
+      h("span", { class: "u-t" }, str(u.t)),
+      h("span", { class: "u-body" },
+        h("span", { class: "u-who" }, spk(u.speaker) + ":"), " ",
+        h("span", { class: "u-text" }, str(u.text)),
+        its.length ? h("span", { class: "u-chips" }, its.map((it) => chip(it.route))) : null)
+    ];
+    let el;
+    if (its.length) {
+      el = h("li", { class: "u u-ref", id: "u-" + str(u.id) },
+        h("button", { type: "button", class: "u-btn", title: "Show the item this line became", onclick: () => onUtterClick(u) }, inner));
+    } else {
+      el = h("li", { class: "u", id: "u-" + str(u.id) }, h("div", { class: "u-btn" }, inner));
+    }
+    uEls.set(str(u.id), el);
+    return el;
+  }
+
+  function onUtterClick(u) {
+    const its = byU.get(str(u.id)) || [];
+    if (!its.length) return;
+    let idx = 0;
+    const cur = its.findIndex((x) => x.id === state.sel);
+    if (cur >= 0) idx = (cur + 1) % its.length;
+    select(its[idx].id, "transcript");
+  }
+
+  /* ---------- desk: routes ---------- */
+  function buildRoutes() {
+    const wrap = $("routes");
+    wrap.replaceChildren();
+    ROUTES.forEach((r) => {
+      const its = byRoute[r];
+      const list = h("ol", { class: "rlist", id: "rl-" + r });
+      its.forEach((it) => {
+        const btn = h("button", { type: "button", class: "ri", "aria-pressed": "false", "data-route": r, id: "ri-" + it.id, onclick: () => select(it.id, "route") },
+          h("span", { class: "ri-t" }, it._t || "--:--"),
+          h("span", { class: "ri-main" },
+            h("span", { class: "ri-title" }, str(it.title) || "Untitled item"),
+            h("span", { class: "ri-meta" }, [it._who, it.lane ? laneLabel(it.lane) : ""].filter(Boolean).join(" · "))));
+        const li = h("li", null, btn);
+        riEls.set(it.id, btn);
+        riLis.set(it.id, li);
+        list.append(li);
+      });
+      const empties = { you: "Nothing needs you.", precedent: "No precedent applied.", agent: "Nothing dispatched.", drop: "Nothing filtered." };
+      wrap.append(h("div", { class: "rbox rbox-" + r },
+        h("div", { class: "rbox-h" }, chip(r), h("span", { class: "rbox-name" }, RNAME[r]), h("span", { class: "rbox-n", id: "cnt-" + r }, String(its.length))),
+        r === "you" ? h("div", { class: "rbox-budget" }, "Budget: " + budget + " a day") : null,
+        list,
+        its.length ? null : h("p", { class: "rempty" }, empties[r])));
+    });
+  }
+
+  const cardHref = (it) => "#card-" + it.id;
+  const cardWord = { you: "decision card", precedent: "precedent entry", agent: "dispatch brief", drop: "filtered entry" };
+
+  function renderInspector(it) {
+    const box = $("inspector");
+    if (!it) {
+      box.replaceChildren(h("p", { class: "insp-empty" }, "Pick an item, or a marked line in the transcript, to see why it went where it did."));
+      return;
+    }
+    let extra = null;
+    if (it.route === "you" && it.decision) extra = h("p", { class: "insp-x" }, "Question for you: " + str(it.decision.question));
+    if (it.route === "precedent" && it.precedent) extra = h("p", { class: "insp-x" }, "Under your precedent: " + q(it.precedent.claim));
+    if (it.route === "agent" && it.dispatch) extra = h("p", { class: "insp-x" }, "Sent to " + (str(it.dispatch.agent) || "an agent") + ". Approval: " + (str(it.dispatch.approval_gate) || "none") + ".");
+    if (it.route === "drop") extra = h("p", { class: "insp-x" }, "Reason: " + (str(it.drop_reason) || "noise"));
+    box.replaceChildren(
+      h("div", { class: "insp-h" }, chip(it.route), h("span", { class: "insp-id" }, it.id), laneChip(it.lane), it.type ? h("span", { class: "tag" }, str(it.type)) : null),
+      h("p", { class: "insp-t" }, str(it.title) || "Untitled item"),
+      it.signal ? h("p", { class: "quote" }, h("span", { class: "q-t" }, it._t), h("span", { class: "q-who" }, it._who), h("span", { class: "q-s" }, q(it.signal))) : null,
+      it.why ? h("p", { class: "insp-why" }, str(it.why)) : null,
+      extra,
+      h("a", { class: "insp-link", href: cardHref(it), onclick: () => setTimeout(() => flash(document.querySelector(cardHref(it))), 60) }, "Open its " + cardWord[it.route]));
+  }
+
+  function scrollTranscriptTo(u, allowPage) {
+    const box = $("transcript");
+    const el = u && uEls.get(str(u.id));
+    if (!el || el.hidden) return;
+    const ctxEl = el.closest(".ctx");
+    const head = ctxEl && ctxEl.querySelector(".ctx-h");
+    const pad = (head ? head.offsetHeight : 0) + 10;
+    const top = el.getBoundingClientRect().top - box.getBoundingClientRect().top + box.scrollTop - pad;
+    box.scrollTop = Math.max(0, top);
+    if (allowPage) {
+      const r = box.getBoundingClientRect();
+      if (r.top > window.innerHeight - 80 || r.bottom < 80) box.scrollIntoView({ block: "nearest", behavior: reduceMotion ? "auto" : "smooth" });
+    }
+  }
+
+  function select(id, from) {
+    state.sel = id;
+    const it = id ? itemMap.get(id) : null;
+    riEls.forEach((btn, iid) => btn.setAttribute("aria-pressed", iid === id ? "true" : "false"));
+    hlEls.forEach((el) => { el.classList.remove("hl"); el.removeAttribute("data-hl"); });
+    hlEls = [];
+    renderInspector(it);
+    if (!it) return;
+    it._us.forEach((u) => {
+      const el = uEls.get(str(u.id));
+      if (el) { el.classList.add("hl"); el.setAttribute("data-hl", it.route); hlEls.push(el); }
+    });
+    if (from === "route" || from === "init") scrollTranscriptTo(it._us[0], from === "route");
+    if (from === "transcript") {
+      const btn = riEls.get(id);
+      const list = btn && btn.closest(".rlist");
+      if (btn && list) {
+        const top = btn.getBoundingClientRect().top - list.getBoundingClientRect().top + list.scrollTop - 8;
+        list.scrollTo({ top: Math.max(0, top), behavior: "auto" });
+      }
+    }
+  }
+
+  /* ---------- replay ---------- */
+  const rp = { on: false, k: 0, timer: 0, speed: 1 };
+  const stepMs = () => Math.max(70, Math.min(900, 24000 / Math.max(1, U.length))) / rp.speed;
+  function restClock() {
+    const c = $("clock");
+    c.classList.remove("on");
+    c.textContent = U.length ? str(U[0].t) + "–" + str(U[U.length - 1].t) : "";
+  }
+  function replayUI() {
+    $("replay-btn").textContent = rp.on ? "Restart" : "Replay the day";
+    $("skip-btn").hidden = !rp.on;
+    $("clock").classList.toggle("on", rp.on);
+  }
+  function replayStart() {
+    clearTimeout(rp.timer);
+    rp.on = true;
+    rp.k = 0;
+    uEls.forEach((el) => { el.hidden = true; el.classList.remove("fresh"); });
+    ctxEls.forEach((el) => { el.hidden = true; });
+    riLis.forEach((li) => { li.hidden = true; li.classList.remove("fresh"); });
+    ROUTES.forEach((r) => { const rl = $("rl-" + r); if (rl) rl.scrollTop = 0; });
+    select(null);
+    $("transcript").scrollTop = 0;
+    updateCounts(0);
+    $("clock").textContent = U.length ? str(U[0].t) : "";
+    replayUI();
+    rp.timer = setTimeout(replayTick, 300);
+  }
+  function replayTick() {
+    if (!rp.on) return;
+    if (rp.k >= U.length) { replayEnd(); return; }
+    const u = U[rp.k];
+    const el = uEls.get(str(u.id));
+    const ce = ctxEls.get(str(u.context));
+    if (ce) ce.hidden = false;
+    if (el) { el.hidden = false; el.classList.add("fresh"); }
+    items.forEach((it) => {
+      if (it._last === rp.k) {
+        const li = riLis.get(it.id);
+        if (li) {
+          li.hidden = false;
+          li.classList.add("fresh");
+          const list = li.closest(".rlist");
+          if (list) list.scrollTop = list.scrollHeight;
+        }
+      }
+    });
+    rp.k++;
+    updateCounts(rp.k);
+    $("clock").textContent = str(u.t);
+    if (el) {
+      const box = $("transcript");
+      const bottom = el.getBoundingClientRect().bottom - box.getBoundingClientRect().top + box.scrollTop;
+      if (bottom > box.scrollTop + box.clientHeight - 8) box.scrollTop = bottom - box.clientHeight + 24;
+    }
+    rp.timer = setTimeout(replayTick, stepMs());
+  }
+  function replayEnd() {
+    clearTimeout(rp.timer);
+    rp.on = false;
+    uEls.forEach((el) => { el.hidden = false; });
+    ctxEls.forEach((el) => { el.hidden = false; });
+    riLis.forEach((li) => { li.hidden = false; });
+    updateCounts(U.length);
+    replayUI();
+    restClock();
+  }
+  function setSpeed(s) {
+    rp.speed = s;
+    $("speed-1").setAttribute("aria-pressed", s === 1 ? "true" : "false");
+    $("speed-3").setAttribute("aria-pressed", s === 3 ? "true" : "false");
+  }
+  $("replay-btn").addEventListener("click", replayStart);
+  $("skip-btn").addEventListener("click", replayEnd);
+  $("speed-1").addEventListener("click", () => setSpeed(1));
+  $("speed-3").addEventListener("click", () => setSpeed(3));
+
+  /* ---------- decisions ---------- */
+  const cardEls = new Map();
+  const optLabel = (o) => (o && typeof o === "object" ? str(o.label) : str(o)) || "Option";
+  const optTrade = (o) => (o && typeof o === "object" ? str(o.tradeoff) : "");
+  const escRe = (s) => s.replace(/[.*+?^${}()|[\]\\]/g, "\\$&");
+  const takeRowText = (n, r) => "| " + n + " | " + str(r.claim) + " | " + str(r.kind || "take") + " | " + str(r.who || "self") + " | " + str(r.weight) + " | " + str(r.since) + " | " + str(r.source) + " |";
+
+  function buildDecisions() {
+    const box = $("decisions");
+    box.replaceChildren();
+    const its = byRoute.you;
+    const over = its.length - budget;
+    $("you-sub").textContent = its.length
+      ? plural(its.length, "decision") + " only you can make, against a budget of " + budget + " a day" + (over > 0 ? ", so this day ran " + over + " over." : ". Pick an option to decide; each choice becomes a precedent.")
+      : "Nothing reached you today.";
+    if (!its.length) {
+      box.append(h("p", { class: "empty-lg" }, "Nothing needs you today. Your precedents and your agents covered the rest."));
+      return;
+    }
+    its.forEach((it) => {
+      const card = h("article", { class: "card dcard", id: "card-" + it.id, "aria-labelledby": "q-" + it.id });
+      cardEls.set(it.id, card);
+      box.append(card);
+      renderDecision(it);
+    });
+  }
+
+  function renderDecision(it) {
+    const card = cardEls.get(it.id);
+    if (!card) return;
+    const d = it.decision && typeof it.decision === "object" ? it.decision : {};
+    const opts = arr(d.options);
+    const rec = isNum(d.recommended) ? d.recommended : -1;
+    const dec = state.decided[it.id];
+    const stakes = str(d.stakes).toLowerCase();
+    const meta = h("div", { class: "dmeta" },
+      chip("you"),
+      laneChip(it.lane),
+      stakes ? h("span", { class: "tag" + (stakes === "high" ? " tag-high" : "") }, cap(stakes) + " stakes") : null,
+      h("span", { class: "tag" }, d.deadline ? "Due " + shortDate(d.deadline) : "No deadline"),
+      typeof d.reversible === "boolean" ? h("span", { class: "tag" }, d.reversible ? "Reversible" : "One-way door") : null);
+    const qEl = h("h3", { class: "q", id: "q-" + it.id, tabindex: "-1" }, str(d.question) || str(it.title) || "Decision");
+    const quote = it.signal ? h("p", { class: "quote" }, h("span", { class: "q-t" }, it._t), h("span", { class: "q-who" }, it._who), h("span", { class: "q-s" }, q(it.signal))) : null;
+
+    if (dec) {
+      card.classList.add("is-decided");
+      card.replaceChildren(meta, qEl,
+        h("div", { class: "decided" },
+          h("p", { class: "dec-l" }, chip("precedent", "Decided"), dec.label),
+          h("p", { class: "dec-note" }, "This take would be written to GBrain on ", h("code", null, dec.page), ". Nothing was written; this is a demo."),
+          h("div", { class: "code-scroll" }, h("pre", { class: "take-row" }, dec.rowText)),
+          h("p", { class: "dec-note" }, "It is now in your precedent ledger below, and the live triage box uses it."),
+          h("div", null, h("button", { type: "button", class: "btn btn-quiet", id: "undo-" + it.id, onclick: () => undoDecision(it) }, "Undo decision"))));
+      return;
+    }
+    card.classList.remove("is-decided");
+    const optsEl = h("div", { class: "opts", role: "group", "aria-label": "Options" });
+    opts.forEach((o, i) => {
+      optsEl.append(h("button", { type: "button", class: "opt" + (i === rec ? " is-rec" : ""), id: "opt-" + it.id + "-" + i, onclick: () => decide(it, i) },
+        h("span", { class: "opt-top" }, h("span", { class: "opt-l" }, optLabel(o)), i === rec ? h("span", { class: "rec" }, "Recommended") : null),
+        optTrade(o) ? h("span", { class: "opt-tr" }, optTrade(o)) : null));
+    });
+    if (!opts.length) optsEl.append(h("p", { class: "opts-hint" }, "No options drafted for this one yet."));
+    const facts = h("dl", { class: "dfacts" },
+      d.why_only_you ? [h("dt", null, "Why only you"), h("dd", null, str(d.why_only_you))] : null,
+      d.cost_of_delay ? [h("dt", null, "Cost of delay"), h("dd", null, str(d.cost_of_delay))] : null,
+      !d.why_only_you && it.why ? [h("dt", null, "Why it reached you"), h("dd", null, str(it.why))] : null);
+    card.replaceChildren(meta, qEl, quote, opts.length ? h("p", { class: "opts-hint" }, "Choose one to decide. Your choice becomes a precedent.") : null, optsEl, facts.childNodes.length ? facts : null);
+  }
+
+  function decide(it, oi) {
+    const d = it.decision || {};
+    const opt = arr(d.options)[oi];
+    const label = optLabel(opt);
+    const rec = isNum(d.recommended) ? d.recommended : -1;
+    const re = new RegExp("\\b" + escRe(it.id) + "\\b");
+    const mw = arr(T.memory_writes).find((m) => m && re.test(str(m.trigger)));
+    let page = mw ? str(mw.page) : "";
+    let claim = "";
+    if (mw) {
+      const cells = str(mw.row).split("|").map((x) => x.trim());
+      let c = cells.length > 3 ? cells[2] : "";
+      // the skill writes the choice as "[a / b / c]" in option order; keep only the one you picked
+      const alt = /\[([^\]]+)\]/.exec(c);
+      if (alt) {
+        const parts = alt[1].split(" / ").map((x) => x.trim());
+        c = parts.length === arr(d.options).length && parts[oi] ? c.replace(alt[0], parts[oi]) : "";
+      } else if (oi !== rec) c = "";
+      claim = c;
+    }
+    if (!claim) {
+      let qs = str(d.question).trim() || str(it.title).trim();
+      if (qs && !/[?.!]$/.test(qs)) qs += "?";
+      claim = (qs ? qs + " " : "") + label + ".";
+    }
+    if (!page) {
+      const same = P.find((p) => p.lane && p.lane === str(it.lane));
+      page = same ? same.page : "packs/cos-demo/concepts/decisions.md";
+    }
+    let pg = P.find((p) => p.page === page);
+    let created = false;
+    if (!pg) { pg = { page: page, title: pageName(page), lane: str(it.lane), rows: [] }; P.push(pg); created = true; }
+    const row = { claim: claim, kind: "take", who: "self", weight: 0.8, since: dayDate || "today", source: "decided via chief of staff", real: false, _session: it.id };
+    pg.rows.push(row);
+    const n = pg.rows.length;
+    state.decided[it.id] = { oi: oi, label: label, page: page, row: row, pg: pg, created: created, rowText: takeRowText(n, row) };
+    renderDecision(it);
+    renderLedger();
+    const qEl = $("q-" + it.id);
+    if (qEl) qEl.focus({ preventScroll: true });
+  }
+
+  function undoDecision(it) {
+    const dec = state.decided[it.id];
+    if (!dec) return;
+    const i = dec.pg.rows.indexOf(dec.row);
+    if (i >= 0) dec.pg.rows.splice(i, 1);
+    if (dec.created && !dec.pg.rows.length) { const pi = P.indexOf(dec.pg); if (pi >= 0) P.splice(pi, 1); }
+    delete state.decided[it.id];
+    renderDecision(it);
+    renderLedger();
+    const first = $("opt-" + it.id + "-0");
+    if (first) first.focus({ preventScroll: true });
+  }
+
+  /* ---------- precedents ---------- */
+  function buildApplied() {
+    const box = $("applied");
+    box.replaceChildren();
+    const its = byRoute.precedent;
+    $("prec-sub").textContent = its.length
+      ? "Your own rulings settled " + plural(its.length, "item") + " today without asking you. Rows marked real come from your brain; the rest are synthetic for this demo."
+      : "No precedent applied today.";
+    if (!its.length) { box.append(h("li", { class: "ap" }, h("p", { class: "dim", style: "margin:0" }, "Nothing today matched a precedent."))); return; }
+    its.forEach((it) => {
+      const p = it.precedent && typeof it.precedent === "object" ? it.precedent : {};
+      box.append(h("li", { class: "ap", id: "card-" + it.id },
+        h("div", { class: "ap-h" }, chip("precedent"), h("span", { class: "ap-t" }, it._t), h("span", { class: "ap-title" }, str(it.title) || "Untitled item"), laneChip(it.lane),
+          p.real ? h("span", { class: "tag real" }, "real, from your brain") : null),
+        it.signal ? h("p", { class: "quote" }, h("span", { class: "q-t" }, it._t), h("span", { class: "q-who" }, it._who), h("span", { class: "q-s" }, q(it.signal))) : null,
+        h("div", { class: "ap-rule" }, h("span", { class: "ap-k" }, "Your precedent"),
+          h("span", null, h("span", { class: "ap-claim" }, p.claim ? q(p.claim) : "No claim recorded"),
+            h("span", { class: "ap-src" }, [p.since ? "since " + str(p.since) : "", str(p.page)].filter(Boolean).join(" · ")))),
+        p.action ? h("div", { class: "ap-act" }, h("span", { class: "ap-k" }, "What was done"), h("span", null, str(p.action))) : null,
+        it.dispatch ? h("a", { class: "ap-link", href: "#brief-" + it.id, onclick: () => setTimeout(() => flash($("brief-" + it.id)), 60) }, "Carried out by " + (str(it.dispatch.agent) || "an agent") + ": see the brief") : null));
+    });
+  }
+
+  function renderLedger() {
+    const box = $("ledger");
+    box.replaceChildren();
+    const applied = new Set(byRoute.precedent.map((it) => norm(it.precedent && it.precedent.claim)).filter(Boolean));
+    const rows = allRows();
+    const real = rows.filter((x) => x.r.real === true).length;
+    const fresh = rows.filter((x) => x.r._session).length;
+    $("ledger-sum").textContent = rows.length
+      ? plural(rows.length, "take") + " across " + plural(P.length, "page") + ". " + real + " real, from your brain." + (fresh ? " " + fresh + " decided in this session." : "")
+      : "No precedent pages in this build.";
+    P.forEach((pg) => {
+      const body = h("tbody");
+      pg.rows.forEach((r, i) => {
+        const isApplied = applied.has(norm(r.claim));
+        const marks = [
+          r.real === true ? h("span", { class: "tag real" }, "real, from your brain") : null,
+          isApplied ? h("span", { class: "tag mark-applied" }, "applied today") : null,
+          r._session ? h("span", { class: "tag mark-new" }, "decided today, not written") : null
+        ].filter(Boolean);
+        body.append(h("tr", { class: r._session ? "is-new" : null },
+          h("td", { class: "n" }, String(i + 1)),
+          h("td", { class: "claim" }, str(r.claim), marks.length ? h("div", { class: "marks" }, marks) : null),
+          h("td", null, str(r.kind)),
+          h("td", null, str(r.who)),
+          h("td", { class: "n" }, str(r.weight)),
+          h("td", { class: "nowrap" }, str(r.since)),
+          h("td", null, str(r.source))));
+      });
+      const table = h("table", { class: "takes" },
+        h("thead", null, h("tr", null, ["#", "Claim", "Kind", "Who", "Weight", "Since", "Source"].map((x) => h("th", { scope: "col" }, x)))),
+        body);
+      box.append(h("div", { class: "pg" },
+        h("div", { class: "pg-h" }, h("h4", { class: "pg-title" }, pg.title), laneChip(pg.lane), h("code", { class: "pg-path" }, pg.page)),
+        pg.rows.length ? h("div", { class: "table-scroll" }, table) : h("p", { class: "dim", style: "margin:0" }, "No takes on this page yet.")));
+    });
+  }
+
+  /* ---------- dispatch ---------- */
+  function copyText(text, ta, status) {
+    const done = (msg) => {
+      status.textContent = msg;
+      clearTimeout(status._t);
+      status._t = setTimeout(() => { status.textContent = ""; }, 4000);
+    };
+    const fallback = () => {
+      ta.hidden = false;
+      ta.value = text;
+      ta.focus();
+      ta.select();
+      done("Copy was blocked here. The text is selected; press Cmd+C or Ctrl+C.");
+    };
+    try {
+      const p = navigator.clipboard && navigator.clipboard.writeText ? navigator.clipboard.writeText(text) : Promise.reject(new Error("no clipboard"));
+      p.then(() => done("Copied"), fallback);
+    } catch (e) {
+      fallback();
+    }
+  }
+
+  function briefText(it) {
+    const x = it.dispatch || {};
+    const L = [];
+    L.push("Brief for " + (str(x.agent) || "an agent") + ": " + (str(it.title) || "Untitled task"));
+    L.push("Lane: " + laneLabel(x.lane_scope || it.lane) + " only. Approval gate: " + (str(x.approval_gate) || "none") + ".");
+    if (it.route === "precedent" && it.precedent && it.precedent.claim) L.push("Under your precedent: " + q(it.precedent.claim));
+    if (x.brief) L.push("", str(x.brief));
+    const list = (head, xs, pre) => {
+      xs = arr(xs).map(str).filter(Boolean);
+      if (!xs.length) return;
+      L.push("", head);
+      xs.forEach((s) => L.push((pre || "- ") + s));
+    };
+    const sig = arr(x.signal).length ? arr(x.signal) : (it.signal ? [it.signal] : []);
+    list("Signal (verbatim):", sig.map((s) => q(s)));
+    list("Left out on purpose:", x.noise_excluded);
+    list("Done when:", x.done_when, "- [ ] ");
+    list("Context pages:", x.context_pages);
+    L.push("", "From your Hot Mic chief of staff" + (dayDate ? ", " + dayDate : "") + ", item " + it.id + ".");
+    return L.join("\n");
+  }
+
+  function dispatchCard(it) {
+    const x = it.dispatch && typeof it.dispatch === "object" ? it.dispatch : {};
+    const underPrec = it.route === "precedent";
+    const gate = str(x.approval_gate) || "none";
+    const sig = arr(x.signal).length ? arr(x.signal) : (it.signal ? [it.signal] : []);
+    const ta = h("textarea", { class: "copy-fallback", id: "brief-text-" + it.id, readonly: true, hidden: true, "aria-label": "Brief text for " + (str(it.title) || it.id) });
+    const status = h("span", { class: "copy-status", role: "status" });
+    const sec = (title, list) => (list ? h("div", { class: "xsec" }, h("h4", null, title), list) : null);
+    const ul = (xs, cls, fmt) => {
+      xs = arr(xs).map(str).filter(Boolean);
+      return xs.length ? h("ul", { class: cls || null }, xs.map((s) => h("li", null, fmt ? fmt(s) : s))) : null;
+    };
+    return h("article", { class: "card xcard", id: (underPrec ? "brief-" : "card-") + it.id, "aria-labelledby": "xt-" + it.id },
+      h("div", { class: "xh" },
+        h("span", { class: "agent-badge" }, str(x.agent) || "Agent"),
+        underPrec ? chip("precedent", "Under precedent") : chip("agent"),
+        h("span", { class: "lane", title: "Lane scope" }, "Scope: " + laneLabel(x.lane_scope || it.lane)),
+        h("span", { class: "tag" + (gate === "none" ? "" : " tag-gate") }, gate === "none" ? "No approval needed" : "Your approval " + gate)),
+      h("h3", { class: "x-title", id: "xt-" + it.id }, str(it.title) || "Untitled task"),
+      underPrec && it.precedent && it.precedent.claim ? h("p", { class: "x-under" }, "Carrying out your precedent ", h("span", null, q(it.precedent.claim))) : null,
+      x.brief ? h("p", { class: "x-brief" }, str(x.brief)) : h("p", { class: "x-brief dim" }, "No brief written for this item."),
+      sec("Signal, verbatim", ul(sig, "sig", (s) => q(s))),
+      sec("Left out on purpose", ul(x.noise_excluded, "noise")),
+      sec("Done when", ul(x.done_when, "done")),
+      sec("Context pages", ul(x.context_pages, "pages")),
+      h("div", { class: "xfoot" },
+        h("button", { type: "button", class: "btn", id: "copy-" + it.id, onclick: () => copyText(briefText(it), ta, status) }, "Copy brief"),
+        status),
+      ta);
+  }
+
+  function buildDispatch() {
+    const box = $("dispatch");
+    box.replaceChildren();
+    const its = items.filter((it) => it.route === "agent" || (it.route === "precedent" && it.dispatch));
+    const nAgent = byRoute.agent.length;
+    const nPrec = its.length - nAgent;
+    $("agent-sub").textContent = its.length
+      ? plural(nAgent, "brief") + " ready" + (nPrec > 0 ? ", plus " + nPrec + " carrying out your precedents" : "") + ". Each one carries the signal, leaves the noise out, and says when it is done. Nothing passes an approval gate without you."
+      : "Nothing was handed to agents today.";
+    if (!its.length) { box.append(h("p", { class: "empty-lg" }, "No dispatches today.")); return; }
+    its.forEach((it) => box.append(dispatchCard(it)));
+  }
+
+  /* ---------- filtered ---------- */
+  function buildFiltered() {
+    const box = $("filtered");
+    box.replaceChildren();
+    const its = byRoute.drop;
+    $("fl-sum").textContent = its.length
+      ? plural(its.length, "moment") + " filtered. The meeting-notes AI made " + plural(oldFromDrops, "action item") + " for you out of the same lines."
+      : "Nothing was filtered today.";
+    $("toggle-old").hidden = !its.length;
+    $("toggle-old").setAttribute("aria-pressed", state.showOld ? "true" : "false");
+    its.forEach((it) => {
+      const olds = oldFor(it);
+      box.append(h("li", { class: "fl", id: "card-" + it.id },
+        h("div", { class: "fl-h" },
+          h("span", { class: "reason" }, str(it.drop_reason) || "noise"),
+          h("span", { class: "fl-t" }, it._t),
+          h("span", { class: "fl-title" }, str(it.title) || "Untitled")),
+        it.signal ? h("p", { class: "fl-q" }, h("b", null, it._who + ": "), q(it.signal)) : null,
+        state.showOld ? h("div", { class: "fl-old" },
+          olds.length
+            ? olds.map((b) => h("p", null, h("span", { class: "old-k" }, "Old way"), h("span", { class: "mono" }, str(b.id)), " ", q(b.text), " ",
+                h("span", { class: "dim" }, "owner: " + (str(b.owner) === ownerName ? "you" : (str(b.owner) || "unassigned")))))
+            : h("p", { class: "none" }, "The old way let this one go too.")) : null));
+    });
+  }
+  $("toggle-old").addEventListener("click", () => { state.showOld = !state.showOld; buildFiltered(); });
+
+  /* ---------- scorecard ---------- */
+  function buildScore() {
+    const box = $("score");
+    box.replaceChildren();
+    if (!E) { box.append(h("p", { class: "empty-lg" }, "No evaluation in this build.")); return; }
+    const ra = E.route_agreement || {};
+    const ny = E.needs_you || {};
+    const nz = E.noise || {};
+    const tile = (k, v, small, s) => h("div", { class: "tile" }, h("span", { class: "tile-k" }, k), h("span", { class: "tile-v" }, v, small ? h("small", null, small) : null), h("span", { class: "tile-s" }, s));
+    box.append(h("div", { class: "tiles" },
+      tile("Route agreement", pct(ra.pct), isNum(ra.agree) && isNum(ra.total) ? ra.agree + "/" + ra.total : "",
+        "Items your chief of staff routed the same way as the independent grader."),
+      tile("Needs-you recall", pct(ny.recall_pct), isNum(ny.caught) && isNum(ny.gold_total) ? ny.caught + "/" + ny.gold_total : "",
+        "Of the decisions the grader said needed you, how many reached you. This is the no-dropped-balls number." +
+          (isNum(ny.caught) && isNum(ny.gold_total) && ny.gold_total > ny.caught ? " The rest are listed below." : "")),
+      tile("Needs-you precision", pct(ny.precision_pct), isNum(ny.caught) && isNum(ny.cos_total) ? ny.caught + "/" + ny.cos_total : "",
+        "Of the items that interrupted you, how many the grader agreed only you could decide."),
+      tile("Noise amplified", (isNum(nz.cos_amplified) ? nz.cos_amplified : "n/a") + " vs " + (isNum(nz.baseline_amplified) ? nz.baseline_amplified : "n/a"), "",
+        "Of " + (isNum(nz.gold_noise_total) ? nz.gold_noise_total : "the") + " noise moments the grader would filter, how many your chief of staff acted on, against how many the meeting-notes AI made into action items.")));
+
+    const missed = arr(E.missed).filter(Boolean);
+    const inter = arr(E.interruptions).filter(Boolean);
+    const elsewhere = arr(E.per_item).filter((p) => p && str(p.gold_route) === "you" && ["precedent", "agent"].indexOf(str(p.cos_route)) >= 0);
+    const cols = h("div", { class: "score-cols" });
+    cols.append(h("div", null,
+      h("h3", null, "Missed: what the grader flagged and you would not have seen"),
+      h("ul", { class: "slist" }, missed.length
+        ? missed.map((m) => h("li", null, h("span", { class: "sid" }, str(m.gold_id)), h("span", { class: "stext" }, str(m.summary)),
+            m.severity ? h("span", { class: "tag" + (str(m.severity) === "high" ? " tag-high" : "") }, cap(m.severity) + " severity") : null,
+            chip(str(m.cos_route) === "drop" ? "drop" : "missing", str(m.cos_route) === "drop" ? "Filtered" : "Not caught")))
+        : h("li", null, h("span", { class: "none" }, "None. Nothing the grader flagged was dropped or lost."))),
+      elsewhere.length ? h("h3", { style: "margin-top:22px" }, "Needed you, but handled without you") : null,
+      elsewhere.length ? h("ul", { class: "slist" }, elsewhere.map((p) => h("li", null,
+        h("span", { class: "sid" }, str(p.gold_id) + (p.triage_id ? " / " + str(p.triage_id) : "")),
+        h("span", { class: "stext" }, str(p.summary)),
+        h("span", { class: "dim" }, "went to"), chip(str(p.cos_route)),
+        p.triage_id && itemMap.has(str(p.triage_id)) ? h("a", { href: "#card-" + str(p.triage_id), class: "insp-link" }, "See it") : null))) : null,
+      elsewhere.length ? h("p", { class: "grid-note" }, "These still got done, but the grader would have put them in front of you first. This is why recall is below 100%.") : null));
+    cols.append(h("div", null,
+      h("h3", null, "Interruptions the grader would not have sent you"),
+      h("ul", { class: "slist" }, inter.length
+        ? inter.map((x) => h("li", null, h("span", { class: "sid" }, str(x.triage_id)), h("span", { class: "stext" }, str(x.title)),
+            h("span", { class: "dim" }, "grader said"), chip(ROUTES.indexOf(str(x.gold_route)) >= 0 ? str(x.gold_route) : "drop")))
+        : h("li", null, h("span", { class: "none" }, "None. Every interruption was one the grader agreed needed you.")))));
+
+    const conf = E.confusion && typeof E.confusion === "object" ? E.confusion : null;
+    if (conf) {
+      const ccols = ["you", "precedent", "agent", "drop", "missing"];
+      const table = h("table", { class: "grid-t" },
+        h("thead", null, h("tr", null, h("th", { scope: "col", class: "corner" }, h("span", null, "Chief of staff →"), h("span", null, "Grader ↓")), ccols.map((c) => h("th", { scope: "col" }, chip(c))))),
+        h("tbody", null, ROUTES.map((r) => {
+          const row = conf[r] && typeof conf[r] === "object" ? conf[r] : {};
+          return h("tr", null, h("th", { scope: "row" }, chip(r)), ccols.map((c) => {
+            const n = isNum(row[c]) ? row[c] : 0;
+            return h("td", { class: r === c ? "diag" : (n === 0 ? "zero" : "off") }, String(n));
+          }));
+        })));
+      cols.append(h("div", { class: "conf-block" },
+        h("h3", null, "Where the routes agree"),
+        h("div", { class: "table-scroll" }, table),
+        h("p", { class: "grid-note" }, "Rows are the grader's route, columns are your chief of staff's. The diagonal is agreement; Not caught means no item was made.")));
+    }
+    box.append(cols);
+
+    const per = arr(E.per_item).filter(Boolean);
+    if (per.length) {
+      box.append(h("details", { class: "per", id: "per-item" },
+        h("summary", null, "Every graded item (" + per.length + ")"),
+        h("div", { class: "table-scroll" }, h("table", { class: "grid-t" },
+          h("thead", null, h("tr", null, ["Grader item", "Moment", "Grader", "Chief of staff", "Result"].map((x) => h("th", { scope: "col" }, x)))),
+          h("tbody", null, per.map((p) => h("tr", null,
+            h("td", { class: "mono" }, str(p.gold_id) + (p.triage_id ? " / " + str(p.triage_id) : "")),
+            h("td", null, str(p.summary)),
+            h("td", null, chip(ROUTES.indexOf(str(p.gold_route)) >= 0 ? str(p.gold_route) : "drop")),
+            h("td", null, p.cos_route ? chip(ROUTES.indexOf(str(p.cos_route)) >= 0 ? str(p.cos_route) : "drop") : chip("missing")),
+            h("td", null, p.agree ? "Agrees" : "Differs"))))))));
+    }
+
+    const how = [];
+    how.push(h("b", null, "Method. "), "This is a synthetic day. The grader was a separate agent that saw the day and your precedents but never the skill or its output. The old way is an emulation of a meeting-notes AI.");
+    if (E.grader) how.push(" Grader: " + str(E.grader));
+    if (G.labeler && str(G.labeler) !== str(E.grader)) how.push(" Labels: " + str(G.labeler));
+    if (B.how) how.push(" Old way: " + str(B.how));
+    const gi = isNum(E.gold_items) ? E.gold_items : arr(G.items).length;
+    if (gi) how.push(" " + plural(gi, "graded item") + ".");
+    box.append(h("p", { class: "method" }, how));
+  }
+
+  /* ---------- live triage ---------- */
+  const STOP = new Set(("a about after again all also am an and any are as at be been before being but by can could did do does doing done dont for from get got had has have he her here him his how i if im in into is it its just let lets me more my no not now of off on one or our out over please really she should so some than that thats the their them then there these they this those to too up us very was we were what when where which who why will with would yeah yes you your okay ok maybe think know want need going gonna like well sure right thing things cant wont ill").split(" "));
+  function stem(w) {
+    if (w.length > 3 && w.endsWith("s") && !w.endsWith("ss")) w = w.slice(0, -1);
+    if (w.length > 5 && w.endsWith("ing")) w = w.slice(0, -3);
+    return w;
+  }
+  function words(t) {
+    const out = new Set();
+    norm(t).replace(/'/g, "").split(" ").forEach((w) => { if (w.length > 2 && !STOP.has(w)) out.add(stem(w)); });
+    return out;
+  }
+  const YOU_RE = /(\$\s?\d|\b\d+\s?(k|m|mm|million|thousand)\b|\b(money|hire[sd]?|hiring|fire[sd]?|firing|sign(s|ed|ing)?|invest(s|ed|ing|ment)?|rules?|ruled|decide[sd]?|deciding|decision|valuation|budget|salary|equity)\b)/i;
+  const AGENT_RE = /\b(send(s|ing)?|sent|draft(s|ed|ing)?|fix(es|ed|ing)?|schedul(e|es|ed|ing)|book(s|ed|ing)?|email(s|ed|ing)?|intro(s|duce|duced|duces|ducing)?)\b/i;
+  const clipWords = (t, n) => { const w = str(t).trim().split(/\s+/); return w.slice(0, n).join(" ") + (w.length > n ? "..." : ""); };
+
+  function heuristic(line) {
+    const w = words(line);
+    let best = null;
+    allRows().forEach((x) => {
+      const shared = [];
+      words(x.r.claim).forEach((t) => { if (w.has(t)) shared.push(t); });
+      if (shared.length >= 2 && (!best || shared.length > best.shared.length)) best = { shared: shared, x: x };
+    });
+    if (best) {
+      return { route: "precedent", title: "Apply your precedent",
+        why: "It shares " + best.shared.length + " key words (" + best.shared.slice(0, 4).join(", ") + ") with a take you already hold, so you do not decide it again.",
+        precedent_claim: str(best.x.r.claim), _pg: best.x.pg, _row: best.x.r };
+    }
+    let m = YOU_RE.exec(line);
+    if (m) {
+      let qs = str(line).trim();
+      if (!/[?]$/.test(qs)) qs = qs.replace(/[.!]+$/, "") + "?";
+      return { route: "you", title: "Decide: " + clipWords(line, 6),
+        why: "It touches money, people or a rule (" + q(m[0].trim()) + ") and no precedent covers it, so only you can decide.",
+        question: qs, options: [] };
+    }
+    m = AGENT_RE.exec(line);
+    if (m) {
+      const v = m[0].toLowerCase();
+      const agent = /^(email|send|sent|intro)/.test(v) ? "Email draft" : /^(schedul|book)/.test(v) ? "Calendar" : /^fix/.test(v) ? "Claude Code" : "Muse";
+      return { route: "agent", title: "Hand it to " + agent,
+        why: "It is a task with a clear verb (" + q(m[0]) + "), so an agent can do it from a brief.",
+        agent: agent, brief: "Do this: " + clipWords(line, 30) + " Stay inside one lane and bring it back before anything goes out in your name." };
+    }
+    return { route: "drop", title: "Filter it", why: "No decision, no task and no matching precedent, so it stays out of your day." };
+  }
+
+  function buildPrompt(line) {
+    const laneTxt = lanes.length ? lanes.map((l) => "- " + str(l.id) + ": " + str(l.label) + (l.blurb ? " (" + str(l.blurb) + ")" : "")).join("\n") : "- none given";
+    let precTxt = allRows().map((x) => "- " + q(x.r.claim) + " | who: " + str(x.r.who || "self") + " | since " + str(x.r.since) + " | page " + x.pg.page + (x.r._session ? " | decided today" : "")).join("\n") || "- none yet";
+    if (precTxt.length > 40000) precTxt = precTxt.slice(0, 40000) + "\n- (list cut for length)";
+    return [
+      "You are the chief-of-staff skill for " + ownerName + ". Their scarcest resource is decisions. Route ONE line that " + ownerName + " or someone near them just said.",
+      "",
+      "Routes:",
+      "- you: only the owner can decide it (money, people, commitments in the owner's name, taste, irreversible or high-stakes calls) and no precedent below already settles it.",
+      "- precedent: one of the owner's takes below already decides it. Cite the exact claim text.",
+      "- agent: work an agent can do now with no new decision from the owner (draft, research, schedule, fix code). Name the agent and write a 2-3 sentence brief that keeps only the signal.",
+      "- drop: chatter, venting, speculation, already handled, or not the owner's to carry.",
+      "",
+      "The you test: send it to the owner only if a great human chief of staff would interrupt them for it, only they can decide it, and no precedent covers it. If a precedent fits, route precedent.",
+      "Attention budget: at most " + budget + " items a day go to the owner. Be stingy with you.",
+      "",
+      "Lanes (keep any work inside one lane):",
+      laneTxt,
+      "",
+      "The owner's precedents (GBrain takes; who=self means the owner holds it):",
+      precTxt,
+      "",
+      "The line: " + q(str(line).slice(0, 500)),
+      "",
+      'Reply with only one JSON object and no other text: {"route": "you|precedent|agent|drop", "title": "imperative, at most 8 words", "why": "one sentence", "precedent_claim": "exact claim text, or null", "agent": "Claude Code|Codex|Muse|Email draft|Calendar, or null", "brief": "2-3 sentences, or null", "question": "the decision question, or null", "options": ["short option", "short option"] or null}'
+    ].join("\n");
+  }
+
+  function normalizeLive(res) {
+    if (!res || typeof res !== "object" || Array.isArray(res)) throw { code: "invalid_json" };
+    const route = str(res.route).toLowerCase().trim();
+    if (ROUTES.indexOf(route) < 0) throw { code: "invalid_json" };
+    const nz = (x) => (x == null || str(x) === "null" ? "" : str(x));
+    return {
+      route: route, title: nz(res.title), why: nz(res.why), precedent_claim: nz(res.precedent_claim),
+      agent: nz(res.agent), brief: nz(res.brief), question: nz(res.question),
+      options: arr(res.options).map((o) => (o && typeof o === "object" ? str(o.label || o.option || o.text) : str(o))).filter(Boolean)
+    };
+  }
+
+  function findRow(claim) {
+    const n = norm(claim);
+    if (!n) return null;
+    return allRows().find((x) => norm(x.r.claim) === n) || null;
+  }
+
+  function renderLive(r, line, mode, note) {
+    const route = ROUTES.indexOf(r.route) >= 0 ? r.route : "drop";
+    const modeText = mode === "claude" ? "Claude, quick model" : mode === "example" ? "Example, offline heuristic" : "Offline heuristic";
+    let precEl = null;
+    if (route === "precedent" && r.precedent_claim) {
+      const hit = r._pg ? { pg: r._pg, r: r._row } : findRow(r.precedent_claim);
+      precEl = h("p", { class: "lc-claim" }, q(r.precedent_claim),
+        hit ? h("span", null, [hit.r.since ? "since " + str(hit.r.since) : "", hit.pg.page, hit.r._session ? "decided in this session" : ""].filter(Boolean).join(" · ")) : null);
+    }
+    const opts = arr(r.options);
+    const card = h("div", { class: "card live-card lc-" + route },
+      h("div", { class: "lc-h" }, chip(route), h("span", { class: "lc-route" }, RNAME[route]), h("span", { class: "lc-mode" }, modeText)),
+      h("p", { class: "lc-heard" }, "You said: " + q(line)),
+      route === "you" && r.question ? h("p", { class: "lc-q" }, r.question) : h("p", { class: "lc-title" }, r.title || "Untitled"),
+      route === "you" && r.question && r.title ? h("p", { class: "lc-why" }, r.title) : null,
+      r.why ? h("p", { class: "lc-why" }, r.why) : null,
+      precEl,
+      route === "agent" ? h("div", { class: "lc-agent" }, h("span", { class: "agent-badge" }, r.agent || "Agent"), r.brief ? h("span", null, r.brief) : null) : null,
+      route === "you" && opts.length ? h("ul", { class: "lc-opts" }, opts.map((o) => h("li", null, o))) : null,
+      note ? h("p", { class: "lc-note" }, note) : null);
+    $("live-out").replaceChildren(card);
+  }
+
+  let sampleFn;
+  let sampleBlocked = false;
+  let samplePromise = null;
+  function setMode() {
+    const el = $("live-mode");
+    if (sampleFn === undefined) el.textContent = "Checking whether Claude is available here.";
+    else if (sampleFn && !sampleBlocked) el.textContent = "Answers come from Claude (quick model), checked against your precedents. The first one asks you to allow it.";
+    else el.textContent = "Claude is not available in this view, so answers come from a small offline heuristic.";
+  }
+  try {
+    if (window.claude && typeof window.claude.use === "function") {
+      samplePromise = Promise.resolve(window.claude.use("sample")).then(
+        (f) => { sampleFn = typeof f === "function" ? f : null; setMode(); },
+        () => { sampleFn = null; setMode(); });
+    } else {
+      sampleFn = null;
+    }
+  } catch (e) {
+    sampleFn = null;
+  }
+  setMode();
+
+  async function runLive(ev) {
+    if (ev) ev.preventDefault();
+    const input = $("live-line");
+    const btn = $("live-btn");
+    const line = str(input.value).trim().slice(0, 500);
+    if (!line) {
+      $("live-out").replaceChildren(h("p", { class: "thinking" }, "Type a line first, or pick an example."));
+      input.focus();
+      return;
+    }
+    btn.disabled = true;
+    $("live-out").replaceChildren(h("p", { class: "thinking" }, "Thinking..."));
+    try {
+      if (sampleFn === undefined && samplePromise) await samplePromise;
+      if (sampleFn && !sampleBlocked && typeof sampleFn.json === "function") {
+        try {
+          const res = await sampleFn.json(buildPrompt(line), { modelTier: "quick" });
+          renderLive(normalizeLive(res), line, "claude");
+        } catch (e) {
+          const code = e && e.code ? String(e.code) : "";
+          if (["not_granted", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed", "session_expired"].indexOf(code) >= 0) sampleBlocked = true;
+          let msg;
+          if (code === "not_granted") msg = "Claude was not allowed for this page, so this answer comes from the offline heuristic.";
+          else if (code === "rate_limited") msg = "Claude is busy for you right now. Try again in a minute. This answer comes from the offline heuristic.";
+          else if (code === "invalid_json") msg = "Claude replied in an unexpected shape. This answer comes from the offline heuristic; try again for Claude's answer.";
+          else if (code === "session_expired") msg = "Your Claude session expired. Sign in again to use Claude. This answer comes from the offline heuristic.";
+          else msg = "Claude could not answer this time" + (code ? " (" + code + ")" : "") + ". This answer comes from the offline heuristic.";
+          renderLive(heuristic(line), line, "heuristic", msg);
+          setMode();
+        }
+      } else {
+        renderLive(heuristic(line), line, "heuristic");
+      }
+    } finally {
+      btn.disabled = false;
+    }
+  }
+  $("live-form").addEventListener("submit", runLive);
+
+  function buildExamples() {
+    const precCands = ["Can we squeeze in a first meeting with that founder this Friday?"].concat(byRoute.precedent.map((it) => str(it.signal)).filter(Boolean));
+    let ex1 = precCands.find((t) => heuristic(t).route === "precedent");
+    if (!ex1) {
+      const row = allRows().find((x) => str(x.r.who || "self") === "self");
+      if (row) ex1 = "Quick check on this: " + str(row.r.claim);
+    }
+    const youCands = [
+      "Should we invest $500k in the founder we met this morning, or wait for the next round?",
+      "I think we should hire a head of platform before the end of the year.",
+      "Do we sign the new office lease this week?"
+    ];
+    const ex2 = youCands.find((t) => heuristic(t).route === "you") || youCands[0];
+    const box = $("examples");
+    box.replaceChildren();
+    [[ex1, "Example: covered by a precedent"], [ex2, "Example: needs you"]].forEach((pair, i) => {
+      if (!pair[0]) return;
+      box.append(h("button", { type: "button", class: "ex", id: "ex-" + (i + 1), onclick: () => { $("live-line").value = pair[0]; $("live-line").focus(); } },
+        h("span", { class: "ex-k" }, pair[1]), h("span", { class: "ex-t" }, pair[0])));
+    });
+    if (ex1) {
+      $("live-line").value = ex1;
+      renderLive(heuristic(ex1), ex1, "example");
+    }
+  }
+
+  /* ---------- skill ---------- */
+  function buildSkill() {
+    const box = $("skill");
+    box.replaceChildren();
+    if (!SK) { box.append(h("p", { class: "empty-lg" }, "The skill text is not included in this build.")); return; }
+    if (SK.description) $("skill-sub").textContent = str(SK.description);
+    const md = str(SK.markdown);
+    const ta = h("textarea", { class: "copy-fallback", id: "skill-text", readonly: true, hidden: true, "aria-label": "SKILL.md text" });
+    const status = h("span", { class: "copy-status", role: "status" });
+    box.append(
+      h("div", { class: "skill-meta" }, h("span", { class: "sk-name" }, str(SK.name) || "chief-of-staff"), SK.version ? h("span", { class: "sk-ver" }, "v" + str(SK.version)) : null,
+        h("span", { class: "dim" }, "Triage version " + str(T.skill_version || SK.version || "") + (T.skill ? ", used to route this day" : ""))),
+      md ? h("details", { class: "skill-d", id: "skill-details" },
+        h("summary", null, "Read SKILL.md (" + plural(md.split("\n").length, "line") + ")"),
+        h("div", { class: "skill-body" },
+          h("div", { class: "skill-actions" }, h("button", { type: "button", class: "btn", id: "copy-skill", onclick: () => copyText(md, ta, status) }, "Copy SKILL.md"), status),
+          ta,
+          h("pre", { class: "sk-md", tabindex: "0" }, md))) : h("p", { class: "dim" }, "No SKILL.md text in this build."));
+  }
+
+  /* ---------- boot ---------- */
+  buildTranscript();
+  buildRoutes();
+  updateCounts(U.length);
+  restClock();
+  buildDecisions();
+  buildApplied();
+  renderLedger();
+  buildDispatch();
+  buildFiltered();
+  buildScore();
+  buildExamples();
+  buildSkill();
+  const firstSel = byRoute.you[0] || byRoute.precedent[0] || byRoute.agent[0] || items[0];
+  if (firstSel) select(firstSel.id, "init"); else renderInspector(null);
+  window.COS_PRECEDENTS = () => P;
+  }
+})();
+</script>
+<script>
+/* Run the chief-of-staff skill on an uploaded conversation. Bound once on document,
+   so it keeps working after the page is redrawn for a new conversation. */
+(function () {
+  "use strict";
+  const DEMO = window.COS_DATA;
+  if (!DEMO || typeof DEMO !== "object") return;
+  const $ = (id) => document.getElementById(id);
+  const str = (x) => (x == null ? "" : String(x));
+  const arr = (x) => (Array.isArray(x) ? x : []);
+  const MAX_CHARS = 240000;
+  const ARTIFACT_URL = "https://claude.ai/artifact/ShevjvqyBXDsdZXDoJAtm1";
+  let parsed = null;
+  let ctl = null;
+  let timer = 0;
+  let debounce = 0;
+
+  function status(msg, err) {
+    const el = $("up-status");
+    if (!el) return;
+    el.textContent = msg;
+    el.classList.toggle("err", !!err);
+  }
+
+  /* ---------- parsing ---------- */
+  function secs(ts) {
+    const m = /^(\d{1,2}):(\d{2})(?::(\d{2}))?(?:[.,]\d+)?$/.exec(str(ts).trim());
+    if (!m) return null;
+    return m[3] != null ? (+m[1]) * 3600 + (+m[2]) * 60 + (+m[3]) : (+m[1]) * 60 + (+m[2]);
+  }
+  function fmt(n, long) {
+    const p = (x) => String(x).padStart(2, "0");
+    const h = Math.floor(n / 3600), m = Math.floor((n % 3600) / 60), s = n % 60;
+    return long ? p(h) + ":" + p(m) + ":" + p(s) : p(m + h * 60) + ":" + p(s);
+  }
+  const cleanName = (n) => str(n).replace(/\*\*|__/g, "").replace(/^[-*•>\s]+/, "").replace(/\s+/g, " ").trim();
+  const nameOk = (n) => n && n.length <= 40 && n.split(" ").length <= 5 && !/https?$|^\d+$/.test(n);
+
+  function fromJson(raw) {
+    let j;
+    try { j = JSON.parse(raw); } catch (e) { return null; }
+    const list = Array.isArray(j) ? j : arr(j && (j.utterances || j.sentences || j.transcript || j.segments));
+    const out = list.map((u) => u && typeof u === "object" ? {
+      speaker: cleanName(u.speaker || u.speaker_name || u.name || u.participant || ""),
+      text: str(u.text || u.raw_text || u.sentence || u.content || "").trim(),
+      time: secs(u.t) != null ? secs(u.t) : (typeof u.start === "number" ? Math.round(u.start) : (typeof u.start_time === "number" ? Math.round(u.start_time) : secs(u.start || u.start_time || u.timestamp)))
+    } : null).filter((u) => u && u.text);
+    return out.length ? { format: "JSON", turns: out } : null;
+  }
+
+  function fromCues(raw) {
+    const blocks = raw.replace(/^WEBVTT[^\n]*\n/, "").split(/\n\s*\n/);
+    const out = [];
+    blocks.forEach((b) => {
+      const lines = b.split("\n").map((l) => l.trim()).filter(Boolean);
+      const ti = lines.findIndex((l) => l.indexOf("-->") >= 0);
+      if (ti < 0) return;
+      const start = secs(lines[ti].split("-->")[0].trim().replace(",", "."));
+      let text = lines.slice(ti + 1).join(" ").trim();
+      if (!text) return;
+      let speaker = "";
+      let m = /^<v(?:\.[^ >]*)?\s+([^>]+)>([\s\S]*)$/.exec(text);
+      if (m) { speaker = cleanName(m[1]); text = m[2].replace(/<\/v>/g, "").trim(); }
+      else {
+        m = /^([^:]{1,40}):\s*([\s\S]+)$/.exec(text);
+        if (m && nameOk(cleanName(m[1]))) { speaker = cleanName(m[1]); text = m[2].trim(); }
+      }
+      text = text.replace(/<[^>]+>/g, "");
+      const prev = out[out.length - 1];
+      if (prev && speaker && prev.speaker === speaker && prev.text.length < 600) prev.text += " " + text;
+      else out.push({ speaker: speaker, text: text, time: start });
+    });
+    return out.length ? { format: /^WEBVTT/.test(raw) ? "WebVTT" : "SRT", turns: out } : null;
+  }
+
+  const OTTER = /^(.{1,60}?)\s+(\d{1,2}:\d{2}(?::\d{2})?)\s*$/;
+  function fromOtter(raw) {
+    const lines = raw.split("\n");
+    const heads = lines.filter((l) => { const m = OTTER.exec(l.trim()); return m && nameOk(cleanName(m[1])); }).length;
+    if (heads < 3) return null;
+    const out = [];
+    let cur = null;
+    lines.forEach((l) => {
+      const t = l.trim();
+      if (!t) return;
+      const m = OTTER.exec(t);
+      if (m && nameOk(cleanName(m[1]))) { cur = { speaker: cleanName(m[1]), text: "", time: secs(m[2]) }; out.push(cur); return; }
+      if (cur) cur.text = (cur.text ? cur.text + " " : "") + t;
+    });
+    const turns = out.filter((u) => u.text);
+    return turns.length ? { format: "Otter", turns: turns } : null;
+  }
+
+  function fromLines(raw) {
+    const out = [];
+    raw.split("\n").forEach((l) => {
+      let t = l.replace(/\*\*|__/g, "").replace(/^\s*[-*•>]\s+/, "").trim();
+      if (!t || /^#{1,6}\s/.test(t) || /^(-{3,}|={3,})$/.test(t)) return;
+      let m = /^\[?(\d{1,2}:\d{2}(?::\d{2})?)\]?\s*[-–]?\s*([^:]{1,40}):\s*(.+)$/.exec(t);
+      if (m && nameOk(cleanName(m[2]))) { out.push({ speaker: cleanName(m[2]), text: m[3].trim(), time: secs(m[1]) }); return; }
+      m = /^([^:\[\]()]{1,40}?)\s*[(\[](\d{1,2}:\d{2}(?::\d{2})?)[)\]]\s*:?\s*(.+)$/.exec(t);
+      if (m && nameOk(cleanName(m[1]))) { out.push({ speaker: cleanName(m[1]), text: m[3].trim(), time: secs(m[2]) }); return; }
+      m = /^([^:]{1,40}):\s*(.+)$/.exec(t);
+      if (m && nameOk(cleanName(m[1]))) { out.push({ speaker: cleanName(m[1]), text: m[2].trim(), time: null }); return; }
+      const prev = out[out.length - 1];
+      if (prev && prev.speaker) prev.text += " " + t;
+      else out.push({ speaker: "", text: t, time: null });
+    });
+    return out.length ? { format: "Name: text lines", turns: out } : null;
+  }
+
+  function parseTranscript(raw) {
+    raw = str(raw).replace(/^﻿/, "").replace(/\r\n?/g, "\n").trim();
+    if (!raw) return null;
+    let res = null;
+    if (/^[\[{]/.test(raw)) res = fromJson(raw);
+    if (!res && (/^WEBVTT/.test(raw) || /\d{2}:\d{2}[.,]\d{3}\s*-->/.test(raw))) res = fromCues(raw);
+    if (!res) res = fromOtter(raw);
+    if (!res) res = fromLines(raw);
+    if (!res) return null;
+    const turns = res.turns.map((u) => ({ speaker: u.speaker || "Unknown speaker", text: str(u.text).replace(/\s+/g, " ").trim(), time: u.time })).filter((u) => u.text);
+    const long = turns.some((u) => u.time != null && u.time >= 3600);
+    let last = null;
+    const utterances = [];
+    let chars = 0;
+    let cut = 0;
+    turns.forEach((u) => {
+      if (u.time != null) last = u.time;
+      if (chars + u.text.length > MAX_CHARS) { cut++; return; }
+      chars += u.text.length;
+      utterances.push({ id: "u" + String(utterances.length + 1).padStart(3, "0"), t: last == null ? "" : fmt(last, long), speaker: u.speaker, text: u.text });
+    });
+    const count = new Map();
+    utterances.forEach((u) => count.set(u.speaker, (count.get(u.speaker) || 0) + 1));
+    const speakers = Array.from(count.entries()).sort((a, b) => b[1] - a[1]).map((e) => e[0]);
+    return { format: res.format, utterances: utterances, speakers: speakers, cut: cut };
+  }
+
+  function onText() {
+    const raw = $("up-text") ? $("up-text").value : "";
+    parsed = parseTranscript(raw);
+    const sel = $("up-owner");
+    const info = $("up-parsed");
+    if (!sel || !info) return;
+    sel.replaceChildren();
+    if (!parsed || parsed.utterances.length < 2) {
+      parsed = null;
+      info.textContent = raw.trim() ? "Could not find at least two lines of conversation in this text." : "No transcript yet.";
+      sel.append(new Option("Load a transcript first", ""));
+      return;
+    }
+    const owner = str(DEMO.day && DEMO.day.owner && DEMO.day.owner.name).toLowerCase();
+    let pick = parsed.speakers.find((s) => /^(me|you)$/i.test(s)) ||
+      parsed.speakers.find((s) => owner && s.toLowerCase().split(" ")[0] === owner) || "";
+    parsed.speakers.forEach((s) => sel.append(new Option(s, s, false, s === pick)));
+    sel.append(new Option("None of them (I was listening)", "__none__", false, false));
+    if (!pick) sel.value = parsed.speakers[0];
+    info.textContent = "Read " + parsed.utterances.length + " lines from " + parsed.speakers.length + " speaker" + (parsed.speakers.length === 1 ? "" : "s") +
+      " (" + parsed.format + ")." + (parsed.cut ? " " + parsed.cut + " later lines are over the " + (MAX_CHARS / 1000) + "k-character limit and will not be sent." : "") +
+      (pick ? "" : " Check which speaker is you.");
+  }
+
+  /* ---------- prompt ---------- */
+  function rulesToUse() {
+    const all = typeof window.COS_PRECEDENTS === "function" ? window.COS_PRECEDENTS() : arr(DEMO.precedents);
+    const withDemo = $("up-demo-rules") && $("up-demo-rules").checked;
+    return all.map((pg) => Object.assign({}, pg, {
+      rows: arr(pg.rows).filter((r) => withDemo || r.real || r._session)
+    })).filter((pg) => pg.rows.length);
+  }
+
+  const enc = new TextEncoder();
+  const bytes = (s) => enc.encode(s).length;
+  const lineOf = (u) => u.id + " " + (u.t ? u.t + " " : "") + u.speaker + ": " + u.text;
+  const SKILL_CARD = [
+    "The chief-of-staff skill, condensed (the full SKILL.md is shown on the page):",
+    "1. Signal. Find asks, commitments by you, commitments to you, decisions, risks and deadlines. Keep the fewest verbatim words that carry each. Merge a matter raised more than once into one item that lists all its lines. Everything else is noise.",
+    "2. Precedent. A take the owner holds answers a moment only inside its bounds (the amounts, people and dates it names). Outside the bounds, route it to you and cite the rule.",
+    "3. Route every moment to exactly one place:",
+    "   you: only the owner can do it: relationship or trust, money above a rule's cap, irreversible, values or identity, a new standing rule, or novel and high stakes. At most 3, ranked by stakes x irreversibility x deadline.",
+    "   precedent: a listed take already answers it; say what you did under it.",
+    "   agent: work an agent can do. Claude Code for repo work and analysis, Codex for a bounded code fix with a repro, Muse for long-form drafting, Email draft for a Gmail draft (never sent), Calendar for a proposed hold (never accepted). Nothing is sent, merged or spent without the owner's approval.",
+    "   drop: noise a naive note-taker would turn into a task: chatter, speculative someday ideas, venting, already handled, not yours (someone else owns it), duplicate. List the tempting noise, not every pleasantry.",
+    "4. Briefs carry the signal verbatim, list what was left out on purpose, say when the work is done, and name the approval gate. Never carry facts from one part of the owner's life into another.",
+    "5. For each you item, write a memory_writes row so the decision becomes a take once the owner decides."
+  ].join("\n");
+
+  function buildPrompt(owner, title, pages, lines, part) {
+    const rules = [];
+    pages.forEach((pg) => pg.rows.forEach((r) => {
+      if (str(r.who || "self") !== "self") return;
+      rules.push("- page " + pg.page + ": \"" + str(r.claim) + "\" (since " + str(r.since) + ", weight " + str(r.weight) + (r.real ? ", real" : "") + ")");
+    }));
+    const who = owner === "__none__"
+      ? "The owner (\"you\") is not a speaker; they were listening. Treat asks made to the listener as asks to you."
+      : "The owner, called \"you\", is the speaker \"" + owner + "\".";
+    return [
+      "You are running the GBrain skill chief-of-staff on an uploaded conversation instead of a whole day.",
+      part && part.n > 1 ? "The conversation is long, so it is read in " + part.n + " parts. This is part " + part.k + " (lines " + part.first + " to " + part.last + "). Route only what is in this part; a later step merges matters that span parts." : "",
+      who,
+      title ? "Conversation title: " + title : "",
+      "",
+      SKILL_CARD,
+      "",
+      "Precedents (takes held by the owner; only these count):",
+      rules.length ? rules.join("\n") : "(none recorded that apply; propose a standing rule where a repeated pattern suggests one)",
+      "",
+      "Transcript (id time speaker: text):",
+      lines.join("\n"),
+      "",
+      "Return ONLY one JSON object, no prose and no code fence, in this shape:",
+      '{"title": "short title", "lane": "one or two words for the part of life this belongs to, e.g. Fund, Board, Build, Home",',
+      ' "items": [{"id": "t01", "utterances": ["u003"], "signal": "verbatim quote", "speaker": "", "type": "ask|commitment-by-you|commitment-to-you|decision|risk|idea|fyi|chatter", "route": "you|precedent|agent|drop", "title": "imperative, max 8 words", "why": "one sentence",',
+      '   "decision": {"question": "", "options": [{"label": "", "tradeoff": ""}], "recommended": 0, "why_only_you": "", "deadline": "YYYY-MM-DD or null", "stakes": "high|medium|low", "reversible": true, "cost_of_delay": ""},',
+      '   "precedent": {"page": "", "claim": "exact claim text", "since": "", "action": "what you did under it", "real": false},',
+      '   "dispatch": {"agent": "Claude Code|Codex|Muse|Email draft|Calendar", "brief": "2-4 sentences", "signal": ["verbatim quotes"], "noise_excluded": [""], "done_when": [""], "context_pages": [], "approval_gate": "before sending|before merging|before spending|none (only for read-only work that sends, shares or changes nothing)"},',
+      '   "drop_reason": "chatter|speculative|venting|already handled|not yours|duplicate"}],',
+      ' "memory_writes": [{"page": "", "row": "| n | claim with [option a / option b / option c] in option order | take | self | 0.8 | YYYY-MM-DD | decided via chief of staff |", "trigger": "t01"}],',
+      ' "end_of_day_brief": "3-5 sentences to you, in a chief of staff voice",',
+      ' "old_way_action_items": [{"text": "", "owner": "name or unassigned", "utterances": ["u003"]}]}',
+      "Include decision only on you items, precedent only on precedent items, dispatch on agent items (and on precedent items an agent carries out), drop_reason only on drop items. Signal quotes must be verbatim substrings of the line text, and every utterance id must be one of the ids above. old_way_action_items emulates a generic meeting-notes AI with no memory of the precedents: every sentence that sounds like a task becomes an action item, including ideas and venting phrased as \"we should\". Keep all text tight."
+    ].join("\n");
+  }
+
+  /* ---------- result -> page data ---------- */
+  const ROUTES = ["you", "precedent", "agent", "drop"];
+  function toData(res, owner, title, pages) {
+    const U = parsed.utterances;
+    const ids = new Set(U.map((u) => u.id));
+    const findBySignal = (sig) => {
+      const s = str(sig).trim().toLowerCase();
+      if (s.length < 6) return [];
+      const hit = U.find((u) => u.text.toLowerCase().indexOf(s) >= 0);
+      return hit ? [hit.id] : [];
+    };
+    let lost = 0;
+    const items = arr(res && res.items).filter((x) => x && typeof x === "object").map((raw) => {
+      const it = Object.assign({}, raw);
+      it.route = ROUTES.indexOf(it.route) >= 0 ? it.route : "drop";
+      let us = arr(it.utterances).map(str).filter((id) => ids.has(id));
+      if (!us.length) us = findBySignal(it.signal);
+      it.utterances = us;
+      it.context = "c1";
+      it.lane = "lane";
+      if (it.route === "you" && (!it.decision || typeof it.decision !== "object")) it.decision = { question: str(it.title), options: [] };
+      if (it.dispatch && typeof it.dispatch === "object") {
+        const dp = it.dispatch;
+        dp.lane_scope = str(res.lane) || "This conversation";
+        // the skill lets nothing leave without the owner's yes: a gate of "none" is kept only for work that sends nothing
+        const g = str(dp.approval_gate).toLowerCase();
+        const leaves = /email draft|calendar/i.test(str(dp.agent)) ||
+          /\b(send|sends|sent|share|forward|email|intro|introduce|invite|book|post|publish|upload|pay|wire|transfer|ingest|export)\b/i.test(str(it.title) + " " + str(dp.brief));
+        if ((!g || g === "none") && leaves) dp.approval_gate = /pay|wire|transfer|spend|buy/i.test(str(it.title) + " " + str(dp.brief)) ? "before spending" : "before sending";
+      }
+      return it;
+    }).filter((it) => { if (!it.utterances.length) { lost++; return false; } return true; });
+    items.forEach((it, i) => { it.id = "t" + String(i + 1).padStart(2, "0"); });
+    const mws = items.filter((it) => it._mw).map((it) => Object.assign({}, it._mw, { trigger: it.id + ": written only after you decide" }));
+    items.forEach((it) => { delete it._mw; });
+    const oldItems = arr(res && res.old_way_action_items).filter((b) => b && typeof b === "object").map((b, i) => ({
+      id: "b" + String(i + 1).padStart(2, "0"), text: str(b.text), owner: str(b.owner) || "unassigned", context: "c1",
+      utterances: arr(b.utterances).map(str).filter((id) => ids.has(id))
+    }));
+    const now = new Date();
+    const iso = now.getFullYear() + "-" + String(now.getMonth() + 1).padStart(2, "0") + "-" + String(now.getDate()).padStart(2, "0");
+    const weekday = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"][now.getDay()];
+    const ownerName = owner === "__none__" ? "(listener)" : owner;
+    const others = parsed.speakers.filter((s) => s !== owner);
+    const times = U.map((u) => u.t).filter(Boolean);
+    return {
+      lost: lost,
+      data: {
+        source: "upload",
+        day: {
+          date: iso, weekday: weekday,
+          owner: { name: ownerName, role: "" },
+          capture: "Your uploaded transcript (" + parsed.format + "), triaged in this browser by Claude with the chief-of-staff skill. Not saved.",
+          lanes: [{ id: "lane", label: str(res.lane) || "This conversation" }],
+          contexts: [{ id: "c1", start: times[0] || "", end: times[times.length - 1] || "", kind: "uploaded", title: str(res.title) || title || "Your conversation", people: others, lane: "lane", consent: "You confirmed everyone agreed to be recorded" }],
+          utterances: U
+        },
+        triage: { skill: "chief-of-staff", skill_version: str(DEMO.skill && DEMO.skill.version), attention_budget: typeof res.attention_budget === "number" ? res.attention_budget : 3, items: items, memory_writes: mws, end_of_day_brief: str(res.end_of_day_brief) },
+        baseline: { tool: "Generic meeting-notes AI (emulated in the same Claude call)", meetings: [{ context: "c1", summary: "" }], action_items: oldItems },
+        gold: {}, eval: null,
+        precedents: pages.map((pg) => ({ page: pg.page, title: pg.title, lane: pg.lane, rows: pg.rows.map((r) => { const c = Object.assign({}, r); delete c._session; return c; }) })),
+        skill: DEMO.skill,
+        built_at: now.toISOString()
+      }
+    };
+  }
+
+  function afterDraw(data, lost, secsTaken, notes) {
+    const n = data.triage.items.length;
+    const banner = $("up-banner");
+    if (banner) {
+      banner.hidden = false;
+      banner.replaceChildren(
+        document.createTextNode("Your conversation: " + data.day.contexts[0].title + ". " + data.day.utterances.length + " lines, " + n + (n === 1 ? " moment" : " moments") + ", triaged by Claude in " + secsTaken + " s." + (lost ? " " + lost + " moments that pointed at no line were left out." : "") + (notes ? " " + notes : "")));
+      const back = document.createElement("button");
+      back.type = "button"; back.className = "btn"; back.id = "up-back"; back.textContent = "Back to the demo day";
+      banner.append(back);
+    }
+    const onair = document.querySelector(".onair");
+    if (onair) onair.lastChild.textContent = "Your conversation";
+    const foot = document.querySelector(".foot-small");
+    if (foot) foot.textContent = "Your uploaded conversation. Nothing was sent, written or spent, and the page did not save the transcript.";
+    const score = $("score");
+    if (score) score.replaceChildren(Object.assign(document.createElement("p"), { className: "up-parsed", textContent: "The blind grader only exists for the demo day. For your conversation, you are the grader: would a great chief of staff have put the same things in front of you?" }));
+    window.scrollTo(0, 0);
+  }
+
+  /* ---------- run ---------- */
+  const FATAL = ["cancelled", "not_granted", "session_expired", "sampling_disabled", "not_declared", "capability_disabled", "capability_removed"];
+  async function triage() {
+    if (!parsed) { status("Load or paste a transcript first.", true); return; }
+    if (!$("up-consent").checked) { status("Tick the consent box first. Only upload conversations everyone agreed to record.", true); return; }
+    const owner = $("up-owner").value;
+    if (!owner) { status("Pick which speaker is you.", true); return; }
+    let sample = null;
+    try { sample = window.claude && typeof window.claude.use === "function" ? await window.claude.use("sample") : null; } catch (e) { sample = null; }
+    if (!sample || typeof sample.json !== "function") {
+      status("Triage needs Claude, which only runs on the claude.ai version of this page: " + ARTIFACT_URL, true);
+      return;
+    }
+    const title = $("up-title").value.trim();
+    const pages = rulesToUse();
+
+    // one request holds at most 64 KiB, so a long conversation is read in parts
+    let maxBytes = 65536;
+    try { const lim = typeof sample.limits === "function" ? await sample.limits() : null; if (lim && lim.maxPromptBytes) maxBytes = lim.maxPromptBytes; } catch (e) { /* keep the default */ }
+    const room = maxBytes - bytes(buildPrompt(owner, title, pages, [], { k: 99, n: 99, first: "u9999", last: "u9999" })) - 4000;
+    if (room < 4000) { status("Your rules leave too little room for the transcript. Untick the demo day's example rules and try again.", true); return; }
+    const lines = parsed.utterances.map((u) => {
+      let line = lineOf(u);
+      if (bytes(line) + 1 > room) line = line.slice(0, Math.floor(room / 4));
+      return { u: u, line: line, b: bytes(line) + 1 };
+    });
+    // equal-sized parts finish at about the same time
+    const total = lines.reduce((a, x) => a + x.b, 0);
+    const target = Math.min(room, Math.ceil(total / Math.max(1, Math.ceil(total / room))) + 500);
+    const chunks = [];
+    let cur = [], curB = 0;
+    lines.forEach((x) => {
+      if (cur.length && curB + x.b > target) { chunks.push(cur); cur = []; curB = 0; }
+      cur.push(x); curB += x.b;
+    });
+    if (cur.length) chunks.push(cur);
+    const n = chunks.length;
+
+    const go = $("up-go"), stop = $("up-stop");
+    go.disabled = true; stop.hidden = false;
+    ctl = new AbortController();
+    const t0 = performance.now();
+    let done = 0, merging = false;
+    const tick = () => {
+      const s = Math.round((performance.now() - t0) / 1000);
+      if (merging) status("Merging the " + n + " parts into one triage. " + s + " s.");
+      else if (n > 1) status("Claude is reading " + parsed.utterances.length + " lines in " + n + " parts, two at a time: " + done + " of " + n + " done, " + s + " s. A long conversation takes a few minutes.");
+      else status("Claude is reading " + parsed.utterances.length + " lines with your rules. " + s + " s. This usually takes 30 to 90 seconds.");
+    };
+    tick();
+    timer = setInterval(tick, 1000);
+    try {
+      const results = new Array(n);
+      let next = 0;
+      const one = async (k) => {
+        const c = chunks[k];
+        const part = { k: k + 1, n: n, first: c[0].u.id, last: c[c.length - 1].u.id };
+        try {
+          results[k] = await sample.json(buildPrompt(owner, title, pages, c.map((x) => x.line), part), { modelTier: "default", signal: ctl.signal });
+        } catch (e) {
+          const code = e && e.code ? String(e.code) : "error";
+          if (FATAL.indexOf(code) >= 0) throw e;
+          results[k] = { _error: code, _part: part };
+        }
+        done++;
+      };
+      const worker = async () => { while (next < n) { const k = next++; await one(k); } };
+      await Promise.all(n > 1 ? [worker(), worker()] : [worker()]);
+
+      // combine the parts; decision write-backs travel with their item
+      const combined = { title: "", lane: "", items: [], old_way_action_items: [], briefs: [] };
+      const failed = [];
+      let seq = 0;
+      results.forEach((r) => {
+        if (!r || typeof r !== "object") return;
+        if (r._error) { failed.push(r); return; }
+        if (!combined.title && r.title) combined.title = str(r.title);
+        if (!combined.lane && r.lane) combined.lane = str(r.lane);
+        const map = {};
+        arr(r.items).forEach((it) => {
+          if (!it || typeof it !== "object") return;
+          const id = "x" + (++seq);
+          map[str(it.id)] = id;
+          combined.items.push(Object.assign({}, it, { id: id }));
+        });
+        arr(r.memory_writes).forEach((m) => {
+          const hit = m && /\bt\d+\b/.exec(str(m.trigger));
+          const it = hit && combined.items.find((x) => x.id === map[hit[0]]);
+          if (it) it._mw = m;
+        });
+        combined.old_way_action_items.push.apply(combined.old_way_action_items, arr(r.old_way_action_items));
+        if (r.end_of_day_brief) combined.briefs.push(str(r.end_of_day_brief));
+      });
+      if (!combined.items.length) {
+        const codes = failed.map((f) => f._error).join(", ");
+        status("Claude could not finish" + (codes ? " (" + codes + ")" : "") + ". Try again in a minute.", true);
+        return;
+      }
+      let brief = combined.briefs.join(" ");
+      if (n - failed.length > 1) {
+        merging = true; tick();
+        const list = combined.items.map((it) => it.id + " | " + str(it.route) + " | " + str(it.title) + " | " + str(it.why) + " | lines " + arr(it.utterances).join(",")).join("\n");
+        const rp = [
+          "You are finishing a chief-of-staff triage of one conversation that was read in " + n + " parts. These are the items from all parts (id | route | title | why | lines):",
+          list,
+          "",
+          "The owner is " + (owner === "__none__" ? "a listener, not a speaker" : "the speaker \"" + owner + "\"") + ". Their budget is 3 decisions a day.",
+          "The brief written for each part:",
+          combined.briefs.join("\n"),
+          "",
+          'Return ONLY one JSON object, no prose: {"merge": [{"keep": "x3", "drop": ["x11"]}], "end_of_day_brief": "3-5 sentences to the owner about the whole conversation, in a chief of staff voice"}.',
+          "Merge only items that are the same matter raised in different parts. Keep the one with the stronger route (you, then agent, then precedent, then drop). If nothing repeats, return an empty merge list."
+        ].join("\n");
+        try {
+          const red = await sample.json(rp, { modelTier: "default", signal: ctl.signal });
+          arr(red && red.merge).forEach((m) => {
+            const keep = m && combined.items.find((x) => x.id === str(m.keep));
+            if (!keep) return;
+            arr(m.drop).forEach((d) => {
+              const i = combined.items.findIndex((x) => x.id === str(d) && x !== keep);
+              if (i < 0) return;
+              const gone = combined.items[i];
+              keep.utterances = Array.from(new Set(arr(keep.utterances).concat(arr(gone.utterances))));
+              if (!keep._mw && gone._mw) keep._mw = gone._mw;
+              combined.items.splice(i, 1);
+            });
+          });
+          if (red && red.end_of_day_brief) brief = str(red.end_of_day_brief);
+        } catch (e) {
+          if (e && FATAL.indexOf(String(e.code)) >= 0) throw e;
+          /* keep the parts unmerged, with the part briefs */
+        }
+      }
+      const secsTaken = Math.round((performance.now() - t0) / 1000);
+      const built = toData({ title: combined.title, lane: combined.lane, attention_budget: 3, items: combined.items, old_way_action_items: combined.old_way_action_items, end_of_day_brief: brief }, owner, title, pages);
+      if (!built.data.triage.items.length) { status("Claude answered, but no moment pointed at a line of the transcript. Try again.", true); return; }
+      const notes = [];
+      if (n > 1) notes.push("Read in " + n + " parts.");
+      failed.forEach((f) => notes.push("Part " + f._part.k + " (lines " + f._part.first + " to " + f._part.last + ") could not be triaged (" + f._error + "); its lines are shown without items."));
+      window.COS_REBOOT(built.data);
+      afterDraw(built.data, built.lost, secsTaken, notes.join(" "));
+    } catch (e) {
+      const code = e && e.code ? String(e.code) : "";
+      const msg = {
+        cancelled: "Stopped. Nothing was kept.",
+        not_granted: "Claude was not allowed for this page. Allow it when asked, then try again.",
+        rate_limited: "Claude is busy for you right now. Wait a minute, then try again.",
+        invalid_json: "Claude's answer was not valid JSON this time. Try again.",
+        session_expired: "Your Claude session expired. Sign in again, then try again."
+      }[code] || "Claude could not finish" + (code ? " (" + code + ")" : "") + ". Try again in a minute.";
+      status(msg, code !== "cancelled");
+    } finally {
+      clearInterval(timer);
+      const g = $("up-go"), s2 = $("up-stop");
+      if (g) g.disabled = false;
+      if (s2) s2.hidden = true;
+      ctl = null;
+    }
+  }
+
+  document.addEventListener("change", async (e) => {
+    const t = e.target;
+    if (!t || t.id !== "up-file" || !t.files || !t.files[0]) return;
+    const f = t.files[0];
+    if (f.size > 3000000) { status("That file is over 3 MB. Export the transcript as text and try again.", true); return; }
+    try {
+      $("up-text").value = await f.text();
+      if (!$("up-title").value) $("up-title").value = f.name.replace(/\.[^.]+$/, "").replace(/[-_]+/g, " ").slice(0, 80);
+      status("");
+      onText();
+    } catch (err) {
+      status("Could not read that file. Paste the transcript instead.", true);
+    }
+  });
+  document.addEventListener("input", (e) => {
+    if (!e.target || e.target.id !== "up-text") return;
+    clearTimeout(debounce);
+    debounce = setTimeout(onText, 250);
+  });
+  document.addEventListener("submit", (e) => {
+    if (!e.target || e.target.id !== "up-form") return;
+    e.preventDefault();
+    triage();
+  });
+  document.addEventListener("click", (e) => {
+    const t = e.target;
+    if (!t) return;
+    if (t.id === "up-stop" && ctl) ctl.abort();
+    if (t.id === "up-back") { parsed = null; window.COS_REBOOT(DEMO); window.scrollTo(0, 0); }
+  });
+  window.COS_PARSE = parseTranscript;
+  // test hooks: the same prompt and conversion the page uses
+  window.COS_UPLOAD_TEST = {
+    prompt: (raw, owner, title, pages, part) => { parsed = parseTranscript(raw); return buildPrompt(owner, title, pages, parsed.utterances.map(lineOf), part); },
+    run: triage,
+    toData: (res, owner, title, pages) => toData(res, owner, title, pages)
+  };
+})();
+</script>
+

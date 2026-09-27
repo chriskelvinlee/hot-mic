@@ -1,0 +1,1019 @@
+{
+  "skill": "chief-of-staff",
+  "skill_version": "0.1.0",
+  "attention_budget": 3,
+  "items": [
+    {
+      "id": "t01",
+      "utterances": [
+        "u032",
+        "u088"
+      ],
+      "context": "c3",
+      "lane": "fund",
+      "signal": "It's exploding, seventy-two hours. Our pro-rata would be about four hundred.",
+      "speaker": "Maya Chen",
+      "type": "decision",
+      "route": "you",
+      "title": "Decide Tidewater pro-rata before the term sheet expires",
+      "why": "About $400k is over your $250k pro-rata cap, so it needs your call and a partner vote, and at 21:05 you said you don't know where Tidewater stands because this was said under Jordan's CRM rant.",
+      "decision": {
+        "question": "Do we take our full Tidewater pro-rata, about $400k, before the term sheet expires?",
+        "options": [
+          {
+            "label": "Take the full pro-rata if the round is priced with a new outside lead",
+            "tradeoff": "Applies your own under-cap test at the larger amount and keeps our roughly 6% stake; needs the full term sheet read and a partner vote before Saturday."
+          },
+          {
+            "label": "Take part of the pro-rata",
+            "tradeoff": "Less capital at risk and leaves room for Helen's co-invest once our allocation is set; our ownership gets diluted."
+          },
+          {
+            "label": "Pass on the pro-rata",
+            "tradeoff": "Keeps the capital for other follow-ons; can read to Tidewater and the new round as weak conviction from its seed investor."
+          }
+        ],
+        "recommended": 0,
+        "why_only_you": "Your cap is $250k and this is about $400k: your rule says above the cap it takes your call, a partner vote and your own read of the full term sheet, not a summary.",
+        "deadline": "2026-09-26",
+        "stakes": "high",
+        "reversible": false,
+        "cost_of_delay": "The term sheet came in last night and explodes in 72 hours, so by Saturday the round can close without our pro-rata; Helen is already asking to co-invest."
+      }
+    },
+    {
+      "id": "t02",
+      "utterances": [
+        "u045",
+        "u046",
+        "u047",
+        "u048",
+        "u049",
+        "u050"
+      ],
+      "context": "c4",
+      "lane": "board",
+      "signal": "I'm thinking about letting Greg go. Before the board meeting.",
+      "speaker": "Dev Patel",
+      "type": "decision",
+      "route": "you",
+      "title": "Give Dev your view on letting Greg go",
+      "why": "Dev brought a hard people decision to you one on one before the board, as your rule asks, but what you advise is a relationship call on an irreversible exit with no precedent behind it.",
+      "decision": {
+        "question": "What do you tell Dev about letting Greg go before Monday's board meeting?",
+        "options": [
+          {
+            "label": "Set a written plan with agreed numbers first",
+            "tradeoff": "Fair and defensible, since Greg has not formally seen his numbers against a plan; slower, and the issue is still open in Monday's room."
+          },
+          {
+            "label": "Back Dev letting Greg go before Monday",
+            "tradeoff": "A clean board meeting and a fast reset of a pipeline that has been flat two quarters; risky with no formal plan on record and the bookings-based comp still unresolved."
+          },
+          {
+            "label": "Take it to the board Monday before acting",
+            "tradeoff": "Shares the call with the board; Dev said he does not want it hanging over the room."
+          }
+        ],
+        "recommended": 0,
+        "why_only_you": "It is your counsel from the board seat on a firing, and how you answer shapes a first-time CEO's trust in you.",
+        "deadline": "2026-09-28",
+        "stakes": "high",
+        "reversible": false,
+        "cost_of_delay": "Dev wants it done before Monday's board meeting, so he may act before he hears your view; the comp plan he is sending you is the input you asked for."
+      }
+    },
+    {
+      "id": "t03",
+      "utterances": [
+        "u003"
+      ],
+      "context": "c1",
+      "lane": "personal",
+      "signal": "that's right on top of IC. So that has to move.",
+      "speaker": "Chris",
+      "type": "decision",
+      "route": "precedent",
+      "title": "Move the dentist off Tuesday IC",
+      "why": "Your IC rule keeps Tuesday 9:30 to 11:30 clear and names personal appointments, 10:00 falls inside it, and you already said it has to move.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/calendar-rules.md",
+        "claim": "Tuesday 9:30 to 11:30 is investment committee; nothing else goes there, personal appointments included",
+        "since": "2026-01-12",
+        "action": "Drafted a reschedule request to the dentist's office for any slot outside Tuesday 9:30 to 11:30; it waits for your send.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a short note to your dentist's office asking to move the Tuesday 10:00 appointment to a time outside Tuesday 9:30 to 11:30. Offer no reason beyond a standing commitment. Nothing is sent without your yes.",
+        "signal": [
+          "The dentist moved me to Tuesday at ten",
+          "that's right on top of IC. So that has to move."
+        ],
+        "noise_excluded": [
+          "The rest of the walk memo: board deck, wire, book, coffee, sailing",
+          "What IC is about (fund lane; the agent only needs the blocked window)"
+        ],
+        "done_when": [
+          "A reschedule request to the dentist's office is drafted",
+          "Every time it proposes avoids Tuesday 9:30 to 11:30",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [],
+        "approval_gate": "before sending",
+        "lane_scope": "personal"
+      }
+    },
+    {
+      "id": "t04",
+      "utterances": [
+        "u011",
+        "u012",
+        "u013",
+        "u037",
+        "u038"
+      ],
+      "context": "c2",
+      "lane": "fund",
+      "signal": "Arlo Vance from Quarry Labs wants a first meeting, and he asked for Friday at two.",
+      "speaker": "Maya Chen",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Offer Arlo Tuesday or Thursday, not Friday",
+      "why": "A first meeting on a Friday is exactly what your calendar rule covers, so Arlo gets Tuesday or Thursday by video without asking you.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/calendar-rules.md",
+        "claim": "I never take first meetings on Fridays; offer Tuesday or Thursday",
+        "since": "2026-06-02",
+        "action": "Drafted a reply for Maya to send offering Arlo a 30-minute video first meeting next Tuesday (outside 9:30 to 11:30) or Thursday.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a reply to Arlo Vance of Quarry Labs, for Maya to send, offering a 30-minute video first meeting next Tuesday or Thursday instead of Friday. Keep Tuesday 9:30 to 11:30 off the table. Video keeps it easy since he flies home Saturday.",
+        "signal": [
+          "Arlo Vance from Quarry Labs wants a first meeting, and he asked for Friday at two.",
+          "He flies home Saturday, that's why he asked."
+        ],
+        "noise_excluded": [
+          "Your 'Friday. Hm.' (a pause, not a decision)",
+          "Jordan's towing note about Fridays",
+          "The partner meeting's CRM debate"
+        ],
+        "done_when": [
+          "The draft offers only Tuesday or Thursday, 30 minutes by video",
+          "No Tuesday slot between 9:30 and 11:30",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/calendar-rules.md",
+          "packs/cos-demo/people/maya-chen.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t05",
+      "utterances": [
+        "u014",
+        "u015"
+      ],
+      "context": "c2",
+      "lane": "fund",
+      "signal": "Nina at Fernhill asked if you'd intro her to Dev at Kestrel.",
+      "speaker": "Maya Chen",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Queue Nina's intro to Dev for next week",
+      "why": "Your double opt-in rule decides how the intro happens and your own 'he's got a lot going on this week' sets the timing, so no decision is left for you.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/intros.md",
+        "claim": "Every intro I make is double opt-in: ask the receiving side first with a short forwardable blurb, and connect only after they say yes",
+        "since": "2025-03-10",
+        "action": "Drafted the forwardable ask to Dev and held it for next week, matching what you said and your 0.7 leaning to hold intro asks during a founder's board week.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a double opt-in ask to Dev: a short forwardable blurb saying Nina at Fernhill would like to compare notes on warehouse robot pilots. Hold it until next week, since you said Dev has a lot going on this week. Connect Nina only after Dev says yes.",
+        "signal": [
+          "Nina at Fernhill asked if you'd intro her to Dev at Kestrel.",
+          "she wants to compare notes on pilots",
+          "Sure, Dev's great.",
+          "he's got a lot going on this week though."
+        ],
+        "noise_excluded": [
+          "Anything about Kestrel or Dev's week beyond your own remark (board lane)",
+          "The Fernhill memo and IC timing"
+        ],
+        "done_when": [
+          "A forwardable blurb is drafted to Dev",
+          "The ask is queued for next week and goes only on your yes",
+          "No connection note to Nina until Dev says yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/intros.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t06",
+      "utterances": [
+        "u016",
+        "u017"
+      ],
+      "context": "c2",
+      "lane": "fund",
+      "signal": "October fifteenth. It's about eighty people.",
+      "speaker": "Maya Chen",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Decline the Boise fireside chat",
+      "why": "About 80 people is under your 200-person bar and no portfolio founder shares the stage, so the invite is declined under your rule.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/speaking-invites.md",
+        "claim": "I decline speaking invites for audiences under 200 people unless a portfolio founder shares the stage",
+        "since": "2026-02-18",
+        "action": "Drafted the decline and, because Maya said she would do it, offered her as Northwind's speaker; that line rests on a 0.7 leaning, so you keep or cut it at the send gate.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a warm decline to the Cascadia Seed Summit fireside chat in Boise on 2026-10-15. Offer Maya as Northwind's speaker, since she said she would do it, as a line you can keep or cut. Nothing is sent without your yes.",
+        "signal": [
+          "the Cascadia Seed Summit in Boise asked if you'd do a fireside chat",
+          "October fifteenth. It's about eighty people.",
+          "I'd do it, honestly. If they want someone from Northwind."
+        ],
+        "noise_excluded": [
+          "The rest of the 1:1: Quarry, Nina's intro, the memo",
+          "Any reason for declining beyond a warm no"
+        ],
+        "done_when": [
+          "A decline to the organizer is drafted",
+          "Maya is offered in one line you can keep or cut",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/speaking-invites.md",
+          "packs/cos-demo/people/maya-chen.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t07",
+      "utterances": [
+        "u051",
+        "u052"
+      ],
+      "context": "c4",
+      "lane": "board",
+      "signal": "could you intro me to someone at Harborline Logistics?",
+      "speaker": "Dev Patel",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Ask Renee before introducing Dev",
+      "why": "Your rule says every intro you make is double opt-in, so Renee is asked first even though you said she'd take the call.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/intros.md",
+        "claim": "Every intro I make is double opt-in: ask the receiving side first with a short forwardable blurb, and connect only after they say yes",
+        "since": "2025-03-10",
+        "action": "Drafted a forwardable ask to Renee Park at Harborline; Dev is connected only after she says yes.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a short forwardable note asking Renee Park, COO of Harborline Logistics, whether she would take a call with Dev Patel of Kestrel Robotics about their warehouse robot pilots. Connect them only after Renee says yes. Nothing is sent without your yes.",
+        "signal": [
+          "could you intro me to someone at Harborline Logistics? I heard they're piloting robots in two warehouses.",
+          "I know Renee Park, their COO. Yeah, she'd take the call."
+        ],
+        "noise_excluded": [
+          "Greg, the comp plan and the board meeting (confidential, never in an intro)",
+          "The bridge note and the wire",
+          "Lunch small talk and the fund gossip"
+        ],
+        "done_when": [
+          "A forwardable ask to Renee is drafted",
+          "No introduction email to Dev until Renee says yes",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/companies/kestrel-robotics.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "board"
+      }
+    },
+    {
+      "id": "t08",
+      "utterances": [
+        "u060",
+        "u061"
+      ],
+      "context": "c5",
+      "lane": "build",
+      "signal": "Should we just use OpenAI embeddings to go faster?",
+      "speaker": "Sam Okafor",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Keep embeddings local and speed them up",
+      "why": "You already decided on 2026-09-19 to run GBrain embeddings locally with Ollama bge-m3, so 'let me think about that' is answered by your own brain.",
+      "precedent": {
+        "page": "packs/cos-demo/projects/gbrain.md",
+        "claim": "I run my GBrain's embeddings locally on my Mac with Ollama bge-m3",
+        "since": "2026-09-19",
+        "action": "Kept embeddings local and queued a read-only look at making the big pack faster on the Mac, with a two-line reply to Sam drafted.",
+        "real": true
+      },
+      "dispatch": {
+        "agent": "Claude Code",
+        "brief": "Embeddings stay local on Ollama bge-m3, as you decided on 2026-09-19. Measure why embedding the big pack is slow on the laptop and propose speedups that keep everything on the Mac, then draft a two-line reply to Sam. Read-only analysis: no code changes and nothing sent.",
+        "signal": [
+          "Should we just use OpenAI embeddings to go faster?",
+          "bge-m3 on the laptop is slow on the big pack."
+        ],
+        "noise_excluded": [
+          "Cloud embeddings as an option (ruled out by your decision)",
+          "Slack someday",
+          "The iOS build fight",
+          "The Apple renewal"
+        ],
+        "done_when": [
+          "A timing of the big-pack embed on the Mac is recorded",
+          "At least one local speedup is proposed with its expected gain",
+          "A two-line reply to Sam is drafted and not sent"
+        ],
+        "context_pages": [
+          "packs/cos-demo/projects/gbrain.md",
+          "packs/cos-demo/projects/hot-mic.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "build"
+      }
+    },
+    {
+      "id": "t09",
+      "utterances": [
+        "u062",
+        "u063"
+      ],
+      "context": "c5",
+      "lane": "build",
+      "signal": "the Apple developer account renews next week. Ninety-nine dollars.",
+      "speaker": "Sam Okafor",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Approve Sam's $99 Apple renewal",
+      "why": "A $99 renewal of a tool you already use is under your $200 pre-approval, so your 'probably' becomes a yes.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/small-spend.md",
+        "claim": "Renewals under $200 for tools we already use are pre-approved; log them in the build notes",
+        "since": "2026-07-15",
+        "action": "Drafted the go-ahead to Sam and the build-notes log line; the spend gate stays on.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Tell Sam to renew the Apple developer account for $99 on the card; it is pre-approved under your small-spend rule. Add one line to the build notes with the amount and date.",
+        "signal": [
+          "the Apple developer account renews next week. Ninety-nine dollars. Can I just put it on the card?",
+          "Probably. Yeah, probably."
+        ],
+        "noise_excluded": [
+          "The embeddings question",
+          "Slack someday",
+          "The iOS build fight"
+        ],
+        "done_when": [
+          "A go-ahead to Sam is drafted",
+          "The build notes have a line for the $99 renewal",
+          "No charge happens before the spend gate clears"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/small-spend.md",
+          "packs/cos-demo/people/sam-okafor.md"
+        ],
+        "approval_gate": "before spending",
+        "lane_scope": "build"
+      }
+    },
+    {
+      "id": "t10",
+      "utterances": [
+        "u070",
+        "u071",
+        "u072"
+      ],
+      "context": "c6",
+      "lane": "fund",
+      "signal": "we need the Q3 letter by October tenth",
+      "speaker": "Helen Marsh",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Draft the Q3 LP letter by October 10",
+      "why": "Helen's ask to lead with marks and DPI is already your standing letter format, and the October 10 date is a commitment you made on the call.",
+      "precedent": {
+        "page": "packs/cos-demo/companies/northwind-seed.md",
+        "claim": "Quarterly LP letters lead with marks and DPI, then one short paragraph per company that moved",
+        "since": "2026-04-02",
+        "action": "Queued a Muse draft in your format, marks and DPI first, with Maya pulling the numbers and the opening left for you, per your letter process.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Muse",
+        "brief": "Draft the Q3 LP letter in your standing format: marks and DPI first, then one short paragraph per company that moved. Leave the numbers as placeholders for Maya and the opening for you. It goes to LPs only after you approve it, by 2026-10-10.",
+        "signal": [
+          "we need the Q3 letter by October tenth",
+          "Last quarter's came late and I got asked about it.",
+          "please put the marks and the DPI up front",
+          "Understood. The tenth."
+        ],
+        "noise_excluded": [
+          "Helen's college tour",
+          "The Tidewater co-invest question (separate item)",
+          "The Fund Three remark"
+        ],
+        "done_when": [
+          "The draft opens with marks and DPI",
+          "One short paragraph per company that moved, numbers left for Maya",
+          "The opening is left blank for you",
+          "Ready for your approval before 2026-10-10; nothing sent"
+        ],
+        "context_pages": [
+          "packs/cos-demo/companies/northwind-seed.md",
+          "packs/cos-demo/people/maya-chen.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t11",
+      "utterances": [
+        "u073",
+        "u074"
+      ],
+      "context": "c6",
+      "lane": "fund",
+      "signal": "If you're not taking your full allocation, we'd love to co-invest.",
+      "speaker": "Helen Marsh",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Hold Helen's co-invest until allocation is set",
+      "why": "Your rule says no LP gets a co-invest offer until the partnership sets our own allocation, and Tidewater's allocation is still open.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/pro-rata.md",
+        "claim": "No LP gets a co-invest offer on a deal until the partnership has decided our own allocation",
+        "since": "2026-05-21",
+        "action": "Drafted a holding reply to Helen that says nothing about terms, amounts or timing, and tied the follow-up to your Tidewater decision.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a short reply to Helen Marsh: thanks for the interest in Tidewater, and we will come back once the partnership has set our own allocation. Say nothing about round terms, amounts or timing.",
+        "signal": [
+          "If you're not taking your full allocation, we'd love to co-invest.",
+          "I'll check where that is and get back to you."
+        ],
+        "noise_excluded": [
+          "The term sheet expiry and the pro-rata amount (partnership-only until we decide)",
+          "The Fund Three remark",
+          "College tour small talk"
+        ],
+        "done_when": [
+          "A holding reply is drafted with no amounts or terms",
+          "The follow-up is tied to the Tidewater decision (t01)",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/pro-rata.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t12",
+      "utterances": [
+        "u076",
+        "u077"
+      ],
+      "context": "c7",
+      "lane": "personal",
+      "signal": "Can you RSVP? She wants to know by tomorrow.",
+      "speaker": "Alex",
+      "type": "ask",
+      "route": "precedent",
+      "title": "RSVP yes to the Nguyens' dinner",
+      "why": "Alex already said probably and you said yes out loud, and your rule is to confirm Alex's social plans rather than reopen them.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/family-first-evenings.md",
+        "claim": "Social plans Alex has already said yes to, I confirm; I do not reopen them",
+        "since": "2026-01-05",
+        "action": "Drafted a yes RSVP to Linh for dinner on the third, ready before tomorrow.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a yes RSVP to Linh for dinner at the Nguyens' on the third, from you and Alex. She wants to know by tomorrow, 2026-09-25.",
+        "signal": [
+          "Linh asked if we're coming to dinner at the Nguyens' on the third.",
+          "She wants to know by tomorrow.",
+          "Yes. Yes, we're going."
+        ],
+        "noise_excluded": [
+          "The kitchen repaint",
+          "Dev's call",
+          "Theo's permission slip (separate item)"
+        ],
+        "done_when": [
+          "A clear yes to Linh is drafted for both of you",
+          "Ready to send before 2026-09-25",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/family-first-evenings.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "personal"
+      }
+    },
+    {
+      "id": "t13",
+      "utterances": [
+        "u078"
+      ],
+      "context": "c7",
+      "lane": "personal",
+      "signal": "Theo's permission slip for the aquarium trip is due Friday.",
+      "speaker": "Alex",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Prep Theo's permission slip for your signature",
+      "why": "Your rule is that school signatures are prepared for you and signed by you, so the slip is queued for your signature before Friday.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/family-first-evenings.md",
+        "claim": "Anything the kids' school needs my signature on gets prepared for me, and I sign it myself",
+        "since": "2025-09-01",
+        "action": "Queued the aquarium slip with a short hold before it is due; only you sign.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Calendar",
+        "brief": "Theo's aquarium permission slip is in the school app and due Friday, 2026-09-25. Propose a short hold before it is due with the slip linked, so you can sign it yourself. The agent never signs or submits.",
+        "signal": [
+          "Theo's permission slip for the aquarium trip is due Friday.",
+          "It's in the school app. You have to sign it"
+        ],
+        "noise_excluded": [
+          "Who signed the last one",
+          "The dinner RSVP (separate item)",
+          "The kitchen repaint"
+        ],
+        "done_when": [
+          "A hold is proposed before Friday 2026-09-25 with the slip linked",
+          "Nothing is signed or submitted by the agent",
+          "The hold is not accepted without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/family-first-evenings.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "personal"
+      }
+    },
+    {
+      "id": "t14",
+      "utterances": [
+        "u079",
+        "u080",
+        "u081",
+        "u082"
+      ],
+      "context": "c7",
+      "lane": "personal",
+      "signal": "It's Dev. He wants to talk tonight.",
+      "speaker": "Chris",
+      "type": "ask",
+      "route": "precedent",
+      "title": "Move Dev's call to tomorrow morning",
+      "why": "It is a weeknight after 6:30pm and not an emergency, so your family rule moves the call to the morning, 7:30 at the earliest, as you already said.",
+      "precedent": {
+        "page": "packs/cos-demo/concepts/family-first-evenings.md",
+        "claim": "Weeknights after 6:30pm are family time; non-emergency work calls move to the next morning, 7:30 at the earliest",
+        "since": "2025-09-01",
+        "action": "Kept tonight clear and drafted a proposal to Dev for Friday at 7:30am or later.",
+        "real": false
+      },
+      "dispatch": {
+        "agent": "Calendar",
+        "brief": "Dev asked to talk tonight and you said the morning. Propose a call with Dev on Friday, 2026-09-25, at 7:30am or later, and keep tonight clear. Nothing goes to Dev without your yes.",
+        "signal": [
+          "It's Dev. He wants to talk tonight.",
+          "No. I'll move him to the morning."
+        ],
+        "noise_excluded": [
+          "Anything about Kestrel or why Dev is calling (board lane, not in this brief)",
+          "The dinner, the slip and the kitchen"
+        ],
+        "done_when": [
+          "A call with Dev is proposed for Friday at 7:30am or later",
+          "Nothing is booked tonight",
+          "The proposal is not sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/concepts/family-first-evenings.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "personal"
+      }
+    },
+    {
+      "id": "t15",
+      "utterances": [
+        "u002"
+      ],
+      "context": "c1",
+      "lane": "board",
+      "signal": "I need to actually read it before the weekend, not Sunday night again.",
+      "speaker": "Chris",
+      "type": "commitment-by-you",
+      "route": "agent",
+      "title": "Block time to read the Kestrel deck",
+      "why": "You already committed to reading the deck before the weekend; an agent can protect the time, and nothing here needs a decision.",
+      "dispatch": {
+        "agent": "Calendar",
+        "brief": "Propose a reading block on Friday, 2026-09-25, titled 'Read Kestrel board deck', so it is done before the weekend and before Monday's board meeting. Nothing is accepted without your yes.",
+        "signal": [
+          "Kestrel board meeting is Monday and I haven't even opened the deck.",
+          "I need to actually read it before the weekend, not Sunday night again."
+        ],
+        "noise_excluded": [
+          "The rest of the walk memo: dentist, book, coffee, sailing",
+          "Greg and the comp plan (they stay on the decision card, not on a calendar)"
+        ],
+        "done_when": [
+          "A reading block is proposed on Friday 2026-09-25",
+          "The block is not on Sunday",
+          "It is not accepted without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/companies/kestrel-robotics.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "board"
+      }
+    },
+    {
+      "id": "t16",
+      "utterances": [
+        "u009",
+        "u010",
+        "u018",
+        "u019",
+        "u030",
+        "u087"
+      ],
+      "context": "c2",
+      "lane": "fund",
+      "signal": "I'll get you comments on the memo by five today.",
+      "speaker": "Chris",
+      "type": "commitment-by-you",
+      "route": "agent",
+      "title": "Reset Maya's Fernhill comments to Friday morning",
+      "why": "You missed five and already reset it to first thing tomorrow, so the open job is telling Maya before she waits again; the comments stay yours to write.",
+      "dispatch": {
+        "agent": "Email draft",
+        "brief": "Draft a short note to Maya: your Fernhill comments come first thing Friday, not 5pm today, still ahead of Tuesday's IC. Include your one note so far, that the market section runs long. Nothing goes to Maya without your yes.",
+        "signal": [
+          "I'll get you comments on the memo by five today.",
+          "I said five. Didn't happen. First thing tomorrow.",
+          "The market section's a little long.",
+          "IC is Tuesday, so I really need your comments on the memo before I send the final."
+        ],
+        "noise_excluded": [
+          "Quarry, Nina's intro and the Boise invite (separate items)",
+          "Jordan's CRM debate",
+          "Maya's 'never mind' aside"
+        ],
+        "done_when": [
+          "A note to Maya is drafted with the new time",
+          "It carries your market-section note",
+          "Nothing is sent without your yes"
+        ],
+        "context_pages": [
+          "packs/cos-demo/people/maya-chen.md"
+        ],
+        "approval_gate": "before sending",
+        "lane_scope": "fund"
+      }
+    },
+    {
+      "id": "t17",
+      "utterances": [
+        "u056",
+        "u057",
+        "u058",
+        "u059"
+      ],
+      "context": "c5",
+      "lane": "build",
+      "signal": "If you reload the page in the middle of a session, the same receipt fires twice.",
+      "speaker": "Sam Okafor",
+      "type": "risk",
+      "route": "agent",
+      "title": "Fix duplicate receipts after page reload",
+      "why": "Sam gave an exact repro, so a bounded fix is agent work, gated before merging.",
+      "dispatch": {
+        "agent": "Codex",
+        "brief": "Fix the Hot Mic bug where a page reload lets the same red receipt fire twice in one session. Reproduce it with a test first, then make the once-per-session rule survive a reload and a socket reconnect. Work on a branch; nothing merges without your yes.",
+        "signal": [
+          "If you reload the page in the middle of a session, the same receipt fires twice.",
+          "say the Friday line, get the red receipt, reload the page, say it again.",
+          "So the once-per-session rule doesn't survive a reload.",
+          "the client keeps the fired list in memory, and the server replays the last event when the socket reconnects."
+        ],
+        "noise_excluded": [
+          "The embeddings question (separate item)",
+          "Slack someday",
+          "The Apple renewal",
+          "The iOS build fight"
+        ],
+        "done_when": [
+          "A test reproduces the double receipt and fails before the fix",
+          "After the fix, the repro gives one receipt per claim per session",
+          "The change sits on a branch, not merged"
+        ],
+        "context_pages": [
+          "packs/cos-demo/projects/hot-mic.md"
+        ],
+        "approval_gate": "before merging",
+        "lane_scope": "build"
+      }
+    },
+    {
+      "id": "t18",
+      "utterances": [
+        "u004"
+      ],
+      "context": "c1",
+      "lane": "personal",
+      "signal": "Someday I should write a book about this.",
+      "speaker": "Chris",
+      "type": "idea",
+      "route": "drop",
+      "title": "Park the decision-fatigue book idea",
+      "why": "A someday idea with no date or ask; signal-detector keeps your exact phrasing and there is nothing to do.",
+      "drop_reason": "speculative"
+    },
+    {
+      "id": "t19",
+      "utterances": [
+        "u005"
+      ],
+      "context": "c1",
+      "lane": "build",
+      "signal": "Text Sam about the two o'clock, make sure we're still on.",
+      "speaker": "Chris",
+      "type": "commitment-by-you",
+      "route": "drop",
+      "title": "Skip the check-in text to Sam",
+      "why": "The 2pm with Sam happened at 14:01, so the check-in is moot.",
+      "drop_reason": "already handled"
+    },
+    {
+      "id": "t20",
+      "utterances": [
+        "u006"
+      ],
+      "context": "c1",
+      "lane": "personal",
+      "signal": "This coffee is not good.",
+      "speaker": "Chris",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Ignore the coffee complaint",
+      "why": "Talking to yourself about coffee; no action.",
+      "drop_reason": "chatter"
+    },
+    {
+      "id": "t21",
+      "utterances": [
+        "u007",
+        "u043",
+        "u044",
+        "u085"
+      ],
+      "context": "c1",
+      "lane": "board",
+      "signal": "The Kestrel bridge wire went out at three, I got the confirmation.",
+      "speaker": "Chris",
+      "type": "commitment-by-you",
+      "route": "drop",
+      "title": "Close the Kestrel bridge wire loop",
+      "why": "You said twice you would send the wire, then at 21:01 confirmed it went out at three, so there is nothing to chase.",
+      "drop_reason": "already handled"
+    },
+    {
+      "id": "t22",
+      "utterances": [
+        "u008"
+      ],
+      "context": "c1",
+      "lane": "personal",
+      "signal": "Also I should learn to sail.",
+      "speaker": "Chris",
+      "type": "idea",
+      "route": "drop",
+      "title": "Park learning to sail",
+      "why": "A yearly someday with no date.",
+      "drop_reason": "speculative"
+    },
+    {
+      "id": "t23",
+      "utterances": [
+        "u020"
+      ],
+      "context": "c2",
+      "lane": "fund",
+      "signal": "never mind, it's not important.",
+      "speaker": "Maya Chen",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Let Maya's aside go",
+      "why": "Maya withdrew it herself.",
+      "drop_reason": "chatter"
+    },
+    {
+      "id": "t24",
+      "utterances": [
+        "u023",
+        "u024",
+        "u025",
+        "u026",
+        "u027",
+        "u028",
+        "u031",
+        "u033",
+        "u035",
+        "u036"
+      ],
+      "context": "c3",
+      "lane": "fund",
+      "signal": "We should rip it out and build our own.",
+      "speaker": "Jordan Blake",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Leave Jordan's CRM rant with Jordan",
+      "why": "Jordan's frustration with no ask of you; Priya parked it to Q1 and Jordan owns the write-up.",
+      "drop_reason": "venting"
+    },
+    {
+      "id": "t25",
+      "utterances": [
+        "u029"
+      ],
+      "context": "c3",
+      "lane": "fund",
+      "signal": "I'll do the reference call on their CEO myself",
+      "speaker": "Priya Raman",
+      "type": "fyi",
+      "route": "drop",
+      "title": "Leave the Halcyon reference to Priya",
+      "why": "Priya owns the Halcyon reference call and said nobody else needs to be on it.",
+      "drop_reason": "not yours"
+    },
+    {
+      "id": "t26",
+      "utterances": [
+        "u039"
+      ],
+      "context": "c3",
+      "lane": "fund",
+      "signal": "They're towing in the back lot on Fridays now.",
+      "speaker": "Jordan Blake",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Ignore the back-lot towing note",
+      "why": "Building logistics with no ask of you.",
+      "drop_reason": "chatter"
+    },
+    {
+      "id": "t27",
+      "utterances": [
+        "u053",
+        "u054"
+      ],
+      "context": "c4",
+      "lane": "board",
+      "signal": "Is Jordan still trying to build his own CRM?",
+      "speaker": "Dev Patel",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Ignore the CRM gossip at lunch",
+      "why": "Small talk about the fund at a board lunch; nothing to do, and it is not merged with the fund-lane rant.",
+      "drop_reason": "chatter"
+    },
+    {
+      "id": "t28",
+      "utterances": [
+        "u064",
+        "u065"
+      ],
+      "context": "c5",
+      "lane": "build",
+      "signal": "we should add Slack someday.",
+      "speaker": "Sam Okafor",
+      "type": "idea",
+      "route": "drop",
+      "title": "Park Slack receipts for someday",
+      "why": "You both said someday; no owner or date.",
+      "drop_reason": "speculative"
+    },
+    {
+      "id": "t29",
+      "utterances": [
+        "u066"
+      ],
+      "context": "c5",
+      "lane": "build",
+      "signal": "I'm going to go fight the iOS build.",
+      "speaker": "Sam Okafor",
+      "type": "fyi",
+      "route": "drop",
+      "title": "Leave the iOS build to Sam",
+      "why": "Sam's own work, with no ask of you.",
+      "drop_reason": "not yours"
+    },
+    {
+      "id": "t30",
+      "utterances": [
+        "u075"
+      ],
+      "context": "c6",
+      "lane": "fund",
+      "signal": "we're likely in for Fund Three, just so you know. Nothing formal.",
+      "speaker": "Helen Marsh",
+      "type": "fyi",
+      "route": "drop",
+      "title": "Note Helen's Fund Three interest, no action",
+      "why": "A soft signal with nothing formal and no date; the on-time Q3 letter is what keeps it warm.",
+      "drop_reason": "speculative"
+    },
+    {
+      "id": "t31",
+      "utterances": [
+        "u083",
+        "u084"
+      ],
+      "context": "c7",
+      "lane": "personal",
+      "signal": "We should repaint the kitchen.",
+      "speaker": "Alex",
+      "type": "idea",
+      "route": "drop",
+      "title": "Park the kitchen repaint",
+      "why": "A someday house project with no date.",
+      "drop_reason": "speculative"
+    },
+    {
+      "id": "t32",
+      "utterances": [
+        "u086"
+      ],
+      "context": "c8",
+      "lane": "personal",
+      "signal": "I keep saying yes to too many coffees. Four this week.",
+      "speaker": "Chris",
+      "type": "chatter",
+      "route": "drop",
+      "title": "Let the coffee venting go",
+      "why": "Frustration with no ask; name a weekly number and it can become a rule.",
+      "drop_reason": "venting"
+    }
+  ],
+  "memory_writes": [
+    {
+      "page": "packs/cos-demo/concepts/pro-rata.md",
+      "row": "| 5 | For Tidewater's 2026 round, above my $250k cap, we take [full / part / none] of our about $400k pro-rata after I read the full term sheet and the partners vote | take | self | 0.8 | 2026-09-24 | decided via chief of staff |",
+      "trigger": "t01: written only after you decide, with your choice in place of the brackets"
+    },
+    {
+      "page": "packs/cos-demo/people/dev-patel.md",
+      "row": "| 3 | When a Kestrel leader has never agreed to a written plan, I advise Dev to [set the plan first / let them go before the board / take it to the board first] | take | self | 0.8 | 2026-09-24 | decided via chief of staff |",
+      "trigger": "t02: written only after you decide, with your advice in place of the brackets"
+    },
+    {
+      "page": "packs/cos-demo/concepts/speaking-invites.md",
+      "row": "| 3 | When I decline a speaking invite under row 1 and the organizer wants someone from Northwind, offer Maya without asking me; she said she wants these on 2026-09-24 | take | self | 0.8 | 2026-09-24 | decided via chief of staff |",
+      "trigger": "t06: proposed standing rule; needs your approval. Written only after you approve; it would supersede the 0.7 leaning in row 2"
+    }
+  ],
+  "end_of_day_brief": "You had eight conversations today, all with consent on record; out of 89 lines I pulled 32 moments, and 2 need you. First, Tidewater: at 10:39, under Jordan's CRM rant, Maya said the term sheet explodes in 72 hours and our pro-rata is about $400k, over your $250k cap, so it needs the full term sheet, a partner vote and your call by Saturday; second, what you tell Dev about Greg before Monday's board meeting, once you have read the comp plan he is sending. I handled 12 under your own precedents, including Sam's OpenAI question (your real 2026-09-19 decision: embeddings stay local), Arlo's Friday ask (Tuesday or Thursday instead), the dentist off IC, the Boise decline with Maya offered, Helen's co-invest held until we set our allocation and Dev's call moved to 7:30 tomorrow, each waiting at its send or spend gate. Three are out with agents: Codex on the reload receipt bug (before merging), a note telling Maya your Fernhill comments land first thing tomorrow, and a Friday block to read the Kestrel deck. I dropped 15, including Jordan's CRM rant, the book, sailing, the kitchen and the bridge wire you confirmed went out at three. One proposed standing rule: when you decline a stage and the organizer wants someone from Northwind, offer Maya without asking you."
+}

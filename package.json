@@ -1,0 +1,12 @@
+{
+  "name": "hot-mic",
+  "version": "0.1.0",
+  "description": "The brain that interrupts: speak, and one card from your own GBrain appears. Red receipts when you contradict your own dated takes.",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "bun src/server.ts",
+    "test": "bun test",
+    "doctor": "bun src/doctor.ts"
+  }
+}

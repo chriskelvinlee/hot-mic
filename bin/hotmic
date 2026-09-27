@@ -1,0 +1,10 @@
+#!/bin/bash
+# Start Hot Mic and open it. Ctrl-C stops it (and the local speech server).
+export PATH="/opt/homebrew/bin:/usr/local/bin:$HOME/.bun/bin:$PATH"
+cd "$(dirname "$0")/.." || exit 1
+PORT="${HOTMIC_PORT:-4747}"
+if ! curl -s -m 2 localhost:11434/api/tags >/dev/null; then
+  echo "[hot-mic] Ollama is not running, so receipts will be off. Start it with: brew services start ollama"
+fi
+( for i in $(seq 1 40); do curl -s -m 1 "http://127.0.0.1:$PORT/" >/dev/null && { open "http://127.0.0.1:$PORT/"; break; }; sleep 0.5; done ) &
+exec bun src/server.ts
